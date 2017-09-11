@@ -1,0 +1,10 @@
+.index_adv {
+  width: 100%;
+  min-height: 400px;
+}
+
+.index_adv img {
+  width: 100%;
+  min-height: 400px;
+  min-width: 1200px;
+}

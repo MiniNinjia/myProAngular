@@ -1,0 +1,88 @@
+.index-container-diary-div {
+  clear: both;
+  width: 100%;
+  background-color: #f3dd00;
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.index-container-diary-ul {
+  width: 1200px;
+  height: 390px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.index-container-diary-ul li {
+  width: 1200px;
+  height: 390px;
+  float: left;
+  overflow: hidden;
+}
+
+.index-container-diary-ul li:first-child {
+  width: 1200px;
+}
+
+.index-container-diary-ul li div {
+  width: 390px;
+  height: 390px;
+  float: left;
+  background-color: white;
+}
+
+.index-container-diary-ul li div:nth-child(2) {
+  margin: 0 15px;
+}
+
+.index-container-diary-ul-list {
+  width: 300px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.index-container-diary-ul-list li {
+  float: left;
+  width: 60px;
+  height: 10px;
+  padding: 0 10px;
+}
+
+.index-container-diary-ul-list li a {
+  border: solid 1px white;
+  width: 40px;
+  height: 10px;
+  display: block;
+}
+
+.index-container-diary-ul-list li a i {
+  width: 0px;
+  height: 10px;
+  display: block;
+  background-color: white;
+}
+
+.index-container-diary-ul-list li:first-child a i {
+  width: 40px;
+}
+
+#index-container-diary-btn {
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  padding: 5px 20px;
+  margin-top: 25px;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+#index-container-diary-btn:hover {
+  border-color: #ffc907;
+  box-shadow: 0 0 20px #ffffff;
+  /*margin-top: 20px;*/
+  /*margin-bottom: 5px;*/
+}
