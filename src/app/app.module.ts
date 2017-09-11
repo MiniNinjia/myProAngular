@@ -9,6 +9,7 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //导入路由模块
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {AdoptionRoutingModule}from './page-adoption/adoption-routing/adoption-routing.module'
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -26,6 +27,11 @@ import {PageDiaryComponent} from './page-diary/page-diary.component';
 import {PageSkillComponent} from './page-skill/page-skill.component';
 import {PageShopComponent} from './page-shop/page-shop.component';
 import {PageCommunityComponent} from './page-community/page-community.component';
+import { AdoptionShowpetComponent } from './page-adoption/adoption-main/adoption-showpet/adoption-showpet.component';
+import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-list/adoption-list.component';
+import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
+import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
+import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
 
 
 @NgModule({
@@ -42,10 +48,16 @@ import {PageCommunityComponent} from './page-community/page-community.component'
     PageDiaryComponent,
     PageSkillComponent,
     PageShopComponent,
-    PageCommunityComponent
+    PageCommunityComponent,
+    AdoptionShowpetComponent,
+    AdoptionListComponent,
+    AdoptionMainComponent,
+    AdoptionDetailsComponent,
+    AdoptionListItmeComponent
   ],
   imports: [
     BrowserModule,
+    AdoptionRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpModule

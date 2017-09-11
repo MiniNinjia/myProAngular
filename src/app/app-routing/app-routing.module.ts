@@ -21,10 +21,6 @@ const routes: Routes = [
     component: IndexComponent
   },
   {
-    path: 'adoption',
-    component: PageAdoptionComponent
-  },
-  {
     path: 'shop',
     component: PageShopComponent
   },
