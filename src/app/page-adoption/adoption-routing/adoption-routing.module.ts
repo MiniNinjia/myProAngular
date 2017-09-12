@@ -1,31 +1,30 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 
 //导入页面
 import {ErrorComponent} from '../../error/error.component';
 import {AdoptionDetailsComponent} from '../adoption-details/adoption-details.component';
 import {AdoptionMainComponent} from '../adoption-main/adoption-main.component';
-import {AdoptionListItmeComponent}from '../adoption-list-itme/adoption-list-itme.component'
-import {from} from "rxjs/observable/from";
-import {PageAdoptionComponent}from'../page-adoption.component'
+import {AdoptionListItmeComponent} from '../adoption-list-itme/adoption-list-itme.component';
+import {PageAdoptionComponent} from '../page-adoption.component';
 
 const routes: Routes = [
   {
     path: 'adoption',
     component: PageAdoptionComponent,
-    children:[
+    children: [
       {
-        path:'',
+        path: '',
         component: AdoptionMainComponent,
       },
       {
-        path:'detail/:petid',
+        path: 'detail/:petid',
         component: AdoptionDetailsComponent,
       },
       {
-        path:'list',
-        component:AdoptionListItmeComponent ,
+        path: 'list',
+        component: AdoptionListItmeComponent,
       },
 
     ]
@@ -33,7 +32,8 @@ const routes: Routes = [
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports:[RouterModule],
+  exports: [RouterModule],
   declarations: []
 })
-export class AdoptionRoutingModule { }
+export class AdoptionRoutingModule {
+}

@@ -32,6 +32,7 @@ import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-li
 import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import { TextComponent } from './index/text/text.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/ad
     AdoptionListComponent,
     AdoptionMainComponent,
     AdoptionDetailsComponent,
-    AdoptionListItmeComponent
+    AdoptionListItmeComponent,
+    TextComponent
   ],
   imports: [
     BrowserModule,
