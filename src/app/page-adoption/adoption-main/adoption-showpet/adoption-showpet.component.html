@@ -1,2 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class=" col-sm-12  col-lg-offset-1  col-md-10 col-lg-10 ">
+      <h1 class="searchPet">萌宠推荐</h1>
+      <div class="left">
+        <ul>
+          <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)"
+              *ngFor="let item of showpet;let i =index">
+            <ng-container *ngIf="i<6">
+              <a target="_blank">
+                <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
+                <h3 class="title"><span>{{item.title}}</span></h3>
+                <div class="mask word-2" [@divState]="showpet[i].state">
+                  <h3><span>{{item.title}}</span></h3>
+                  <p><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
+                </div>
+              </a>
+            </ng-container>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index">
+            <div class="aa" *ngIf="i>5">
+              <a target="_blank">
+                <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
+                <h3 class="title"><span>{{item.title}}</span></h3>
+                <div class="mask" [@divState]="showpet[i].state">
+                  <h3><span>{{item.title}}</span></h3>
+                  <p><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-showpet
+    </div>
+  </div>
+</div>
+
+
