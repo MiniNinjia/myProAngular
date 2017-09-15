@@ -25,19 +25,9 @@ const routes: Routes = [
     component: PageShopComponent
   },
   {
-    path: 'skill',
-    component: PageSkillComponent
-  },
-  {
     path: 'diary',
     component: PageDiaryComponent
   },
-  {
-    path: 'community',
-    component: PageCommunityComponent
-  },
-
-
   {
     path: '',
     redirectTo: '/index/',

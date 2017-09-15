@@ -1,3 +1,24 @@
-<p>
-  adoption-list works!
-</p>
+<div class="aa">
+
+    <div class="listwith">
+
+
+      <div class="main">
+        <div *ngFor="let item of data;let i=index" class="listpet ">
+          <div class="petlft">
+            <img class="img" src="{{item.img}}" alt="">
+          </div>
+          <div class="petrig">
+            <h4>{{item.frist}}</h4>
+            <p>别名：{{item.name}}</p>
+            <p>英文：{{item.Ename}}</p>
+            <p>类型：{{item.from}}</p>
+            <p>功能：{{item.special}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="right"><a routerLink="list">查看详情</a></div>
+</div>

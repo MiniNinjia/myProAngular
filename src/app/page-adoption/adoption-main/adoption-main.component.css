@@ -1,0 +1,21 @@
+.big{
+  background-color: rgba(241, 184, 193, 0.72);
+}
+.word{
+  width: 600px;
+  font-size:5em;
+  position: absolute ;
+  left: 35%;
+  top:35%;
+}
+.adoption_adv {
+  width: 100%;
+  min-height: 400px;
+
+}
+
+.adoption_adv img {
+  width: 100%;
+  min-height: 400px;
+  min-width: 1200px;
+}

@@ -2,155 +2,22 @@
   <div class="index-container-adoption-div">
     <a class="index-container-adoption-a">领养中心</a>
     <ul class="index-container-adoption-ul">
-      <li class="index-container-adoption-li">
-        <a href="">
+      <li class="index-container-adoption-li" *ngFor="let item of datas">
+        <a href="" ngStyle="">
           <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
+            <img src="../../../assets/images/{{item.dogimg}}" width="100%"/>
           </div>
           <div class="index-container-adoption-userInfo">
             <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
+              <img src="../../../assets/images/{{item.headimg}}" alt="">
             </div>
-            <span> username</span>
+            <span> {{item.nickname}}</span>
             <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
+              <img src="../../../assets/images/{{item.sex}}.png" height="25" width="25"/>
             </div>
           </div>
           <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/girl.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
-          </div>
-        </a>
-      </li>
-      <li class="index-container-adoption-li">
-        <a href="">
-          <div>
-            <img src="../../../assets/images/dog1.png" width="100%"/>
-          </div>
-          <div class="index-container-adoption-userInfo">
-            <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/dog.png" alt="">
-            </div>
-            <span> username</span>
-            <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/boy.png" height="25" width="25"/>
-            </div>
-          </div>
-          <div class="index-container-adoption-intro">
-            <span>健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责</span>
+            <span>{{item.text}}</span>
           </div>
         </a>
       </li>

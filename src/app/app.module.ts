@@ -8,8 +8,10 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 //导入动画模块
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //导入路由模块
+import {CommunityRoutingModule} from './page-community/community-routing/community-routing.module';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AdoptionRoutingModule}from './page-adoption/adoption-routing/adoption-routing.module'
+import {AdoptionRoutingModule} from './page-adoption/adoption-routing/adoption-routing.module'
+import {SkillRouteModule} from './page-skill/skill-route/skill-route.module'
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -32,6 +34,19 @@ import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-li
 import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import { TextComponent } from './index/text/text.component';
+import { CommunityListComponent } from './page-community/community-list/community-list.component';
+import { CommunityDetailsComponent } from './page-community/community-details/community-details.component';
+import { CommunityMainComponent } from './page-community/community-main/community-main.component';
+import { NumberPipePipe } from './adoption-pipe/number-pipe.pipe';
+import { SkillDetailsComponent } from './page-skill/skill-details/skill-details.component';
+import { PetIntroduceComponent } from './page-adoption/adoption-details/pet-introduce/pet-introduce.component';
+import { PetMessagenoteComponent } from './page-adoption/adoption-details/pet-messagenote/pet-messagenote.component';
+import { DiaryDetailsComponent } from './page-diary/diary-details/diary-details.component';
+import { DiaryHeaderComponent } from './page-diary/diary-header/diary-header.component';
+import { DiaryRoutingComponent } from './page-diary/diary-routing/diary-routing.component';
+// import { DiaryHeaderComponent } from './diary-header/diary-header.component';
+// import { DiaryDetailComponent } from './page-diary/diary-detail/diary-detail.component';
 import { SkillDatailsComponent } from './page-skill/skill-datails/skill-datails.component';
 import { SkillMainComponent } from './page-skill/skill-main/skill-main.component';
 
@@ -57,12 +72,27 @@ import { SkillMainComponent } from './page-skill/skill-main/skill-main.component
     AdoptionDetailsComponent,
     AdoptionListItmeComponent,
     SkillDatailsComponent,
-    SkillMainComponent
+    SkillMainComponent,
+    AdoptionListItmeComponent,
+    DiaryDetailsComponent,
+    DiaryHeaderComponent,
+    DiaryRoutingComponent,
+    // DiaryHeaderComponent,
+    // DiaryDetailComponent
+    AdoptionListItmeComponent,
+    TextComponent,
+    CommunityListComponent,
+    CommunityDetailsComponent,
+    CommunityMainComponent
   ],
   imports: [
     BrowserModule,
+    CommunityRoutingModule,
+    //子路由
     AdoptionRoutingModule,
+    SkillRouteModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
     HttpModule
   ],

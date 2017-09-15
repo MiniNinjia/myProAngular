@@ -9,12 +9,9 @@
 }
 
 .index-container-skill-ul {
-  width: 1200px;
+  width: 6000px;
   height: 700px;
-  margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 40px;
-  overflow: hidden;
+  position: absolute;
 }
 
 .index-container-skill-ul li {
@@ -75,7 +72,15 @@
   margin-top: 25px;
   outline: none;
 }
-
+.pppp{
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
 #index-container-skill-btn:hover {
   border-color: #ffc907;
   box-shadow: 0 0 20px #ffc907;

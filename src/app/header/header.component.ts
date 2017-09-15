@@ -17,7 +17,9 @@ import {UserInfoService} from '../services/userInfo.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [trigger('searchBox', [ //搜索框显示隐藏动画
+
+  animations: [
+    trigger('searchBox', [ //搜索框显示隐藏动画
     state('show', style({
       height: '100px'
     })),
@@ -26,7 +28,8 @@ import {UserInfoService} from '../services/userInfo.service';
     })),
     transition('* => show', animate('500ms ease-in')),
     transition('* => hide', animate('500ms ease-out'))
-  ]), trigger('searchBtn', [ //搜索按钮显示隐藏动画
+  ]),
+    trigger('searchBtn', [ //搜索按钮显示隐藏动画
     state('show', style({
       opacity: '1'
     })),
@@ -35,7 +38,8 @@ import {UserInfoService} from '../services/userInfo.service';
     })),
     transition('* => show', animate('500ms ease-in')),
     transition('* => hide', animate('500ms ease-out'))
-  ]), trigger('userInfo', [//用户信息下拉框显示隐藏动画
+  ]),
+    trigger('userInfo', [//用户信息下拉框显示隐藏动画
     state('show', style({
       height: '130px'
     })),
@@ -82,7 +86,6 @@ export class HeaderComponent implements OnInit {
     }
     console.log('1111');
   }
-
   ngOnchange() {
     if (this._cookieService.get('user')) {
       this.uis.checkInfo('qqq', function (data) {
