@@ -74,7 +74,7 @@
   height: 60px;
   line-height: 60px;
   border-radius: 100%;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.29);
   text-align: center;
 }
 .index_adv_btn_left{

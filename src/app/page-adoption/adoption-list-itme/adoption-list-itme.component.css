@@ -1,7 +1,7 @@
+
 .max{
   width: 1200px;
   height: 900px;
-  /*background-color: #FCE1E5;*/
   margin: 0 auto;
 }
 .area{
@@ -26,22 +26,20 @@
 .head{
   width: 1200px;
   height: 100px;
-  background-color: #596cfc;
 }
 .list{
   width:265px ;
   /*height: 340px;*/
-  background-color: #999999;
   margin-left: 28px;
   border-radius: 2px;
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 28px;
+  border: solid 1px #999999;
 }
 .user{
   width: 100%;
   height:60px;
-  background-color: #65cd4d;
 
 }
 .uimg{
@@ -55,12 +53,10 @@
   display: inline-block;
   width:150px ;
   height:40px ;
-  background-color: #ed6621;
 }
 .petimg{
 width: 100%;
 
-  background-color: #0000cc;
 }
 .introduce {
 }

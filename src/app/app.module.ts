@@ -47,12 +47,15 @@ import { DiaryHeaderComponent } from './page-diary/diary-header/diary-header.com
 import { DiaryRoutingComponent } from './page-diary/diary-routing/diary-routing.component';
 // import { DiaryHeaderComponent } from './diary-header/diary-header.component';
 // import { DiaryDetailComponent } from './page-diary/diary-detail/diary-detail.component';
-import { SkillDatailsComponent } from './page-skill/skill-datails/skill-datails.component';
 import { SkillMainComponent } from './page-skill/skill-main/skill-main.component';
 
 
 @NgModule({
   declarations: [
+    NumberPipePipe,
+    SkillDetailsComponent,
+    PetIntroduceComponent,
+    PetMessagenoteComponent,
     AppComponent,
     IndexComponent,
     HeaderComponent,
@@ -71,12 +74,12 @@ import { SkillMainComponent } from './page-skill/skill-main/skill-main.component
     AdoptionMainComponent,
     AdoptionDetailsComponent,
     AdoptionListItmeComponent,
-    SkillDatailsComponent,
     SkillMainComponent,
     AdoptionListItmeComponent,
     DiaryDetailsComponent,
     DiaryHeaderComponent,
     DiaryRoutingComponent,
+
     // DiaryHeaderComponent,
     // DiaryDetailComponent
     AdoptionListItmeComponent,

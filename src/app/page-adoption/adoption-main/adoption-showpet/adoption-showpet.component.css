@@ -13,15 +13,17 @@
   margin:0 auto;
   width:1014px;
 }
-.left{
-  width:595px;
+.left {
+  width: 595px;
+  float: left;
+}
 
-
-.right{
+.right {
   /*background-color: #00ee00;*/
-  width:420px;
-margin-left: -2px;
-
+  width: 420px;
+  margin-left: -2px;
+  float: right;
+}
 
 
 .left li {
