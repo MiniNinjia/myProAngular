@@ -9,7 +9,7 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //导入路由模块
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AdoptionRoutingModule}from './page-adoption/adoption-routing/adoption-routing.module'
+import {AdoptionRoutingModule} from './page-adoption/adoption-routing/adoption-routing.module'
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -32,6 +32,11 @@ import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-li
 import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import { DiaryDetailsComponent } from './page-diary/diary-details/diary-details.component';
+import { DiaryHeaderComponent } from './page-diary/diary-header/diary-header.component';
+import { DiaryRoutingComponent } from './page-diary/diary-routing/diary-routing.component';
+// import { DiaryHeaderComponent } from './diary-header/diary-header.component';
+// import { DiaryDetailComponent } from './page-diary/diary-detail/diary-detail.component';
 
 
 @NgModule({
@@ -53,7 +58,12 @@ import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/ad
     AdoptionListComponent,
     AdoptionMainComponent,
     AdoptionDetailsComponent,
-    AdoptionListItmeComponent
+    AdoptionListItmeComponent,
+    DiaryDetailsComponent,
+    DiaryHeaderComponent,
+    DiaryRoutingComponent,
+    // DiaryHeaderComponent,
+    // DiaryDetailComponent
   ],
   imports: [
     BrowserModule,
