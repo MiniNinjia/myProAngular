@@ -24,16 +24,30 @@
 }
 
 .index_adv_list li {
-  background-color: #2cff47;
-  width: 100px;
-  height: 3px;
-  margin: 0 3px;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
   float: left;
   text-align: center;
+  border-radius: 100%;
+  border: 2px solid white;
+  box-sizing: border-box;
+}
+.index_adv_list li div{
+
+}
+.div_active{
+  background-color: #ffc907;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 100%;
+  box-sizing: border-box;
 }
 
+
 .index_adv_list {
-  height: 3px;
+  height: 10px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
@@ -42,12 +56,6 @@
 
 }
 
-.index_adv_list li a {
-  display: block;
-  height: 3px;
-  background-color: red;
-  width: 50%;
-}
 
 .active {
   display: block !important;

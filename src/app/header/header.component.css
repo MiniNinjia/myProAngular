@@ -107,6 +107,7 @@ a:hover {
 #index_dropdown_menu {
   background-color: #ffffff;
   position: absolute;
+  z-index: 300;
   width: 100px;
   border-left: solid 5px #ffc907;
   border-right: solid 5px #ffc907;

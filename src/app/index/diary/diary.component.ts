@@ -86,12 +86,14 @@ export class DiaryComponent implements OnInit {
   ]
 
   change(i: any) {
+    clearInterval(this.time);
     this.state = i;
+    this.go();
   }
 
   go() {
     this.time = setInterval(() => {
-      this.change(this.state === 5 ? 1 : this.state + 1);
+      this.state = (this.state === 5 ? 1 : this.state + 1);
     }, 3000);
   }
 

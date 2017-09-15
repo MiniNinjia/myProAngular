@@ -9,7 +9,8 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //导入路由模块
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AdoptionRoutingModule}from './page-adoption/adoption-routing/adoption-routing.module'
+import {AdoptionRoutingModule} from './page-adoption/adoption-routing/adoption-routing.module';
+import {CommunityRoutingModule} from './page-community/community-routing/community-routing.module';
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -33,6 +34,9 @@ import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-ma
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
 import { TextComponent } from './index/text/text.component';
+import { CommunityListComponent } from './page-community/community-list/community-list.component';
+import { CommunityDetailsComponent } from './page-community/community-details/community-details.component';
+import { CommunityMainComponent } from './page-community/community-main/community-main.component';
 
 
 @NgModule({
@@ -55,10 +59,14 @@ import { TextComponent } from './index/text/text.component';
     AdoptionMainComponent,
     AdoptionDetailsComponent,
     AdoptionListItmeComponent,
-    TextComponent
+    TextComponent,
+    CommunityListComponent,
+    CommunityDetailsComponent,
+    CommunityMainComponent
   ],
   imports: [
     BrowserModule,
+    CommunityRoutingModule,
     AdoptionRoutingModule,
     AppRoutingModule,
     BrowserAnimationsModule,

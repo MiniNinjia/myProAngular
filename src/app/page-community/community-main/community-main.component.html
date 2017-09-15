@@ -1,0 +1,62 @@
+<div class="main">
+  <div class="left">
+    <div class="ordermune">
+      <ul class="ordermune_ul">
+        <li class="ordermune_li" (click)="changeSort('default')" [class.sort]="sort=='default'"> 默认排序</li>
+        <li class="ordermune_li" (click)="changeSort('new')" [class.sort]="sort=='new'">最新</li>
+        <li class="ordermune_li" (click)="changeSort('hot')" [class.sort]="sort=='hot'">最热</li>
+      </ul>
+    </div>
+    <ul>
+      <li class="left_main" *ngFor="let article of list_data.article ;let i=index">
+        <div class="info">
+          <img class="info_img" src="../../../assets/images/{{article.userImg}}" alt="">
+          <span class="username">{{article.userName}}</span>
+          <span class="time">发表于{{article.time}}</span>
+          <div class="report">
+            举报
+          </div>
+        </div>
+        <div  class="text">
+          <h3 routerLink="detail/{{article.id}}">{{article.title}}</h3>
+          <span routerLink="detail/{{article.id}}" class="main_text">{{article.text}}</span>
+        </div>
+        <div class="main_count">
+          <a>
+            <i class="fa fa-comment" aria-hidden="true"></i>
+            <span>{{article.communtCount}}</span><span>评论</span>
+          </a>
+          <a>
+            <i class="fa fa-star" aria-hidden="true" *ngIf="article.isCollect"></i>
+            <i class="fa fa-star-o" aria-hidden="true" *ngIf="!article.isCollect"></i>
+            <span *ngIf="!article.isCollect">收藏</span>
+            <span *ngIf="article.isCollect">已收藏</span>
+          </a>
+          <a>
+            <span> 浏览次数( {{article.viewCount}} )</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+    <div class="page_out">
+      <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
+      <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
+      <a class="page_tag"
+         *ngFor="let page of pageList;"
+         (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
+      <a class="next" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
+      <a class="end" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(list_data.totalPage)">尾页</a>
+    </div>
+  </div>
+  <div class="right">
+    <ul class="right_1">
+      <li class="right_item"><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</li>
+      <li class="right_item"><i class="fa fa-user-circle" aria-hidden="true"></i> 与我相关</li>
+    </ul>
+    <ul class="adv">
+      <li class="adv_li"><a><img src="../../../assets/images/adv.png"/></a></li>
+      <li class="adv_li"><a><img src="../../../assets/images/adv.png"/></a></li>
+      <li class="adv_li"><a><img src="../../../assets/images/adv.png"/></a></li>
+    </ul>
+  </div>
+</div>

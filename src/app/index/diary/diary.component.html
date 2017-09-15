@@ -2,7 +2,7 @@
   <div class="index-container-diary-div">
     <a class="index-container-adoption-a">领养日记</a>
     <div class="pppp">
-      <ul class="index-container-diary-ul" [@change]="state">
+      <ul class="index-container-diary-ul" [@change]="state" >
         <li *ngFor="let items of datas">
           <div *ngFor="let item of items.items">{{item.id}}</div>
         </li>

@@ -33,12 +33,6 @@ const routes: Routes = [
     component: PageDiaryComponent
   },
   {
-    path: 'community',
-    component: PageCommunityComponent
-  },
-
-
-  {
     path: '',
     redirectTo: '/index/',
     pathMatch: 'full'

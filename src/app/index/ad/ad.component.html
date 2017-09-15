@@ -10,7 +10,9 @@
     </ul>
 
     <ul class="index_adv_list">
-      <li *ngFor="let item of items"><a></a></li>
+      <li *ngFor="let item of items;let i=index;">
+        <div class="div_active" [class.div_active]="i==currentPic"></div>
+      </li>
     </ul>
     <ul class="index_adv_btn">
       <li class="index_adv_btn_left" (click)="toLeft()"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
