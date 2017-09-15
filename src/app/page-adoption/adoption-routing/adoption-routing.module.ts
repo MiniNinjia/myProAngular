@@ -6,9 +6,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {ErrorComponent} from '../../error/error.component';
 import {AdoptionDetailsComponent} from '../adoption-details/adoption-details.component';
 import {AdoptionMainComponent} from '../adoption-main/adoption-main.component';
-import {AdoptionListItmeComponent}from '../adoption-list-itme/adoption-list-itme.component'
-import {from} from "rxjs/observable/from";
-import {PageAdoptionComponent}from'../page-adoption.component'
+import {AdoptionListItmeComponent} from '../adoption-list-itme/adoption-list-itme.component';
+import {PageAdoptionComponent} from '../page-adoption.component';
 
 const routes: Routes = [
   {

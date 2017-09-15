@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdoptionListItmeComponent } from './adoption-list-itme.component';
+import { CommunityMainComponent } from './community-main.component';
 
-describe('AdoptionListItmeComponent', () => {
-  let component: AdoptionListItmeComponent;
-  let fixture: ComponentFixture<AdoptionListItmeComponent>;
+describe('CommunityMainComponent', () => {
+  let component: CommunityMainComponent;
+  let fixture: ComponentFixture<CommunityMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdoptionListItmeComponent ]
+      declarations: [ CommunityMainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdoptionListItmeComponent);
+    fixture = TestBed.createComponent(CommunityMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

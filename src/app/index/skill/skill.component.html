@@ -1,65 +1,20 @@
 <div class="row">
   <div class="index-container-skill-div">
     <a class="index-container-adoption-a">领养技巧</a>
-    <ul class="index-container-skill-ul">
-      <li>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-      </li>
-      <li>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-        <div>2</div>
-      </li>
-      <li>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-        <div>3</div>
-      </li>
-      <li>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-        <div>4</div>
-      </li>
-      <li>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-        <div>5</div>
-      </li>
-    </ul>
-    <ul class="index-container-skill-ul-list">
-      <li value="0"><a><i></i></a></li>
-      <li value="1"><a><i></i></a></li>
-      <li value="2"><a><i></i></a></li>
-      <li value="3"><a><i></i></a></li>
-      <li value="4"><a><i></i></a></li>
-    </ul>
+    <div class="pppp">
+      <ul class="index-container-skill-ul">
+        <li *ngFor="let items of datas">
+          <div *ngFor="let item of items.items">{{item.id}}</div>
+        </li>
+      </ul>
+    </div>
+    <!--<ul class="index-container-skill-ul-list">-->
+      <!--<li value="0" (click)="change(1)"><a><i></i></a></li>-->
+      <!--<li value="1" (click)="change(2)"><a><i></i></a></li>-->
+      <!--<li value="2" (click)="change(3)"><a><i></i></a></li>-->
+      <!--<li value="3" (click)="change(4)"><a><i></i></a></li>-->
+      <!--<li value="4" (click)="change(5)"><a><i></i></a></li>-->
+    <!--</ul>-->
     <button id="index-container-skill-btn">查看更多技巧</button>
   </div>
 </div><!--领养技巧-->

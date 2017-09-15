@@ -1,0 +1,29 @@
+
+.word{
+   width: 600px;
+   font-size:5em;
+   position: absolute ;
+   left: 35%;
+   top:30%;
+ }
+.word2{
+  width: 300px;
+  font-size:2.5em;
+  position: absolute ;
+  left: 43%;
+  top:48%;
+}
+.adoption_adv {
+  width: 100%;
+  min-height: 400px;
+
+}
+
+.adoption_adv img {
+  width: 100%;
+  min-height: 400px;
+  min-width: 1200px;
+}
+a{
+  text-decoration: none;
+}
