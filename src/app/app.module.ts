@@ -32,6 +32,8 @@ import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-li
 import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import { SkillDatailsComponent } from './page-skill/skill-datails/skill-datails.component';
+import { SkillMainComponent } from './page-skill/skill-main/skill-main.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/ad
     AdoptionListComponent,
     AdoptionMainComponent,
     AdoptionDetailsComponent,
-    AdoptionListItmeComponent
+    AdoptionListItmeComponent,
+    SkillDatailsComponent,
+    SkillMainComponent
   ],
   imports: [
     BrowserModule,

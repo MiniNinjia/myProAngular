@@ -1,0 +1,42 @@
+<div class="skill-adv">
+  <a href=""><img class="img1" src="../../../assets/images/skill-adv.png"></a>
+  <img class="img2" src="../../../assets/images/skill-font.png" height="118" width="294"/>
+</div>
+
+<div class="skill-middle">
+  <div class="skill-content">
+    <div class="font-1">
+      专家科普
+    </div>
+    <div class="skill-left">
+      <div *ngFor="let item of skill;let i=index" class="list-1">
+        <div >
+          <a href="">
+            <img class="gardent" src="../../../assets/images/{{item.imag}}" /></a>
+          <div class="t-1">
+            <ul>
+              <li>
+                Sylvia闯世界
+              </li>
+              <li class="t-2">
+                发表于：2017-09-09 10：30
+              </li>
+            </ul>
+          </div>
+          <div class="list-main">
+            <p ><strong class="t-title">{{item.title}}</strong></p>
+            <p class="t-main">{{item.main}}</p>
+            <p class="t-ground">{{item.ground}}</p>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="skill-right"></div>
+
+
+  </div>
+</div>
+
