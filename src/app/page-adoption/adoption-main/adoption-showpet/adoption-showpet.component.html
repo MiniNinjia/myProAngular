@@ -1,7 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <div class=" col-sm-12  col-lg-offset-1  col-md-10 col-lg-10 ">
+    <div class="withd">
       <h1 class="searchPet">萌宠推荐</h1>
+      <div class="with ">
+
+
+<!--萌宠推荐版块左边----------------------------------------------->
       <div class="left">
         <ul>
           <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)"
@@ -19,6 +23,8 @@
           </li>
         </ul>
       </div>
+
+        <!--萌宠推荐版块右边------------------------------------------------------->
       <div class="right">
         <ul>
           <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index">
@@ -36,6 +42,9 @@
         </ul>
       </div>
 
+
+
+    </div>
     </div>
   </div>
 </div>

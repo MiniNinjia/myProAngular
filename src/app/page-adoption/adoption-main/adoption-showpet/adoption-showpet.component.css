@@ -2,14 +2,23 @@
   margin: 60px  0px 40px 5%;
 
 }
+.withd{
+  width: 1200px;
+  margin: auto;
+  /*background-color: #990000;*/
+
+}
+.with{
+  /*background-color: #00ee00;*/
+  margin:0 auto;
+  width:1014px;
+}
 .left{
-  margin-left: 5%;
   width:595px;
   float: left;
 }
 .right{
   /*background-color: #00ee00;*/
-  padding: 0px;
   width:420px;
 margin-left: -2px;
   float: left;

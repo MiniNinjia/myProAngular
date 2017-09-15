@@ -9,8 +9,6 @@ import {
   transition,
   keyframes
 } from '@angular/animations';
-
-
 @Component({
   selector: 'app-adoption-showpet',
   templateUrl: './adoption-showpet.component.html',
@@ -19,7 +17,6 @@ import {
     trigger('divState', [ //div块出现
       state('show', style({
   transform:'translateY(5%)'
-
       })),
       state('hide', style({
         height: '0px',

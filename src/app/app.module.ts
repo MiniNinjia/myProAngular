@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 //导入路由模块
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AdoptionRoutingModule}from './page-adoption/adoption-routing/adoption-routing.module'
+import {SkillRouteModule} from './page-skill/skill-route/skill-route.module'
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -32,6 +33,11 @@ import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-li
 import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
 import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
 import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import { NumberPipePipe } from './adoption-pipe/number-pipe.pipe';
+import { SkillMainComponent } from './page-skill/skill-main/skill-main.component';
+import { SkillDetailsComponent } from './page-skill/skill-details/skill-details.component';
+import { PetIntroduceComponent } from './page-adoption/adoption-details/pet-introduce/pet-introduce.component';
+import { PetMessagenoteComponent } from './page-adoption/adoption-details/pet-messagenote/pet-messagenote.component';
 
 
 @NgModule({
@@ -53,12 +59,20 @@ import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/ad
     AdoptionListComponent,
     AdoptionMainComponent,
     AdoptionDetailsComponent,
-    AdoptionListItmeComponent
-  ],
+    AdoptionListItmeComponent,
+    NumberPipePipe,
+    SkillMainComponent,
+    SkillDetailsComponent,
+    PetIntroduceComponent,
+    PetMessagenoteComponent,
+      ],
   imports: [
     BrowserModule,
+    //子路由
     AdoptionRoutingModule,
+    SkillRouteModule,
     AppRoutingModule,
+
     BrowserAnimationsModule,
     HttpModule
   ],

@@ -1,3 +1,120 @@
-<p>
-  adoption-list-itme works!
-</p>
+<!--地区按钮加模态框-->
+<div class="max">
+
+
+  <div class="head">
+    <h3 class="area">全国</h3>
+
+    <div class="listright">
+      <nav>
+        <p (click)="showother()">其他</p>
+        <p (click)="showfish()">鱼类</p>
+        <p (click)="showbird()">鸟类</p>
+        <p (click)="showcat()">喵星人</p>
+        <p (click)="showdog()">汪星人</p>
+      </nav>
+    </div>
+  </div>
+  <!--<div class="blank"></div>-->
+  <div class="list-div">
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of data;let i=index">
+          <div class="list" *ngIf="i%4==1">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{item.uimg}}" alt="">
+              </div>
+              <div class="uname">
+                <p>{{item.uname}}11111,{{item.height}}</p>
+              </div>
+            </div>
+            <div class="petimg">
+              <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+            </div>
+            <div class="introduce">
+              <p>{{item.introduce}}</p>
+              <p>{{item.date}}</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of data;let i=index">
+          <div class="list" *ngIf="i%4==2">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{item.uimg}}" alt="">
+              </div>
+              <div class="uname">
+                <p>{{item.uname}}22222,{{item.height}}</p>
+              </div>
+            </div>
+            <div class="petimg">
+              <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+            </div>
+            <div class="introduce">
+              <p>{{item.introduce}}</p>
+              <p>{{item.date}}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of data;let i=index">
+          <div class="list" *ngIf="i%4==3">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{item.uimg}}" alt="">
+              </div>
+              <div class="uname">
+                <p>{{item.uname}}33333,{{item.height}}</p>
+              </div>
+            </div>
+            <div class="petimg">
+              <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+            </div>
+            <div class="introduce">
+              <p>{{item.introduce}}</p>
+              <p>{{item.date}}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="flo">
+      <li>
+        <div *ngFor="let item of data;let i=index">
+          <div class="list" *ngIf="i%4==0">
+            <div class="user">
+              <div class="uimg">
+                <img class="uimg" src="{{item.uimg}}" alt="">
+              </div>
+              <div class="uname">
+                <p>{{item.uname}}44444,{{item.height}}</p>
+              </div>
+            </div>
+            <div class="petimg">
+              <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+            </div>
+            <div class="introduce">
+              <p>{{item.introduce}}</p>
+              <p><span>{{item.date}}</span>
+                <span><a href="">{{item.commentcount}}条评论</a></span>
+                <span><a href="">收藏</a></span>
+                <span><a href="">浏览次数</a></span></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
