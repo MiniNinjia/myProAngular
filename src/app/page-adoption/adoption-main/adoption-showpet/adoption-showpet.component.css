@@ -15,43 +15,50 @@
 }
 .left{
   width:595px;
-  float: left;
-}
+
+
 .right{
   /*background-color: #00ee00;*/
   width:420px;
 margin-left: -2px;
-  float: left;
-}
-.left li{
+
+
+
+.left li {
   margin: 3px;
 }
-.aa{
+
+.aa {
   margin: 3px;
 
 }
-.left li,.right li{
+
+.left li, .right li {
   position: relative;
   float: left;
   /*background-color: rgba(163, 47, 255, 0.81);*/
 }
-.title{
+
+.title {
   position: absolute;
   bottom: 5px;
   margin-left: 5px;
   color: white;
 }
-.item a:hover .title{
+
+.item a:hover .title {
   display: none;
 }
-.item a img:hover{
-  transform:scale(1.2);
+
+.item a img:hover {
+  transform: scale(1.2);
   transition: transform 2s;
 }
 
-.item{
+.item {
   overflow: hidden;
 }
+
 .mask {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 1em;

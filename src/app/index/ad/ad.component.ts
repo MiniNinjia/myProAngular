@@ -51,7 +51,7 @@ import {
     //     style({width: '*', transform: 'translateX(-99%)', offset: 0.99}),
     //     style({width: '*', transform: 'translateX(0%)', offset: 1})
     //   ]))]),
-    transition('* => *', animate(2500)),
+    transition('* => *', animate(1000)),
   ])
   ]
 })
@@ -60,7 +60,7 @@ export class AdComponent implements OnInit {
     {
       'id': 0,
       'img': 'adv.png',
-      'url': 'www.baidu.com', 
+      'url': 'www.baidu.com',
       'state': 'in'
     },
     {
@@ -79,11 +79,23 @@ export class AdComponent implements OnInit {
   currentPic = 0;
   now = 0;
   next: any;
+  time: any;
 
   constructor() {
+    this.go();
+  }
+
+  go() {
+    this.time = setInterval(() => {
+      this.toRight();
+      console.log(this.now);
+    }, 3000);
   }
 
   nextItem() {
+    if (this.time) {
+      clearInterval(this.time);
+    }
     if (this.now < this.next) {
       this.items[this.now].state = 'right';
       this.items[this.next].state = 'in';
@@ -91,6 +103,7 @@ export class AdComponent implements OnInit {
       this.items[this.now].state = 'left';
       this.items[this.next].state = 'in';
     }
+    this.go();
   }
 
   toLeft() {

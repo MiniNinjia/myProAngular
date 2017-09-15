@@ -9,14 +9,19 @@
 }
 
 .index-container-diary-ul {
+  width: 6000px;
+  height: 390px;
+  position: absolute;
+}
+.pppp{
   width: 1200px;
   height: 390px;
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 40px;
   overflow: hidden;
+  position: relative;
 }
-
 .index-container-diary-ul li {
   width: 1200px;
   height: 390px;
@@ -60,7 +65,7 @@
 }
 
 .index-container-diary-ul-list li a i {
-  width: 0px;
+  width: 40px;
   height: 10px;
   display: block;
   background-color: white;
