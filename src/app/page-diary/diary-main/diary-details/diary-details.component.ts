@@ -18,9 +18,10 @@ export class DiaryDetailsComponent implements OnInit {
       'place':'印度尼西亚',
       'count':365,
       'data':6,      'title':'精品纯种原生态藏獒专业狗场直销 兰州地区可上门购买',
-      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业',
+      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业...',
       'headImag':'头像.jpg',
       'rightimag':'2.png',
+      'isCollect':true,
 },
     {
       'id':2,
@@ -28,9 +29,10 @@ export class DiaryDetailsComponent implements OnInit {
       'place':'印度尼西亚',
       'count':365,
       'data':6,      'title':'精品纯种原生态藏獒专业狗场直销 兰州地区可上门购买',
-      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业',
+      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业...',
       'headImag':'头像2.jpg',
       'rightimag':'pic.2.jpg',
+      'isCollect':true,
     },
     {
       'id':3,
@@ -38,9 +40,10 @@ export class DiaryDetailsComponent implements OnInit {
       'place':'印度尼西亚',
       'count':365,
       'data':6,      'title':'精品纯种原生态藏獒专业狗场直销 兰州地区可上门购买',
-      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业',
+      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业...',
       'headImag':'头像3.jpg',
       'rightimag':'pic.3.jpg',
+      'isCollect':true,
     },
     {
       'id':4,
@@ -48,9 +51,10 @@ export class DiaryDetailsComponent implements OnInit {
       'place':'印度尼西亚',
       'count':365,
       'data':6,      'title':'精品纯种原生态藏獒专业狗场直销 兰州地区可上门购买',
-      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业',
+      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业...',
       'headImag':'头像4.jpg',
       'rightimag':'2.png',
+      'isCollect':true,
     },
     {
       'id':5,
@@ -58,10 +62,14 @@ export class DiaryDetailsComponent implements OnInit {
       'place':'印度尼西亚',
       'count':365,
       'data':6,      'title':'精品纯种原生态藏獒专业狗场直销 兰州地区可上门购买',
-      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业',
+      'inturduce':'虽然我们是繁育犬只和销售犬只的从业者，却也是资深的爱狗人士。对爱狗的我们来说，经营这项事业，绝对需要高度的职业...',
       'headImag':'头像5.jpg',
       'rightimag':'2.png',
+      'isCollect':true,
     },
   ];
+  exchange(i:any){
+    this.diary[i].isCollect = !this.diary[i].isCollect;
+  }
 
 }

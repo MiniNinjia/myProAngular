@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DiaryRoutingComponent } from './diary-routing.component';
+import { DiaryMainComponent } from './diary-main.component';
 
-describe('DiaryRoutingComponent', () => {
-  let component: DiaryRoutingComponent;
-  let fixture: ComponentFixture<DiaryRoutingComponent>;
+describe('DiaryMainComponent', () => {
+  let component: DiaryMainComponent;
+  let fixture: ComponentFixture<DiaryMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DiaryRoutingComponent ]
+      declarations: [ DiaryMainComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DiaryRoutingComponent);
+    fixture = TestBed.createComponent(DiaryMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
