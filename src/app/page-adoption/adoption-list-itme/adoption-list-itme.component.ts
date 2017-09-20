@@ -45,7 +45,8 @@ export class AdoptionListItmeComponent implements OnInit {
       'form':'柯基',
       'special':'腿短',
       'commentcount':'1232',
-      'browse':300
+      'browse':300,
+      'isCollect':true
 
     },
     {
@@ -61,7 +62,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -76,7 +80,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
     {
@@ -92,7 +99,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -107,7 +117,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -122,7 +135,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -137,7 +153,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -152,7 +171,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -167,7 +189,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
     {
@@ -183,7 +208,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -198,7 +226,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -213,7 +244,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
     {
@@ -229,7 +263,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -244,7 +281,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -259,7 +299,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
     {
@@ -275,7 +318,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -290,7 +336,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -305,7 +354,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -320,7 +372,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -335,7 +390,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -350,7 +408,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
     {
@@ -366,7 +427,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -381,7 +445,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
     {
       'id':1,
@@ -396,7 +463,10 @@ export class AdoptionListItmeComponent implements OnInit {
       'name':'shabi',
       'Ename':'sha',
       'form':'柯基',
-      'special':'腿短'
+      'special':'腿短',
+      'commentcount':'1232',
+      'browse':300,
+      'isCollect':true
     },
 
 
@@ -674,5 +744,8 @@ export class AdoptionListItmeComponent implements OnInit {
       'special':'腿短'
     }
   ];
+  exchange(i:any){
+    this.dog[i].isCollect=!this.dog[i].isCollect;
+  }
 
 }

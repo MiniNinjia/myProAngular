@@ -1,3 +1,19 @@
-<p>
-  pet-messagenote works!
-</p>
+<div class="message">
+
+<div class="user" *ngFor="let item of message;let i=index">
+
+  <div class="left">
+    <img class="uing" src="{{item.uimg}}" alt="">
+    <p>{{item.uname}}</p>
+  </div>
+  <div class="right">
+    <p>{{item.mes}}</p>
+    <p><span>时间{{item.data}}</span> <span class="rright" >
+            <a (click)="exchange(i)">
+              <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
+              <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
+              <span >{{item.number}}次赞 </span>
+            </a></span></p>
+  </div>
+</div>
+</div>

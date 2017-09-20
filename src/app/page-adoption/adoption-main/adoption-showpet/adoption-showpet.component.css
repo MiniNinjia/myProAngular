@@ -5,24 +5,28 @@
 .withd{
   width: 1200px;
   margin: auto;
+  /*height: 900px;*/
   /*background-color: #990000;*/
 
 }
 .with{
-  /*background-color: #00ee00;*/
+  /*background-color: #ee6224;*/
   margin:0 auto;
-  width:1014px;
+  width:1020px;
+
 }
 .left {
   width: 595px;
   float: left;
+margin-left: 15px;
+  /*background-color: #0d3349;*/
 }
 
 .right {
   /*background-color: #00ee00;*/
-  width: 420px;
-  margin-left: -2px;
-  float: right;
+  width: 400px;
+  float: left;
+
 }
 
 
@@ -46,6 +50,13 @@
   bottom: 5px;
   margin-left: 5px;
   color: white;
+  font-size:20px;
+}
+.stil{
+  font-size: 20px;
+}
+.psize{
+  font-size: 14px;
 }
 
 .item a:hover .title {

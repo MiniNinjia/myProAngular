@@ -52,8 +52,7 @@ import {
     //     style({width: '*', transform: 'translateX(0%)', offset: 1})
     //   ]))]),
     transition('* => *', animate(1000)),
-  ])
-  ]
+  ])]
 })
 export class AdComponent implements OnInit {
   items = [
