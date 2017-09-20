@@ -3,20 +3,19 @@
     <div class="withd">
       <h1 class="searchPet">萌宠推荐</h1>
       <div class="with ">
-
-
 <!--萌宠推荐版块左边----------------------------------------------->
       <div class="left">
         <ul>
           <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)"
               *ngFor="let item of showpet;let i =index">
+
             <ng-container *ngIf="i<6">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
-                <h3 class="title"><span>{{item.title}}</span></h3>
+                <p class="title"><span>{{item.title}}11111</span></p>
                 <div class="mask word-2" [@divState]="showpet[i].state">
-                  <h3><span>{{item.title}}</span></h3>
-                  <p><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
+                  <p class="stil"><span>{{item.title}}22222</span></p>
+                  <p class="psize"><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
                 </div>
               </a>
             </ng-container>
@@ -31,18 +30,16 @@
             <div class="aa" *ngIf="i>5">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
-                <h3 class="title"><span>{{item.title}}</span></h3>
+                <p class="title"><span>{{item.title}}</span></p>
                 <div class="mask" [@divState]="showpet[i].state">
-                  <h3><span>{{item.title}}</span></h3>
-                  <p><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
+                  <p class="stil"><span>{{item.title}}</span></p>
+                  <p class="psize"><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
                 </div>
               </a>
             </div>
           </li>
         </ul>
       </div>
-
-
 
     </div>
     </div>

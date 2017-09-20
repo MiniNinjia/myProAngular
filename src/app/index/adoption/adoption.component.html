@@ -3,21 +3,21 @@
     <a class="index-container-adoption-a">领养中心</a>
     <ul class="index-container-adoption-ul">
       <li class="index-container-adoption-li" *ngFor="let item of datas">
-        <a href="" ngStyle="">
+        <a>
           <div>
-            <img src="../../../assets/images/{{item.dogimg}}" width="100%"/>
+            <img src="{{_uploadUrl}}{{item.img}}" width="100%"/>
           </div>
           <div class="index-container-adoption-userInfo">
             <div class="index-container-adoption-headImg">
-              <img src="../../../assets/images/{{item.headimg}}" alt="">
+              <img src="{{_uploadUrl}}{{item.headimg}}" alt="">
             </div>
             <span> {{item.nickname}}</span>
             <div class="index-container-adoption-userInfo-sex">
-              <img src="../../../assets/images/{{item.sex}}.png" height="25" width="25"/>
+              <img src="../../../assets/images/sex/{{item.sex}}.png" height="25" width="25"/>
             </div>
           </div>
           <div class="index-container-adoption-intro">
-            <span>{{item.text}}</span>
+            <span>{{item.title}}</span>
           </div>
         </a>
       </li>

@@ -1,4 +1,5 @@
 <!--地区按钮加模态框-->
+
 <div class="max">
   <div class="head">
     <h3 class="area">全国</h3>
@@ -15,6 +16,9 @@
   </div>
   <!--<div class="blank"></div>-->
   <div class="list-div">
+
+
+
     <ul class="flo">
       <li>
         <div *ngFor="let item of data;let i=index">
@@ -32,13 +36,23 @@
             </div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>{{item.date}}</p>
+              <p>
+                <span>{{item.commentcount}}条评论</span>
+                <span (click)="exchange(i)">
+                  <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
+                  <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
+                  <span *ngIf="!item.isCollect">收藏</span>
+                  <span *ngIf="item.isCollect">已收藏</span>
+                </span>
+                <span>{{item.browse}}浏览次数</span></p>
+              <p class="dat">{{item.date}}</p>
               <p></p>
             </div>
           </div>
         </div>
       </li>
     </ul>
+
     <ul class="flo">
       <li>
         <div *ngFor="let item of data;let i=index">
@@ -56,7 +70,17 @@
             </div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>{{item.date}}</p>
+              <p>
+                <span><a href="">{{item.commentcount}}条评论</a></span>
+                <span><a (click)="exchange(i)">
+                  <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
+                  <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
+                  <span *ngIf="!item.isCollect">收藏</span>
+                  <span *ngIf="item.isCollect">已收藏</span>
+                </a></span>
+                <span><a href="">{{item.browse}}浏览次数</a></span></p>
+              <span class="dat">{{item.date}}</span>
+              <p></p>
             </div>
           </div>
         </div>
@@ -80,12 +104,22 @@
             </div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>{{item.date}}</p>
+              <p>
+                <span><a href="">{{item.commentcount}}条评论</a></span>
+                <span><a (click)="exchange(i)">
+                  <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
+                  <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
+                  <span *ngIf="!item.isCollect">收藏</span>
+                  <span *ngIf="item.isCollect">已收藏</span>
+                </a></span>
+                <span><a href="">{{item.browse}}浏览次数</a></span></p>
+              <span class="dat">{{item.date}}</span>
             </div>
           </div>
         </div>
       </li>
     </ul>
+
     <ul class="flo">
       <li>
         <div *ngFor="let item of data;let i=index">
@@ -103,10 +137,16 @@
             </div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p><span>{{item.date}}</span>
+              <p>
                 <span><a href="">{{item.commentcount}}条评论</a></span>
-                <span><a href="">收藏</a></span>
-                <span><a href="">浏览次数</a></span></p>
+                <span><a (click)="exchange(i)">
+                  <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
+                  <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
+                  <span *ngIf="!item.isCollect">收藏</span>
+                  <span *ngIf="item.isCollect">已收藏</span>
+                </a></span>
+                <span><a href="">{{item.browse}}浏览次数</a></span></p>
+             <span class="dat">{{item.date}}</span>
             </div>
           </div>
         </div>
@@ -116,3 +156,4 @@
 
 
 </div>
+

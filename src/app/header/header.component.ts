@@ -20,35 +20,35 @@ import {UserInfoService} from '../services/userInfo.service';
 
   animations: [
     trigger('searchBox', [ //搜索框显示隐藏动画
-    state('show', style({
-      height: '100px'
-    })),
-    state('hide', style({
-      height: '0px',
-    })),
-    transition('* => show', animate('500ms ease-in')),
-    transition('* => hide', animate('500ms ease-out'))
-  ]),
+      state('show', style({
+        height: '50px'
+      })),
+      state('hide', style({
+        height: '0px',
+      })),
+      transition('* => show', animate('500ms ease-in')),
+      transition('* => hide', animate('500ms ease-out'))
+    ]),
     trigger('searchBtn', [ //搜索按钮显示隐藏动画
-    state('show', style({
-      opacity: '1'
-    })),
-    state('hide', style({
-      opacity: '0'
-    })),
-    transition('* => show', animate('500ms ease-in')),
-    transition('* => hide', animate('500ms ease-out'))
-  ]),
+      state('show', style({
+        opacity: '1'
+      })),
+      state('hide', style({
+        opacity: '0'
+      })),
+      transition('* => show', animate('500ms ease-in')),
+      transition('* => hide', animate('500ms ease-out'))
+    ]),
     trigger('userInfo', [//用户信息下拉框显示隐藏动画
-    state('show', style({
-      height: '130px'
-    })),
-    state('hide', style({
-      height: '0'
-    })),
-    transition('* => show', animate('600ms ease-in')),
-    transition('* => hide', animate('600ms ease-out'))
-  ]),
+      state('show', style({
+        height: '130px'
+      })),
+      state('hide', style({
+        height: '0'
+      })),
+      transition('* => show', animate('600ms ease-in')),
+      transition('* => hide', animate('600ms ease-out'))
+    ]),
   ]
 })
 export class HeaderComponent implements OnInit {
@@ -77,25 +77,16 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit() {
-    this.userInfo = this._cookieService.get('user');
-    if (this.userInfo) {
-      this.userInfo = this._cookieService.getObject('user');
-      this.uis.checkInfo('qqq', function (data) {
-        console.log(data);
-      });
-    }
-    console.log('1111');
-  }
-  ngOnchange() {
-    if (this._cookieService.get('user')) {
-      this.uis.checkInfo('qqq', function (data) {
-        console.log(data);
-      });
-      // this.http.post(this._url + '/users/check').subscribe(
-      //   function (data) {
-      //     console.log(data);
-      //   }
-      // );
-    }
+    this.userInfo = this._cookieService.getObject('user');
+    console.log(this.userInfo.nickname);
+    // if (this.userInfo) {
+    //   this.userInfo = this._cookieService.getObject('user');
+    //   this.uis.checkInfo(this.userInfo, function (data) {
+    //     alert(data._body);
+    //     if (data._body === 'false') {
+    //
+    //     }
+    //   });
+    // }
   }
 }
