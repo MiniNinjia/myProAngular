@@ -1,0 +1,66 @@
+<app-header></app-header>
+  <div class="main">
+    <div class="top">
+      <img class="bg" src="../../assets/images/personalbg.png" alt="">
+      <div class="info">
+        <img class="headimg" src="../../assets/diary-images/头像3.jpg" alt="">
+
+        <div class="username">
+          <p><b>雷乔</b></p>
+          <p>暂无个人资料</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle">
+      <div class="left">
+          <div class="menu">
+            <ul>
+              <li>
+                <a [class.active]="selectIndex==1" (click)="changeIndex(1)">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  &nbsp;&nbsp;我发布的
+                </a>
+              </li>
+              <li>
+                <a [class.active]="selectIndex==2" (click)="changeIndex(2)">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                  &nbsp;&nbsp;我收养的
+                </a>
+              </li>
+              <li>
+                <a [class.active]="selectIndex==3" (click)="changeIndex(3)">
+                  <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                  &nbsp;&nbsp;我的日记
+                </a>
+              </li>
+              <li>
+                <a [class.active]="selectIndex==4" (click)="changeIndex(4)">
+                  <i class="fa fa-users" aria-hidden="true"></i>
+                  &nbsp;&nbsp;我的社区
+                </a>
+              </li>
+              <li>
+                <a [class.active]="selectIndex==5" (click)="changeIndex(5)">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  &nbsp;&nbsp;我的资料
+                </a>
+              </li>
+            </ul>
+          </div>
+        <div class="left_main" ngSwitch="{{selectIndex}}">
+            <app-my-publish *ngSwitchCase="1"></app-my-publish>
+            <app-my-adoption *ngSwitchCase="2"></app-my-adoption>
+            <app-my-diary *ngSwitchCase="3"></app-my-diary>
+            <app-my-community *ngSwitchCase="4"></app-my-community>
+            <app-my-info *ngSwitchCase="5"></app-my-info>
+        </div>
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+
+
+  </div>
+

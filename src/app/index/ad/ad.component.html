@@ -1,23 +1,22 @@
-<div style="">
+<div style="overflow: hidden">
   <div class="index_adv">
     <ul class="index_adv_item">
-      <li *ngFor="let item of items;let i=index;" [@flyInOut]='items[i].state'>
-      <a>
-        <img src="../../../assets/images/{{item.img}}" alt="">
-      </a>
+      <li *ngFor="let item of items;let i=index;" [class.li_active]="i==currentPic">
+        <a>
+          <img src="{{_uploadUrl}}{{item.imgurl}}" alt="">
+        </a>
       </li>
-      <!--<img class="op" src="../../../assets/images/adv1.png" alt="">-->
     </ul>
-
     <ul class="index_adv_list">
-      <li *ngFor="let item of items;let i=index;">
+      <li *ngFor="let item of items;let i=index;"  (click)="changebanner(i)">
         <div class="div_active" [class.div_active]="i==currentPic"></div>
       </li>
     </ul>
     <ul class="index_adv_btn">
-      <li class="index_adv_btn_left" (click)="toLeft()"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
-      <li class="index_adv_btn_right" (click)="toRight()"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+      <li class="index_adv_btn_left" (click)="changebanner(currentPic-1>=0?currentPic-1:items.length-1)"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+      <li class="index_adv_btn_right" (click)="changebanner(currentPic+1<=items.length-1?currentPic+1:0)"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
       </li>
     </ul>
   </div>
 </div>
+

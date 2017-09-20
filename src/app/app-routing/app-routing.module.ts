@@ -9,7 +9,7 @@ import {PageShopComponent} from '../page-shop/page-shop.component';
 import {PageSkillComponent} from '../page-skill/page-skill.component';
 import {PageDiaryComponent} from '../page-diary/page-diary.component';
 import {PageCommunityComponent} from '../page-community/page-community.component';
-
+import {PagePersonalCenterComponent} from '../page-personal-center/page-personal-center.component'
 
 const routes: Routes = [
   {
@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'diary',
     component: PageDiaryComponent
+  },
+  {
+    path: 'personal/:telephone',
+    component: PagePersonalCenterComponent
   },
   {
     path: '',

@@ -29,25 +29,34 @@ import {PageDiaryComponent} from './page-diary/page-diary.component';
 import {PageSkillComponent} from './page-skill/page-skill.component';
 import {PageShopComponent} from './page-shop/page-shop.component';
 import {PageCommunityComponent} from './page-community/page-community.component';
-import { AdoptionShowpetComponent } from './page-adoption/adoption-main/adoption-showpet/adoption-showpet.component';
-import { AdoptionListComponent } from './page-adoption/adoption-main/adoption-list/adoption-list.component';
-import { AdoptionMainComponent } from './page-adoption/adoption-main/adoption-main.component';
-import { AdoptionDetailsComponent } from './page-adoption/adoption-details/adoption-details.component';
-import { AdoptionListItmeComponent } from './page-adoption/adoption-list-itme/adoption-list-itme.component';
-import { TextComponent } from './index/text/text.component';
-import { CommunityListComponent } from './page-community/community-list/community-list.component';
-import { CommunityDetailsComponent } from './page-community/community-details/community-details.component';
-import { CommunityMainComponent } from './page-community/community-main/community-main.component';
-import { NumberPipePipe } from './adoption-pipe/number-pipe.pipe';
-import { SkillDetailsComponent } from './page-skill/skill-details/skill-details.component';
-import { PetIntroduceComponent } from './page-adoption/adoption-details/pet-introduce/pet-introduce.component';
-import { PetMessagenoteComponent } from './page-adoption/adoption-details/pet-messagenote/pet-messagenote.component';
-import { DiaryDetailsComponent } from './page-diary/diary-details/diary-details.component';
-import { DiaryHeaderComponent } from './page-diary/diary-header/diary-header.component';
-import { DiaryRoutingComponent } from './page-diary/diary-routing/diary-routing.component';
+import {AdoptionShowpetComponent} from './page-adoption/adoption-main/adoption-showpet/adoption-showpet.component';
+import {AdoptionListComponent} from './page-adoption/adoption-main/adoption-list/adoption-list.component';
+import {AdoptionMainComponent} from './page-adoption/adoption-main/adoption-main.component';
+import {AdoptionDetailsComponent} from './page-adoption/adoption-details/adoption-details.component';
+import {AdoptionListItmeComponent} from './page-adoption/adoption-list-itme/adoption-list-itme.component';
+import {TextComponent} from './index/text/text.component';
+import {CommunityListComponent} from './page-community/community-list/community-list.component';
+import {CommunityDetailsComponent} from './page-community/community-details/community-details.component';
+import {CommunityMainComponent} from './page-community/community-main/community-main.component';
+import {NumberPipePipe} from './adoption-pipe/number-pipe.pipe';
+import {SkillDetailsComponent} from './page-skill/skill-details/skill-details.component';
+import {PetIntroduceComponent} from './page-adoption/adoption-details/pet-introduce/pet-introduce.component';
+import {PetMessagenoteComponent} from './page-adoption/adoption-details/pet-messagenote/pet-messagenote.component';
+import {DiaryDetailsComponent} from './page-diary/diary-details/diary-details.component';
+import {DiaryHeaderComponent} from './page-diary/diary-header/diary-header.component';
+import {DiaryRoutingComponent} from './page-diary/diary-routing/diary-routing.component';
 // import { DiaryHeaderComponent } from './diary-header/diary-header.component';
 // import { DiaryDetailComponent } from './page-diary/diary-detail/diary-detail.component';
-import { SkillMainComponent } from './page-skill/skill-main/skill-main.component';
+import {SkillMainComponent} from './page-skill/skill-main/skill-main.component';
+import {MyscrollDirective} from './myscroll.directive';
+import {PagePersonalCenterComponent} from './page-personal-center/page-personal-center.component';
+import {MyPublishComponent} from './page-personal-center/my-publish/my-publish.component';
+import {MyAdoptionComponent} from './page-personal-center/my-adoption/my-adoption.component';
+import {MyDiaryComponent} from './page-personal-center/my-diary/my-diary.component';
+import {MyCommunityComponent} from './page-personal-center/my-community/my-community.component';
+import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
+import {AdvsService} from "./services/advs.service";
+import {AdoptionService} from "./services/adoption.service";
 
 
 @NgModule({
@@ -86,7 +95,14 @@ import { SkillMainComponent } from './page-skill/skill-main/skill-main.component
     TextComponent,
     CommunityListComponent,
     CommunityDetailsComponent,
-    CommunityMainComponent
+    CommunityMainComponent,
+    MyscrollDirective,
+    PagePersonalCenterComponent,
+    MyPublishComponent,
+    MyAdoptionComponent,
+    MyDiaryComponent,
+    MyCommunityComponent,
+    MyInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +115,14 @@ import { SkillMainComponent } from './page-skill/skill-main/skill-main.component
     BrowserAnimationsModule,
     HttpModule
   ],
-  providers: [LocalStorage, CookieService, GlobalPropertyService, UserInfoService],
+  providers: [
+    LocalStorage,
+    CookieService,
+    GlobalPropertyService,
+    UserInfoService,
+    AdvsService,
+    AdoptionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

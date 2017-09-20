@@ -1,74 +1,25 @@
 import {Component, OnInit} from '@angular/core';
-
+import {AdoptionService} from '../../services/adoption.service';
 @Component({
   selector: 'app-adoption',
   templateUrl: './adoption.component.html',
   styleUrls: ['./adoption.component.css']
 })
 export class AdoptionComponent implements OnInit {
+  _uploadUrl: string;
+  datas: any;
 
-  constructor() {
+  constructor(private ads: AdoptionService) {
+    const that = this;
+    this.ads.getIndexList(function (result) {
+      if (result !== 'err') {
+        that.datas = JSON.parse(result._body);
+        console.log(that.datas);
+      }
+    });
+    this._uploadUrl = this.ads.uploadUrl;
   }
 
-  datas = [
-    {
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    },{
-      'id': '1',
-      'dogimg': 'dog1.png',
-      'headimg': 'dog.png',
-      'nickname': '雷乔',
-      'sex': 'girl',
-      'text': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责'
-    }
-  ]
 
   ngOnInit() {
   }

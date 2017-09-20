@@ -1,21 +1,47 @@
-  <div class="main">
-    <div class="top">
-      <div class="title">
-        <p>南京市玄武区后酬谢五千寻找泰迪</p>
+<div class="main">
+  <div class="top">
+    <div class="title">
+      <p>南京市玄武区后酬谢五千寻找泰迪</p>
+    </div>
+    <div class="count">
+      <div class="count_left">
+        <p class="count_cat">收藏数</p>
+        <p>217</p>
       </div>
-      <div class="count">
-        <div class="count_left">
-          <p class="count_cat">收藏数</p>
-          <p>217</p>
-        </div>
-        <div class="count_right">
-          <p class="count_cat">浏览数</p>
-          <p>295217</p>
-        </div>
+      <div class="count_right">
+        <p class="count_cat">浏览数</p>
+        <p>295217</p>
       </div>
-      <div class="text">
+    </div>
+    <div class="text">
+          <span>
+            {{test}}
+          </span>
+    </div>
+
+
+    <div class="showAll">
+
+      <button class="showAll_report"><i class="fa fa-flag" aria-hidden="true"></i> 举报</button>
+      <button class="showAll_time">2017-9-18</button>
+      <a (click)="showall()">显示全部 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      <a (click)="showall()">收起 <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="aaa">
+      <button class="collection_btn"><i class="fa fa-star" aria-hidden="true"></i> 收藏</button>
+      <button class="review_btn"><i class="fa fa-pencil" aria-hidden="true"></i> 写评论</button>
+    </div>
+  </div>
+  <div class="middle">
+    <div class="left">
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
           <span>
           ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
           ewrwertwetgweryrtyuertyertyr3t
           ewrwertwetgweryrtyuertyertyr3t
           ewrwertwetgweryrtyuertyertyr3t
@@ -29,20 +55,263 @@
           ewrwertwetgweryrtyuertyertyr3t
           ewrwertwetgweryrtyuertyertyr3t
           ewrwertwetgweryrtyuertyertyr3t
-          ewrwertwetgweryrtyuertyertyr3t</span>
-
-        <a class="showAll"> 显示全部<i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
+          <span>
+          ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
+          <span>
+          ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
+          <span>
+          ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
+          <span>
+          ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="list">
+        <img class="headimg" src="../../../assets/images/dog.png">
+        <span class="username"><b>雷乔</b></span>
+        <div class="review_text">
+          <span>
+          ewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3tewrwertwetgweryrtyuertyertyr3t
+          345345324234234
+            ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          ewrwertwetgweryrtyuertyertyr3t
+          </span>
+        </div>
+        <div class="bottom">
+          <a>
+            <i class="fa fa-comment " aria-hidden="true"></i>
+            <span>20</span><span>条回复 </span>
+          </a>
+          <a>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true"></i>
+            <span>20</span><span>次点赞 </span>
+          </a>
+          <a>
+            <i class="fa fa-flag " aria-hidden="true"></i>
+           <span>举报 </span>
+          </a>
+          <span class="time"> <b>评论于 2017-9-18</b></span>
+        </div>
+      </div>
+      <div class="page_out">
+        <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
+        <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
+        <a class="page_tag"
+           *ngFor="let page of pageList;"
+           (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
+        <a class="next" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
+        <a class="end" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(list_data.totalPage)">尾页</a>
       </div>
     </div>
-    <div class="middle">
-      <div class="left">
 
-      </div>
-      <div class="right">
-
+    <div class="right" appMyscroll="480">
+      <div class="info" >
+        <div class="info_top">
+          <a><b>关于作者</b></a>
+        </div>
+        <div class="info_user">
+          <img src="../../../assets/images/dog.png" alt="">
+          <div class="info_user_info">
+            <a><b>雷乔</b></a>
+            <p><b>hjfguhjghj</b></p>
+          </div>
+          <div class="info_count">
+            <ul>
+              <li>
+                <a>领养</a>
+                <p>1</p>
+              </li>
+              <li>
+                <a>日记</a>
+                <p>112</p>
+              </li>
+              <li>
+                <a>文章</a>
+                <p>1123</p>
+              </li>
+            </ul>
+          </div>
+          <button class="follow_btn"><i class="fa fa-plus" aria-hidden="true"></i> 关注他</button>
+          <button class="message_btn"><i class="fa fa-comments" aria-hidden="true"></i>发私信</button>
+        </div>
       </div>
     </div>
-
-
   </div>
 
+
+</div>

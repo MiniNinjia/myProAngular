@@ -8,7 +8,7 @@ li {
 
 a,
 a:hover {
-  color: black;
+  color: #444444;
   text-decoration: none;
   cursor: pointer;
 }
@@ -16,15 +16,15 @@ a:hover {
 .header {
   width: 100%;
   padding-left: 40px;
-  height: 100px;
-  line-height: 100px;
-  background-color: #ffc907;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fccd36;
   overflow: hidden;
 }
 
 .index_icon {
-  height: 100px;
-  line-height: 100px;
+  height: 50px;
+  line-height: 50px;
   min-width: 150px;
   max-width: 200px;
   margin: 0;
@@ -54,14 +54,14 @@ a:hover {
 }
 
 .index_main ul li a {
-  line-height: 80px;
+  line-height: 40px;
   display: inline-block;
-
+  color: #444444;
 }
 
 .index_main_menu {
   width: 80%;
-  height: 100px;
+  height: 40px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -72,23 +72,23 @@ a:hover {
 }
 
 .active {
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px #444444;
 }
 
 .index_main ul li a:hover {
-  border-bottom: solid 4px black;
+  border-bottom: solid 4px #444444;
 }
 
 .index_search_box {
   width: 80%;
-  height: 100px;
+  height: 40px;
   margin: 0 auto;
 }
 
 #index_search_txt {
   box-sizing: border-box;
   border: none;
-  background-color: #ffc907;
+  background-color: #fccd36;
   outline: none;
   font-size: 20px;
   padding-left: 30px;
@@ -98,10 +98,10 @@ a:hover {
 #index_search_btn,
 #index_search_out {
   outline: none;
-  background-color: #ffc907;
+  background-color: #fccd36;
   border: none;
   box-sizing: border-box;
-  height: 70px;
+  height: 40px;
 }
 
 #index_dropdown_menu {
@@ -109,11 +109,11 @@ a:hover {
   position: absolute;
   z-index: 300;
   width: 100px;
-  border-left: solid 5px #ffc907;
-  border-right: solid 5px #ffc907;
+  border-left: solid 5px #fccd36;
+  border-right: solid 5px #fccd36;
   box-sizing: border-box;
   height: 0px;
-  margin-left: -15px;
+  margin-left: 0px;
   overflow: hidden;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -126,10 +126,11 @@ a:hover {
   line-height: 40px;
   height: 40px;
   font-weight: 600;
+  outline: none;
 }
 
 #index_dropdown_menu li:hover {
-  background-color: #ffc907;
+  background-color: #fccd36;
   cursor: pointer;
 }
 
