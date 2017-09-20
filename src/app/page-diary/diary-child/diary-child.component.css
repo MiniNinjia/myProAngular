@@ -12,12 +12,11 @@
   margin: 0 auto;
 }
 .back1_left{
-  position: relative;
   margin-top: 80px;
   float: left;
   width: 825px;
-  height: 900px;
   /*background-color: #4ab6f5;*/
+  background-color: white;
 }
 .back1_right{
   z-index: 100;
@@ -33,18 +32,19 @@
 .back1_left1{
   width: 825px;
   height: 80px;
-  background-color: white;
   border: solid 1px #cfcfcf;
   box-sizing: border-box;
 }
 .back1_left2{
   width: 825px;
-  height: 150px;
-  background-color: white;
   border: solid 1px #cfcfcf;
   border-top: none;
   box-sizing: border-box;
-
+}
+.back1_left2:after{
+  display: block;
+  content: '';
+  clear: both;
 }
 .head_imag{
   width: 60px;

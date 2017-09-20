@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 //导入页面
 import {ErrorComponent} from '../../error/error.component';
@@ -17,7 +17,7 @@ const routes: Routes = [
       },
       {
         path: 'detail/:petid',
-        component:DiaryChildComponent,
+        component: DiaryChildComponent,
       },
     ]
   },
@@ -27,4 +27,5 @@ const routes: Routes = [
   exports: [RouterModule],
   declarations: []
 })
-export class DiaryRoutingModule { }
+export class DiaryRoutingModule {
+}
