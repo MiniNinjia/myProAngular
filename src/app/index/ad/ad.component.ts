@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {GlobalPropertyService} from '../../services/global-property.service';
+import {AdvsService} from '../../services/advs.service';
 import {
   trigger,
   state,
@@ -26,101 +28,45 @@ import {
     })),
     transition('void => *', animate(1)),
     transition('* => void', animate(1)),
-    //
-    // transition('* => left', [
-    //   animate(1000, keyframes([
-    //     style({width: '*', transform: 'translateX(0)', offset: 0}),
-    //     style({width: '*', transform: 'translateX(-99%)', offset: 0.99}),
-    //     style({width: '0', transform: 'translateX(-100%)', offset: 1})
-    //   ]))]),
-    // transition('left => *', [
-    //   animate(1000, keyframes([
-    //     style({width: '*', transform: 'translateX(-100%)', offset: 0}),
-    //     style({width: '*', transform: 'translateX(-99%)', offset: 0.01}),
-    //     style({width: '*', transform: 'translateX(0%)', offset: 1})
-    //   ]))]),
-    // transition('* => right', [
-    //   animate(1000, keyframes([
-    //     style({width: '*', transform: 'translateX(0)', offset: 0}),
-    //     style({width: '*', transform: 'translateX(99%)', offset: 0.99}),
-    //     style({width: '0', transform: 'translateX(100%)', offset: 1})
-    //   ]))]),
-    // transition('right => *', [
-    //   animate(1000, keyframes([
-    //     style({width: '*', transform: 'translateX(-100%)', offset: 0}),
-    //     style({width: '*', transform: 'translateX(-99%)', offset: 0.99}),
-    //     style({width: '*', transform: 'translateX(0%)', offset: 1})
-    //   ]))]),
     transition('* => *', animate(1000)),
   ])
   ]
 })
 export class AdComponent implements OnInit {
-  items = [
-    {
-      'id': 0,
-      'img': 'adv.png',
-      'url': 'www.baidu.com',
-      'state': 'in'
-    },
-    {
-      'id': 1,
-      'img': 'adv1.png',
-      'url': 'www.baidu.com',
-      'state': 'left'
-    },
-    {
-      'id': 2,
-      'img': 'adv2.png',
-      'url': 'www.baidu.com',
-      'state': 'left'
-    }
-  ];
+  items: any;
   currentPic = 0;
-  now = 0;
-  next: any;
   time: any;
+  _uploadUrl: string;
 
-  constructor() {
-    this.go();
+  constructor(private glo: GlobalPropertyService,
+              private as: AdvsService) {
+    this._uploadUrl = glo.uploadUrl;
+    const that = this;
+    this.as.getAdv({'position': 'index'}, function (result) {
+      if (result !== 'err') {
+        that.items = JSON.parse(result._body);
+        that.go();
+      }
+    });
   }
 
   go() {
+    const that = this;
     this.time = setInterval(() => {
-      this.toRight();
-      console.log(this.now);
+      that.currentPic = (that.currentPic + 1) % that.items.length;
+      console.log(that.currentPic);
     }, 3000);
   }
 
-  nextItem() {
-    if (this.time) {
-      clearInterval(this.time);
-    }
-    if (this.now < this.next) {
-      this.items[this.now].state = 'right';
-      this.items[this.next].state = 'in';
-    } else {
-      this.items[this.now].state = 'left';
-      this.items[this.next].state = 'in';
-    }
+  changebanner(id) {
+    clearInterval(this.time);
+    this.currentPic = id;
+    console.log(id);
     this.go();
   }
 
-  toLeft() {
-    this.now = this.currentPic;
-    this.currentPic = (this.currentPic === 0 ? 2 : this.currentPic - 1);
-    this.next = this.currentPic;
-    this.nextItem();
-  }
-
-  toRight() {
-    this.now = this.currentPic;
-    this.currentPic = (this.currentPic === 2 ? 0 : this.currentPic + 1);
-    this.next = this.currentPic;
-    this.nextItem();
-  }
-
   ngOnInit() {
+
   }
 
 }

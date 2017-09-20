@@ -1,7 +1,6 @@
 <div class="header">
   <div class="index_icon">
-    <i class="fa fa-paw fa-3x" aria-hidden="true"></i>
-    <span>窝宠</span>
+    <img src="../../assets/images/logo.png" alt="">
   </div>
   <div class="index_main">
     <ul class="index_main_menu" [@searchBox]="state">
@@ -16,9 +15,9 @@
 
     </ul>
     <div class="index_search_box" [@searchBox]="boxState">
-      <button id="index_search_btn"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+      <button id="index_search_btn"><i class="fa fa-search " aria-hidden="true"></i></button>
       <input id="index_search_txt" type="text" placeholder="输入要查找的内容">
-      <button id="index_search_out" (click)="toggleState()"><i class="fa fa-times fa-2x" aria-hidden="true"></i>
+      <button id="index_search_out" (click)="toggleState()"><i class="fa fa-times " aria-hidden="true"></i>
       </button>
     </div>
 
@@ -38,13 +37,13 @@
       <div *ngIf="userInfo?.nickname">
         <li id="index_search" [@searchBtn]="state" (click)="toggleState()">
           <a>
-            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-search" aria-hidden="true"></i>
           </a>
         </li>
-        <li><a><img id="index_headimg" src="../../assets/images/dog.png" alt="" width="40px"></a></li>
+        <!--<li><a><img id="index_headimg" src="../../assets/images/dog.png" alt="" width="40px"></a></li>-->
         <li id="index_dropdown" (mouseenter)="toggleUserInfoState()" (mouseleave)="toggleUserInfoState()"><a>{{userInfo.nickname}}</a>
           <ul id="index_dropdown_menu" [@userInfo]="userInfoState">
-            <li>个人中心</li>
+            <li routerLink="/personal/{{userInfo.telphone}}">个人中心</li>
             <li>我发布的</li>
             <li><a href="{{_url}}/users/loginout">退出</a></li>
           </ul>
