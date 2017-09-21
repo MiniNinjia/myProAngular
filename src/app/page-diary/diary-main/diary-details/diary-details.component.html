@@ -1,44 +1,46 @@
 <div class="container_2">
   <div class="aaa">
 <div class="left">
-  <div *ngFor="let item of diary;let i=index"class="detail-1">
+  <div *ngFor="let item of list_data?.diary;let i=index"class="detail-1">
     <div class="line"></div>
     <div class="detail-1-1 ">
-    <!--<div class="imag"></div>-->
-      <img  class="imag" src="../../../assets/diary-images/{{item.headImag}}"/>
-      <div class="username ">{{item.id}}</div>
+      <img  class="imag" src="{{_uploadUrl}}{{item.headimg}}"/>
+      <div class="username ">{{item.nickname}}</div>
     <div class="info1 ">
     <ul class="ul-1">
-      <!--<li>在</li>-->
-      <!--<li class="country">印度尼西亚</li>-->
       <li>发表的日志</li>
     </ul>
   </div>
     <div class="info2">
       <ul class="ul-2">
         <li>
-          <!--<i id="dianzan"><img src="../../../../assets/diary-images/点赞.png" height="16" width="16"/></i> -->
           <a (click)="exchange(i)">
-            <i class="fa fa-thumbs-up" aria-hidden="true" *ngIf="!item.isCollect"></i>
-            <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
-
+            <i class="fa fa-thumbs-up" aria-hidden="true" *ngIf="item.isCollect"></i>
+            <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="!item.isCollect"></i>
           </a>
-
-          <span>365</span>人赞过</li>
+          <span>{{item.likecount}}</span>人赞过</li>
         <li><i><img src="../../../../assets/diary-images/时钟.png" height="16" width="16"/></i> 最后回复于<span>6</span>天前</li>
       </ul>
     </div>
     </div>
     <div class="detail-1-2  ">
     <div class="left_word">
-      <p class="left_word_name" ><a  routerLink="detail/4677">{{item.title}}</a></p>
-      <p class="left_word_info">{{item.inturduce}}</p>
+      <p class="left_word_name" ><a  routerLink="detail/{{item.adoptID}}">{{item.titile}}</a></p>
+      <p class="left_word_info">{{item.content}}</p>
     </div>
       <!--<div class="right_imag "></div>-->
-        <img class="right_imag" src="../../../assets/diary-images/{{item.rightimag}}"/>
-
+        <img class="right_imag" src="{{_uploadUrl}}{{item.img}}"/>
     </div>
 </div>
+  <div class="page_out">
+    <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
+    <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
+    <a class="page_tag"
+       *ngFor="let page of pageList;"
+       (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
+    <a class="next" [class.page_btn_enable]="pageNumber==list_data?.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
+    <a class="end" [class.page_btn_enable]="pageNumber==list_data?.totalPage" (click)="changePageNumber(list_data?.totalPage)">尾页</a>
+  </div>
 </div>
     <div class="right">
 
@@ -48,21 +50,6 @@
 
 
 </div>
-    <div class="page">
-      <ul class="paging">
-        <li id="persent"><a href="">当前：<span>1</span>/22</a></li>
-        <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">6</a></li>
-        <li><a href="">7</a></li>
-        <li><a href="">8</a></li>
-        <li><a href="">9</a></li>
-        <li id="next"><a href="">下一页</a></li>
-        <li id="last"><a href="">最后一页</a></li>
-      </ul>
-    </div>
+
   </div>
 </div>
