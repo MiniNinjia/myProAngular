@@ -27,14 +27,14 @@ nav{
 margin-left: 50px;
 }
 .listpet{
-  border: 1px solid rgba(232, 204, 25, 0.78);
+  border: 1px solid #9ca3b1;
   margin-top: 20px;
   padding: 5px;
   box-sizing: border-box;
   float: left;
   width: 470px;
   height: 150px;
-  /*background-color: rgba(53, 198, 47, 0.65);*/
+  background-color: white;
 }
 .petlft{
   width: 48%;
@@ -50,7 +50,7 @@ margin-left: 50px;
   width: 47%;
   height: 100%;
   float: right;
-  border-left: 1px dashed #ffcb31;
+  border-left: 1px dashed #9ca3b1;
   padding-left: 30px;
   box-sizing: border-box;
 }
@@ -78,5 +78,5 @@ margin-left: 50px;
   width: 990px;
   height: 700px;
   margin:  0 auto;
-  /*background-color: #00ee00;*/
+  /*background-color: white;*/
 }

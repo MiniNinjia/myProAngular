@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-
 import {IndexComponent} from '../index/index.component';
 import {ErrorComponent} from '../error/error.component';
 import {PageAdoptionComponent} from '../page-adoption/page-adoption.component';
@@ -10,6 +9,7 @@ import {PageSkillComponent} from '../page-skill/page-skill.component';
 import {PageDiaryComponent} from '../page-diary/page-diary.component';
 import {PageCommunityComponent} from '../page-community/page-community.component';
 import {PagePersonalCenterComponent} from '../page-personal-center/page-personal-center.component'
+import { PagePublishComponent } from '../page-publish/page-publish.component';
 
 const routes: Routes = [
   {
@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'diary',
     component: PageDiaryComponent
+  },
+  {
+    path: 'publish',
+    component: PagePublishComponent
   },
   {
     path: 'personal/:telephone',
