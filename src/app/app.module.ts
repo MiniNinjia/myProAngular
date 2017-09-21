@@ -11,8 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommunityRoutingModule} from './page-community/community-routing/community-routing.module';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AdoptionRoutingModule} from './page-adoption/adoption-routing/adoption-routing.module';
-import {SkillRouteModule} from './page-skill/skill-route/skill-route.module';
-import  {DiaryRoutingModule} from './page-diary/diary-routing/diary-routing.module';
+import {SkillRoutingModule} from './page-skill/skill-routing/skill-routing.module';
+import {DiaryRoutingModule} from './page-diary/diary-routing/diary-routing.module';
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -118,7 +118,7 @@ import {AdoptionService} from './services/adoption.service';
     //子路由
     DiaryRoutingModule,
     AdoptionRoutingModule,
-    SkillRouteModule,
+    SkillRoutingModule,
     AppRoutingModule,
 
     BrowserAnimationsModule,
