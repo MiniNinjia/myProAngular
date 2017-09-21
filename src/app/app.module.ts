@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 //导入localstrong模块
 import {LocalStorage} from './app.local.storage';
@@ -63,6 +64,7 @@ import {MyCommunityComponent} from './page-personal-center/my-community/my-commu
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
 import {AdvsService} from './services/advs.service';
 import {AdoptionService} from './services/adoption.service';
+import { PagePublishComponent } from './page-publish/page-publish.component';
 
 
 @NgModule({
@@ -110,12 +112,14 @@ import {AdoptionService} from './services/adoption.service';
     MyInfoComponent,
     CommunityMainComponent,
     DiaryChildComponent,
-    DiaryMainComponent
+    DiaryMainComponent,
+    PagePublishComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    CommunityRoutingModule,
     //子路由
+    CommunityRoutingModule,
     DiaryRoutingModule,
     AdoptionRoutingModule,
     SkillRouteModule,
