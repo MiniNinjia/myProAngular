@@ -2,8 +2,8 @@
 
     <div class="listwith">
 
-<h2>jhgkjdfh</h2>
-      <div class="main">
+
+      <div class="main" routerLink="detail/id">
         <div *ngFor="let item of data;let i=index" class="listpet ">
           <div class="petlft">
             <img class="img" src="{{item.img}}" alt="">
@@ -20,5 +20,5 @@
 
     </div>
 
-    <div class="right"><a routerLink="list">查看详情</a></div>
+    <div class="right"><a routerLink="list">查看更多</a></div>
 </div>

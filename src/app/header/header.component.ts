@@ -77,7 +77,8 @@ export class HeaderComponent implements OnInit {
 
 
   ngOnInit() {
-    //this.userInfo = this._cookieService.getObject('user');
+    this.userInfo = this._cookieService.getObject('user');
+    console.log(this.userInfo)
     //console.log(this.userInfo.nickname);
     // if (this.userInfo) {
     //   this.userInfo = this._cookieService.getObject('user');

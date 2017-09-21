@@ -7,14 +7,14 @@
       <div class="left">
         <ul>
           <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)"
-              *ngFor="let item of showpet;let i =index">
+              *ngFor="let item of showpet;let i =index" routerLink="detail/id">
 
             <ng-container *ngIf="i<6">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
-                <p class="title"><span>{{item.title}}11111</span></p>
+                <p class="title"><span>{{item.title}}</span></p>
                 <div class="mask word-2" [@divState]="showpet[i].state">
-                  <p class="stil"><span>{{item.title}}22222</span></p>
+                  <p class="stil"><span>{{item.title}}</span></p>
                   <p class="psize"><em class="fontYaHei">{{item.title}}</em><span class="texts fontYaHei">{{item.word}}</span></p>
                 </div>
               </a>
@@ -26,7 +26,7 @@
         <!--萌宠推荐版块右边------------------------------------------------------->
       <div class="right">
         <ul>
-          <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index">
+          <li class="item " routerLink="detail/id" (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index" >
             <div class="aa" *ngIf="i>5">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
@@ -40,7 +40,6 @@
           </li>
         </ul>
       </div>
-
     </div>
     </div>
   </div>
