@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import {GlobalPropertyService} from './global-property.service';
-import {forEach} from "@angular/router/src/utils/collection";
 @Injectable()
 export class AdvsService {
   constructor(private http: Http,

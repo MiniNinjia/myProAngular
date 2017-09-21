@@ -1,0 +1,9 @@
+<div class="page_out">
+  <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
+  <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
+  <a class="page_tag"
+     *ngFor="let page of pageList;"
+     (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
+  <a class="next" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
+  <a class="end" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(list_data.totalPage)">尾页</a>
+</div>
