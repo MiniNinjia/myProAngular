@@ -12,7 +12,7 @@ export class AdoptionComponent implements OnInit {
   constructor(private ads: AdoptionService) {
     const that = this;
     this.ads.getIndexList(function (result) {
-      if (result !== 'err') {
+      if (result._body !== 'err') {
         that.datas = JSON.parse(result._body);
         console.log(that.datas);
       }

@@ -117,7 +117,7 @@ import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.com
     DiaryChildComponent,
     DiaryMainComponent,
     PageOutComponent,
-    DiaryChild2Component
+    DiaryChild2Component,
     PageOutComponent,
     PagePublishComponent
   ],

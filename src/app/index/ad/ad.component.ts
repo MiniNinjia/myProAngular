@@ -42,7 +42,7 @@ export class AdComponent implements OnInit {
     this._uploadUrl = glo.uploadUrl;
     const that = this;
     this.as.getAdv({'position': 'index'}, function (result) {
-      if (result !== 'err') {
+      if (result._body !== 'err') {
         that.items = JSON.parse(result._body);
         that.go();
       }
