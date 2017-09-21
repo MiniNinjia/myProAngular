@@ -4,7 +4,16 @@
     <div class="pppp">
       <ul class="index-container-skill-ul">
         <li *ngFor="let items of datas">
-          <div *ngFor="let item of items.items">{{item.id}}</div>
+          <div  class="all" *ngFor="let item of items">
+            <img  class="diary_imag_up" src="../../../assets/images/{{item.imag}}" />
+            <div class="diary_words_middle">
+              {{item.middlewords}}
+            </div>
+            <div class="diary_words_dowm">
+              <span>100</span>个人赞过
+            </div>
+            </div>
+          <!--{{item.id}}-->
         </li>
       </ul>
     </div>

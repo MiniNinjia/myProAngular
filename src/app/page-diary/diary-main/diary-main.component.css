@@ -8,13 +8,13 @@
 }
 ul{
   height: 40px;
-  list-style: none;
-  margin-left: 178px;
+  padding-left: 150px;
+  /*list-style: none;*/
+  /*margin-left: 178px;*/
 
 }
 li{
   float: left;
-  margin-left: 5px;
 }
 .lyrz{
   font-size:2em;
@@ -30,3 +30,12 @@ li{
   background-color: #f0f0f0;
 }
 
+.write{
+  margin-left: 950px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  border: solid 1px #9ca3b1;
+  padding: 5px;
+  border-radius: 36px;
+  color: #444444;
+}

@@ -44,43 +44,43 @@ export class DiaryComponent implements OnInit {
   datas = [
     {
       items: [{
-        'id': 1
+        'id': '日志1.png'
       }, {
-        'id': 1
+        'id': '日志2.png'
       }, {
-        'id': 1
+        'id': '日志3.png'
       }]
     }, {
       items: [{
-        'id': 2
+        'id': '日志1.png'
       }, {
-        'id': 2
+        'id': '日志2.png'
       }, {
-        'id': 2
+        'id': '日志3.png'
       }]
     }, {
       items: [{
-        'id': 3
+        'id': '日志1.png'
       }, {
-        'id': 3
+        'id': '日志2.png'
       }, {
-        'id': 3
+        'id': '日志3.png'
       }]
     }, {
       items: [{
-        'id': 4
+        'id': '日志1.png'
       }, {
-        'id': 4
+        'id': '日志2.png'
       }, {
-        'id': 4
+        'id': '日志3.png'
       }]
     }, {
       items: [{
-        'id': 5
+        'id': '日志1.png'
       }, {
-        'id': 5
+        'id': '日志2.png'
       }, {
-        'id': 5
+        'id': '日志3.png'
       }]
     },
   ]

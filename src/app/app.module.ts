@@ -63,6 +63,7 @@ import {MyCommunityComponent} from './page-personal-center/my-community/my-commu
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
 import {AdvsService} from './services/advs.service';
 import {AdoptionService} from './services/adoption.service';
+import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
 
 
 @NgModule({
@@ -110,7 +111,8 @@ import {AdoptionService} from './services/adoption.service';
     MyInfoComponent,
     CommunityMainComponent,
     DiaryChildComponent,
-    DiaryMainComponent
+    DiaryMainComponent,
+    DiaryChild2Component
   ],
   imports: [
     BrowserModule,

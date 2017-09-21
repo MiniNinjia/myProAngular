@@ -82,10 +82,10 @@ li{
 }
 .back1_left2_left{
   width:160px;
-  height: 150px;
+  /*height: 150px;*/
   /*background-color: #2cff47;*/
   float: left;
-  border-right:solid 1px #cfcfcf;
+  /*border-right:solid 1px #cfcfcf;*/
   text-align: center;
   box-sizing: border-box;
 }
@@ -107,8 +107,9 @@ li{
 }
 .back1_left2_right{
   width: 663px;
-  height: 150px;
+  /*height: 150px;*/
   float: left;
+  border-left: 1px solid #cfcfcf;
   /*background-color: #ffab8e;*/
 }
 .info{
@@ -125,7 +126,7 @@ li{
 }
 .discuss{
   width: 663px;
-  height: 50px;
+  height: 60px;
   /*background-color: #ffab8e;*/
   line-height: 50px;
   padding-right: 20px;

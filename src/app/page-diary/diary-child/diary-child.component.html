@@ -13,7 +13,7 @@
           <span class="readtimes">浏览次数（<span class="readtime">533</span>）</span>
         </div>
       </div>
-      <div *ngFor="let item of xiangqing;let i=index" class="back1_left2">
+      <div *ngFor="let item of xiangqing;let i=index;" class="back1_left2">
         <div class="back1_left2_left" id="aa{{i}}">
           <div class="circle">
             D1
@@ -23,7 +23,12 @@
         <div class="back1_left2_right">
           <p class="info">
             {{item.info}}
-            <span class="viewall" (click)="showall(i)">显示全部>></span>
+            <span class="viewall" (click)="showall(i)">
+              <span>显示全部>></span> </span>
+            <!--*ngIf="del==true"-->
+            <!--<span class="viewall" (click)="shou(1)">-->
+              <!--<span *ngIf="del==false">收起>></span> </span>-->
+
           </p>
           <div class="discuss">
             <ul>

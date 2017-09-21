@@ -57,8 +57,9 @@ export class DiaryChildComponent implements OnInit {
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
     },
-  ]
-
+  ];
+  det: any;
+del = true;
   constructor() {
 
   }
@@ -75,7 +76,9 @@ export class DiaryChildComponent implements OnInit {
         'date': '2017-10-05',
         'time': '10:31',
         'readtimes': '533',
-        'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
+        'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，' +
+        '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，' +
+        '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'date2': '10.5',
         'count': '182',
       },
@@ -121,5 +124,11 @@ export class DiaryChildComponent implements OnInit {
       },
     ];
     this.xiangqing = data;
+    this.del = !this.del;
   }
+  // shou(j: any) {
+  //   this.xiangqing = this. xiangqing;
+  //   this.del = !this.del;
+  // }
 }
+
