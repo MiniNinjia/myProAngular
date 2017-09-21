@@ -1,29 +1,20 @@
-<div class="index_adv">
-
-  <!--<ul>-->
-  <!--<li><a href=""><img src="../../assets/diary-images/1.jpg"/></a></li>-->
-  <!--</ul>-->
-
+<div class="index_adv" *ngIf="id>=0">
   <div class="back">
-    <!--<div class="imag">-->
-      <img class=" back_imag" src="../../../assets/diary-images/{{data[id].backimag}}"/>
-    <!--</div>-->
-    <!--<img class="touxiang" src="../../../assets/diary-ima111.jpg.jpg"/>-->
-    <!--<div class="head_imag"></div>-->
-    <img   class="head_imag" src="../../../assets/diary-images/{{data[id].headimg}}" />
+      <img class=" back_imag" src="{{_uploadUrl}}{{data[id]?.img}}"/>
+    <img class="head_imag" src="{{_uploadUrl}}{{data[id]?.headimg}}" />
     <div class="head_word">
-      <p class="username">{{data[id].UserName}}</p>
-      <p class="info_words">{{data[id].words}}</p>
+      <p class="username">{{data[id]?.nickname}}</p>
+      <p class="info_words">{{data[id]?.content}}</p>
       <div class="carousel">
         <ul>
           <li *ngFor="let item of data;let i=index" (click)="changeId(i)" >
-            <img class="pic" src="../../../assets/diary-images/{{item.backimag}}"/>
+            <img class="pic" [class.active]="id==i" src="{{_uploadUrl}}{{item?.img}}"/>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <img class="ss" src="../../../assets/diary-images/{{data[id].backimag}}"/>
+  <img class="ss" src="{{_uploadUrl}}{{data[id]?.img}}" routerLink="./detail/{{data[id]?.diaryID}}"/>
 </div>
 
 

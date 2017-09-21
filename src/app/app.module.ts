@@ -16,6 +16,9 @@ import  {DiaryRoutingModule} from './page-diary/diary-routing/diary-routing.modu
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
+import {AdvsService} from './services/advs.service';
+import {AdoptionService} from './services/adoption.service';
+import {DiaryService} from './services/diary.service';
 //导入组件模块
 import {AdoptionComponent} from './index/adoption/adoption.component';
 import {DiaryComponent} from './index/diary/diary.component';
@@ -61,8 +64,8 @@ import {MyAdoptionComponent} from './page-personal-center/my-adoption/my-adoptio
 import {MyDiaryComponent} from './page-personal-center/my-diary/my-diary.component';
 import {MyCommunityComponent} from './page-personal-center/my-community/my-community.component';
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
-import {AdvsService} from './services/advs.service';
-import {AdoptionService} from './services/adoption.service';
+
+import { PageOutComponent } from './page-out/page-out.component';
 
 
 @NgModule({
@@ -110,7 +113,8 @@ import {AdoptionService} from './services/adoption.service';
     MyInfoComponent,
     CommunityMainComponent,
     DiaryChildComponent,
-    DiaryMainComponent
+    DiaryMainComponent,
+    PageOutComponent
   ],
   imports: [
     BrowserModule,
@@ -130,7 +134,8 @@ import {AdoptionService} from './services/adoption.service';
     GlobalPropertyService,
     UserInfoService,
     AdvsService,
-    AdoptionService
+    AdoptionService,
+    DiaryService
   ],
   bootstrap: [AppComponent]
 })
