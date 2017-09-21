@@ -65,7 +65,7 @@ import {MyAdoptionComponent} from './page-personal-center/my-adoption/my-adoptio
 import {MyDiaryComponent} from './page-personal-center/my-diary/my-diary.component';
 import {MyCommunityComponent} from './page-personal-center/my-community/my-community.component';
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
-
+import {PagePublishComponent} from './page-publish/page-publish.component'
 import { PageOutComponent } from './page-out/page-out.component';
 
 
@@ -115,7 +115,8 @@ import { PageOutComponent } from './page-out/page-out.component';
     CommunityMainComponent,
     DiaryChildComponent,
     DiaryMainComponent,
-    PageOutComponent
+    PageOutComponent,
+    PagePublishComponent
   ],
   imports: [
     FormsModule,
