@@ -67,6 +67,7 @@ import {MyCommunityComponent} from './page-personal-center/my-community/my-commu
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
 import {PagePublishComponent} from './page-publish/page-publish.component'
 import { PageOutComponent } from './page-out/page-out.component';
+import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
 
 
 @NgModule({
@@ -115,6 +116,8 @@ import { PageOutComponent } from './page-out/page-out.component';
     CommunityMainComponent,
     DiaryChildComponent,
     DiaryMainComponent,
+    PageOutComponent,
+    DiaryChild2Component
     PageOutComponent,
     PagePublishComponent
   ],

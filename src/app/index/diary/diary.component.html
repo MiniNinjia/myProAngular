@@ -4,7 +4,9 @@
     <div class="pppp">
       <ul class="index-container-diary-ul" [@change]="state" >
         <li *ngFor="let items of datas">
-          <div *ngFor="let item of items.items">{{item.id}}</div>
+          <div *ngFor="let item of items.items">
+            <img src="../../../assets/images/{{item.id}}" height="390" width="390"/>
+          </div>
         </li>
       </ul>
     </div>
