@@ -1,7 +1,7 @@
 .big{
   width: 1200px;
   height: 900px;
-  background-color: #dcddff;
+  /*background-color: #dcddff;*/
   margin: 0 auto;
 }
 .big:after{
@@ -12,7 +12,7 @@
 .mbig{
   width: 700px;
   height: 700px;
-  background-color: #ffd1ca;
+  /*background-color: #ffd1ca;*/
   margin: 0 auto;
   padding-top: 50px;
   box-sizing: border-box ;
@@ -24,7 +24,7 @@
 .sp1{
   width: 85px;
   height: 30px;
-  background-color: #d7dfff;
+  /*background-color: #d7dfff;*/
   display: inline-block;
   text-align: right;
   font-size: 16px;
@@ -32,7 +32,7 @@
   margin-right: 40px;
 }
 p{
-  background-color: #d8ffab;
+  /*background-color: #d8ffab;*/
 }
 .area{
   width: 550px;
