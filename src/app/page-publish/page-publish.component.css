@@ -1,8 +1,13 @@
+.max{
+  width: 100%;
+  background-color:white;
+}
 .big{
   width: 1200px;
   height: 900px;
   /*background-color: #dcddff;*/
   margin: 0 auto;
+  position: relative;
 }
 .big:after{
   content: '';
@@ -18,8 +23,9 @@
   box-sizing: border-box ;
 }
 .title{
-  margin-left: 20px;
+  margin:0px 0px 30px 20px;
   font-size:16px;
+  font-weight: 600;
 }
 .sp1{
   width: 85px;
@@ -30,14 +36,56 @@
   font-size: 16px;
   margin-bottom: 20px;
   margin-right: 40px;
+  color: #9ca3b1;
 }
 p{
   /*background-color: #d8ffab;*/
+}
+.col{
+  color: #fa862a;
 }
 .area{
   width: 550px;
 height: 270px;
 }
-.sp0{
+
+.add1{
+  margin-right: 20px;
+  width: 200px;
+  height: 35px;
+  border-radius: 5%;
+  border: 1px solid #e0e0e0;
+}
+.last{
+width: 256px;
+  height: 40px;
+  background-color: #fa862a;
+  border-radius: 5%;
+  font-weight: 600;
+  color: white ;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  margin-left: 130px;
+}
+.bianji{
+  position: absolute ;
+  left: 380px;
+  top: 280px;;
+  min-width: 540px;
+}
+.tuch{
+  margin: 90px  0 30px  20px  ;
+  font-size: 16px;
+  font-weight: 600;
+}
+.tex,.til{
+  width: 258px;
+  height: 35px;
+border: 1px solid #e0e0e0;
+  border-radius: 5%;
+}
+.til{
+  width:550px;
 
 }

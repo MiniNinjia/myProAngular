@@ -69,7 +69,8 @@ import {PagePublishComponent} from './page-publish/page-publish.component'
 import { PageOutComponent } from './page-out/page-out.component';
 import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
 
-
+import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
+import { FroalaComponent } from './froala/froala.component';
 @NgModule({
   declarations: [
     NumberPipePipe,
@@ -119,7 +120,8 @@ import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.com
     PageOutComponent,
     DiaryChild2Component,
     PageOutComponent,
-    PagePublishComponent
+    PagePublishComponent,
+    FroalaComponent
   ],
   imports: [
     FormsModule,
@@ -133,7 +135,9 @@ import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.com
     AppRoutingModule,
 
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
   ],
   providers: [
     LocalStorage,
