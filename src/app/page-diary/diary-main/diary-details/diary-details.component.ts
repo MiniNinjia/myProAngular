@@ -16,8 +16,6 @@ export class DiaryDetailsComponent implements OnInit {
   pageList: any;
   pageNumber = 1;//默认第一页
   sort = 'default1'; //排序方式
-
-
   constructor(private glo: GlobalPropertyService,
               private ds: DiaryService,
               private _cookieService: CookieService) {
@@ -90,5 +88,9 @@ export class DiaryDetailsComponent implements OnInit {
         that.list_data.diary = JSON.parse(result._body);
       }
     });
+  }
+
+  change(i: any) {
+    this.list_data.diary[i].isCollect = !this.list_data.diary[i].isCollect;
   }
 }

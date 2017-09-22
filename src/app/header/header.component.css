@@ -103,7 +103,10 @@ a:hover {
   box-sizing: border-box;
   height: 40px;
 }
-
+#index_dropdown{
+  width: 100px;
+  text-align: center;
+}
 #index_dropdown_menu {
   background-color: #ffffff;
   position: absolute;
@@ -113,7 +116,6 @@ a:hover {
   border-right: solid 5px #fccd36;
   box-sizing: border-box;
   height: 0px;
-  margin-left: 0px;
   overflow: hidden;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;

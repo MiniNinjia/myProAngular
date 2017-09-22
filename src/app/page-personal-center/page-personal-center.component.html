@@ -3,11 +3,10 @@
     <div class="top">
       <img class="bg" src="../../assets/images/personalbg.png" alt="">
       <div class="info">
-        <img class="headimg" src="../../assets/diary-images/头像3.jpg" alt="">
-
+        <img class="headimg" src="{{_uploadUrl}}{{headimg}}" alt="">
         <div class="username">
-          <p><b>雷乔</b></p>
-          <p>暂无个人资料</p>
+          <p><b>{{nickname}}</b></p>
+          <p>{{introduce}}</p>
         </div>
       </div>
     </div>
@@ -64,3 +63,4 @@
 
   </div>
 
+<app-protected></app-protected>

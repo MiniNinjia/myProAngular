@@ -153,13 +153,13 @@ ul{
 }
 .left_word_info{
   margin-top: 15px;
+  height:50px;
+  overflow: hidden;
 }
 .page{
   width: 100%;
-  /*height: 50px;*/
   float: left;
   margin-top: 80px;
-  /*background-color: #ff6651;*/
 }
 .paging{
   color: #444444;
@@ -173,14 +173,11 @@ ul{
   border: solid 1px #9ca3b1;
   text-align: center;
   line-height: 25px;
-
 }
 #persent{
-  /*background-color: #999999;*/
   width: 100px;
   height: 25px;
   border: solid 1px #9ca3b1;
-
 }
 #next{
   width: 50px;
@@ -210,7 +207,6 @@ ul{
   display: inline-block;
   margin: 0 8px;
   border-radius: 100%;
-
 }
 
 .page_tag:hover {
