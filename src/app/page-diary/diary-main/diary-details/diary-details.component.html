@@ -14,12 +14,17 @@
     <div class="info2">
       <ul class="ul-2">
         <li>
-          <a (click)="exchange(i)">
+          <a (click)="change(i)">
             <i class="fa fa-thumbs-up" aria-hidden="true" *ngIf="item.isCollect"></i>
             <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="!item.isCollect"></i>
           </a>
           <span>{{item.likecount}}</span>人赞过</li>
-        <li><i><img src="../../../../assets/diary-images/时钟.png" height="16" width="16"/></i> 最后回复于<span>6</span>天前</li>
+        <!--<li>-->
+          <!--<i>-->
+            <!--<img src="../../../../assets/diary-images/时钟.png" height="16" width="16"/>-->
+          <!--</i>-->
+          <!--最后回复于<span>6</span>天前-->
+        <!--</li>-->
       </ul>
     </div>
     </div>

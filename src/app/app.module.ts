@@ -68,6 +68,7 @@ import {MyInfoComponent} from './page-personal-center/my-info/my-info.component'
 import {PagePublishComponent} from './page-publish/page-publish.component'
 import { PageOutComponent } from './page-out/page-out.component';
 import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
+import { ProtectedComponent } from './protected/protected.component';
 
 
 @NgModule({
@@ -119,7 +120,8 @@ import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.com
     PageOutComponent,
     DiaryChild2Component,
     PageOutComponent,
-    PagePublishComponent
+    PagePublishComponent,
+    ProtectedComponent
   ],
   imports: [
     FormsModule,
