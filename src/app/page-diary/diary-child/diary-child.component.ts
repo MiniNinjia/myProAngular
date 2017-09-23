@@ -59,7 +59,7 @@ export class DiaryChildComponent implements OnInit {
     },
   ];
   det: any;
-del = true;
+  del = true;
   constructor() {
 
   }

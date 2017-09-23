@@ -19,21 +19,14 @@
             <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="!item.isCollect"></i>
           </a>
           <span>{{item.likecount}}</span>人赞过</li>
-        <!--<li>-->
-          <!--<i>-->
-            <!--<img src="../../../../assets/diary-images/时钟.png" height="16" width="16"/>-->
-          <!--</i>-->
-          <!--最后回复于<span>6</span>天前-->
-        <!--</li>-->
       </ul>
     </div>
     </div>
     <div class="detail-1-2  ">
     <div class="left_word">
-      <p class="left_word_name" ><a  routerLink="detail/{{item.adoptID}}">{{item.titile}}</a></p>
+      <p class="left_word_name" ><a  routerLink="detail/{{item.diaryID}}">{{item.titile}}</a></p>
       <p class="left_word_info">{{item.content}}</p>
     </div>
-      <!--<div class="right_imag "></div>-->
         <img class="right_imag" src="{{_uploadUrl}}{{item.img}}"/>
     </div>
 </div>
