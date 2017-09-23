@@ -20,6 +20,7 @@ import {UserInfoService} from './services/userInfo.service';
 import {AdvsService} from './services/advs.service';
 import {AdoptionService} from './services/adoption.service';
 import {DiaryService} from './services/diary.service';
+import {CommunityService} from './services/community.service';
 //导入组件模块
 import {AdoptionComponent} from './index/adoption/adoption.component';
 import {DiaryComponent} from './index/diary/diary.component';
@@ -161,6 +162,7 @@ import { FroalaComponent } from './froala/froala.component';
     AdvsService,
     AdoptionService,
     DiaryService,
+    CommunityService
   ],
   bootstrap: [AppComponent]
 })
