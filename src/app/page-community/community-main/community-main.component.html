@@ -2,8 +2,7 @@
   <div class="left">
     <div class="ordermune">
       <ul class="ordermune_ul">
-        <li class="ordermune_li" (click)="changeSort('default')" [class.sort]="sort=='default'"> 默认排序</li>
-        <li class="ordermune_li" (click)="changeSort('new')" [class.sort]="sort=='new'">最新</li>
+        <li class="ordermune_li" (click)="changeSort('new')" [class.sort]="sort=='default'">最新</li>
         <li class="ordermune_li" (click)="changeSort('hot')" [class.sort]="sort=='hot'">最热</li>
       </ul>
     </div>

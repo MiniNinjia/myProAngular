@@ -120,6 +120,12 @@ li{
   padding-right: 70px;
   box-sizing: border-box;
 }
+/*.info span{*/
+  /*color: #444444;*/
+/*}*/
+a{
+  color: #9ca3b1;
+}
 .viewall{
   color: #9ca3b1;
   font-size: 0.9em;

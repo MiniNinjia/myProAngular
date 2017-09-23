@@ -37,4 +37,32 @@ export class UserInfoService {
       }
     );
   }
+
+  getAdoptionList(uid, callback) {
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getAdoptionList', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  getPublishList(uid, callback) {
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getPublishList', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  getDiaryList(uid, callback) {
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getDiaryList', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
 }

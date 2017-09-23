@@ -63,7 +63,7 @@ export class AdoptionListItmeComponent implements OnInit {
       'Ename':'sha',
       'form':'柯基',
       'special':'腿短',
-      'commentcount':'1232',
+      'commentcount':'12',
       'browse':300,
       'isCollect':true
     },

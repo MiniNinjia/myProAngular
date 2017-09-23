@@ -10,6 +10,7 @@ import {PageDiaryComponent} from '../page-diary/page-diary.component';
 import {PageCommunityComponent} from '../page-community/page-community.component';
 import {PagePersonalCenterComponent} from '../page-personal-center/page-personal-center.component'
 import { PagePublishComponent } from '../page-publish/page-publish.component';
+import { PageSearchComponent } from '../page-search/page-search.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'shop',
     component: PageShopComponent
+  },
+  {
+    path: 'search',
+    component: PageSearchComponent
   },
   {
     path: 'diary',

@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {CommunityService} from '../../services/community.service';
+import {CookieService} from 'angular2-cookie/services/cookies.service';
+import {GlobalPropertyService} from '../../services/global-property.service';
 
 @Component({
   selector: 'app-community-main',
@@ -6,8 +9,6 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./community-main.component.css']
 })
 export class CommunityMainComponent implements OnInit {
-  constructor() {
-  }
   pageNumber = 1;//默认第一页
   sort = 'default'; //排序方式
   list_data = {
@@ -61,6 +62,12 @@ export class CommunityMainComponent implements OnInit {
     ]
   };
   pageList = [1, 2, 3, 4, 5, 6, 7];
+
+  constructor(private glo: GlobalPropertyService,
+              private cs: CommunityService,
+              private _cookieService: CookieService) {
+  }
+
 
   changeSort(sort: string) {//修改排序方式
     this.sort = sort;

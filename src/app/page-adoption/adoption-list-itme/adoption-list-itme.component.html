@@ -6,11 +6,11 @@
 
     <div class="listright">
       <nav>
-        <p (click)="showother()">其他</p>
-        <p (click)="showfish()">鱼类</p>
-        <p (click)="showbird()">鸟类</p>
-        <p (click)="showcat()">喵星人</p>
-        <p (click)="showdog()">汪星人</p>
+        <p (click)="showother()"><a>其他</a></p>
+        <p (click)="showfish()"><a>鱼类</a></p>
+        <p (click)="showbird()"><a>鸟类</a></p>
+        <p (click)="showcat()"><a>喵星人</a></p>
+        <p (click)="showdog()"><a>汪星人</a></p>
       </nav>
     </div>
   </div>
@@ -27,24 +27,28 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p>{{item.uname}}11111,{{item.height}}</p>
+                <p class="uname01">{{item.uname}},{{item.height}}</p>
               </div>
             </div>
             <div class="petimg">
               <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
+            <div class="aa">
+            <span class="dat">{{item.date}}</span>
+            <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>
+
                 <span>{{item.commentcount}}条评论</span>
-                <span (click)="exchange(i)">
+                <span class="shoucang" (click)="exchange(i)">
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
                   <span *ngIf="item.isCollect">已收藏</span>
                 </span>
-                <span>{{item.browse}}浏览次数</span></p>
-              <p class="dat">{{item.date}}</p>
+                <br>
+
+
               <p></p>
             </div>
           </div>
@@ -61,24 +65,28 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p>{{item.uname}}22222,{{item.height}}</p>
+                <p class="uname01">{{item.uname}},{{item.height}}</p>
               </div>
             </div>
             <div class="petimg">
               <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
+            <div class="aa">
+              <span class="dat">{{item.date}}</span>
+              <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>
-                <span><a href="">{{item.commentcount}}条评论</a></span>
-                <span><a (click)="exchange(i)">
+
+              <span>{{item.commentcount}}条评论</span>
+              <span class="shoucang" (click)="exchange(i)">
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
                   <span *ngIf="item.isCollect">已收藏</span>
-                </a></span>
-                <span><a href="">{{item.browse}}浏览次数</a></span></p>
-              <span class="dat">{{item.date}}</span>
+                </span>
+              <br>
+
+
               <p></p>
             </div>
           </div>
@@ -95,24 +103,29 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p>{{item.uname}}33333,{{item.height}}</p>
+                <p class="uname01">{{item.uname}},{{item.height}}</p>
               </div>
             </div>
             <div class="petimg">
               <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
+            <div class="aa">
+              <span class="dat">{{item.date}}</span>
+              <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>
-                <span><a href="">{{item.commentcount}}条评论</a></span>
-                <span><a (click)="exchange(i)">
+
+              <span>{{item.commentcount}}条评论</span>
+              <span class="shoucang" (click)="exchange(i)">
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
                   <span *ngIf="item.isCollect">已收藏</span>
-                </a></span>
-                <span><a href="">{{item.browse}}浏览次数</a></span></p>
-              <span class="dat">{{item.date}}</span>
+                </span>
+              <br>
+
+
+              <p></p>
             </div>
           </div>
         </div>
@@ -128,29 +141,36 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p>{{item.uname}}44444,{{item.height}}</p>
+                <p class="uname01">{{item.uname}},{{item.height}}</p>
               </div>
             </div>
             <div class="petimg">
               <img height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
+            <div class="aa">
+              <span class="dat">{{item.date}}</span>
+              <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
               <p>{{item.introduce}}</p>
-              <p>
-                <span><a href="">{{item.commentcount}}条评论</a></span>
-                <span><a (click)="exchange(i)">
+
+              <span>{{item.commentcount}}条评论</span>
+              <span class="shoucang" (click)="exchange(i)">
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
                   <span *ngIf="item.isCollect">已收藏</span>
-                </a></span>
-                <span><a href="">{{item.browse}}浏览次数</a></span></p>
-             <span class="dat">{{item.date}}</span>
+                </span>
+              <br>
+
+
+              <p></p>
             </div>
           </div>
         </div>
       </li>
     </ul>
+
+
   </div>
 
 
