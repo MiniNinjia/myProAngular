@@ -12,8 +12,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CommunityRoutingModule} from './page-community/community-routing/community-routing.module';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AdoptionRoutingModule} from './page-adoption/adoption-routing/adoption-routing.module';
-import {SkillRouteModule} from './page-skill/skill-route/skill-route.module';
-import  {DiaryRoutingModule} from './page-diary/diary-routing/diary-routing.module';
+import {SkillRoutingModule} from './page-skill/skill-routing/skill-routing.module';
+import {DiaryRoutingModule} from './page-diary/diary-routing/diary-routing.module';
 // 导入服务模块
 import {GlobalPropertyService} from './services/global-property.service';
 import {UserInfoService} from './services/userInfo.service';
@@ -65,16 +65,18 @@ import {MyAdoptionComponent} from './page-personal-center/my-adoption/my-adoptio
 import {MyDiaryComponent} from './page-personal-center/my-diary/my-diary.component';
 import {MyCommunityComponent} from './page-personal-center/my-community/my-community.component';
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
-import {PagePublishComponent} from './page-publish/page-publish.component'
+import {PagePublishComponent} from './page-publish/page-publish.component';
 import { PageOutComponent } from './page-out/page-out.component';
 import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
+import { ProtectedComponent } from './protected/protected.component';
 import { PageSearchComponent } from './page-search/page-search.component';
 import { SearchDiaryComponent } from './page-search/search-diary/search-diary.component';
 import { SearchSkillComponent } from './page-search/search-skill/search-skill.component';
 import { SearchPetComponent } from './page-search/search-pet/search-pet.component';
 import { SearchAllComponent } from './page-search/search-all/search-all.component';
 
-
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { FroalaComponent } from './froala/froala.component';
 @NgModule({
   declarations: [
     NumberPipePipe,
@@ -129,7 +131,9 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
     SearchDiaryComponent,
     SearchSkillComponent,
     SearchPetComponent,
-    SearchAllComponent
+    SearchAllComponent,
+    ProtectedComponent,
+    FroalaComponent
   ],
   imports: [
     FormsModule,
@@ -139,11 +143,13 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
     CommunityRoutingModule,
     DiaryRoutingModule,
     AdoptionRoutingModule,
-    SkillRouteModule,
+    SkillRoutingModule,
     AppRoutingModule,
 
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
   ],
   providers: [
     LocalStorage,
@@ -152,7 +158,7 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
     UserInfoService,
     AdvsService,
     AdoptionService,
-    DiaryService
+    DiaryService,
   ],
   bootstrap: [AppComponent]
 })

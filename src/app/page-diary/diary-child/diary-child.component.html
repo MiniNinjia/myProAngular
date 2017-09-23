@@ -24,6 +24,7 @@
           <p class="info">
             {{item.info}}
             <span class="viewall" (click)="showall(i)">
+              <span>显示全部>></span> </span>
               <span><a>显示全部>></a></span> </span>
             <!--*ngIf="del==true"-->
             <!--<span class="viewall" (click)="shou(1)">-->
@@ -51,10 +52,6 @@
         <ul>
           <li *ngFor="let item of xiangqing;let i=index"><a href="#aa{{i}}"><span class="small_circle"></span><span
             class="small_div"> {{item.date}} </span></a></li>
-          <!--<li><a herf=""><span class="small_circle"></span><span class="small_div"> 10月2日 </span></a></li>-->
-          <!--<li><a herf=""><span class="small_circle"></span><span class="small_div"> 10月3日 </span></a></li>-->
-          <!--<li><a herf=""><span class="small_circle"></span><span class="small_div"> 10月4日 </span></a></li>-->
-          <!--<li><a herf=""><span class="small_circle"></span><span class="small_div"> 10月5日 </span></a></li>-->
         </ul>
       </div>
 

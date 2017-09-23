@@ -25,8 +25,8 @@
         <p><span class="sp1">电话tel：</span>
           <span *ngIf="del==!true">{{tel}}</span>
           <input type="text" name="tele" id="tele"
-                 #tele="ngModel" pattern="1[34578]\d{9}$" *ngIf="del==true" [(ngModel)]="tel"
-                 value="tel" required minlength="11">
+                 #tele="ngModel" pattern="1[34578]\d{9}$" *ngIf="del==true"  [(ngModel)]="tel"
+                  required minlength="11">
         </p>
       </div>
 
