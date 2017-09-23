@@ -16,6 +16,7 @@ export class DiaryChildComponent implements OnInit {
       'date2': '10.5',
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
+      'day': 'D5',
     },
     {
       'headImag': '头像.jpg',
@@ -26,6 +27,7 @@ export class DiaryChildComponent implements OnInit {
       'date2': '10.4',
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
+      'day': 'D4',
     },
     {
       'headImag': '头像.jpg',
@@ -36,6 +38,7 @@ export class DiaryChildComponent implements OnInit {
       'date2': '10.3',
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
+      'day': 'D3',
     },
     {
       'headImag': '头像.jpg',
@@ -46,6 +49,7 @@ export class DiaryChildComponent implements OnInit {
       'date2': '10.2',
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
+      'day': 'D2',
     },
     {
       'headImag': '头像.jpg',
@@ -56,6 +60,7 @@ export class DiaryChildComponent implements OnInit {
       'date2': '10.1',
       'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
       'count': '182',
+      'day': 'D1',
     },
   ];
   det: any;
@@ -81,6 +86,7 @@ del = true;
         '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'date2': '10.5',
         'count': '182',
+        'day': 'D5',
       },
       {
         'headImag': '头像.jpg',
@@ -91,6 +97,7 @@ del = true;
         'date2': '10.4',
         'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'count': '182',
+        'day': 'D4',
       },
       {
         'headImag': '头像.jpg',
@@ -101,6 +108,7 @@ del = true;
         'date2': '10.3',
         'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'count': '182',
+        'day': 'D3',
       },
       {
         'headImag': '头像.jpg',
@@ -111,6 +119,7 @@ del = true;
         'date2': '10.2',
         'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'count': '182',
+        'day': 'D2',
       },
       {
         'headImag': '头像.jpg',
@@ -121,6 +130,7 @@ del = true;
         'date2': '10.1',
         'info': '昨天去打针，说偏瘦，怎么补啊？感觉吃狗粮没用啊，吃的是天然粮，一天四次，',
         'count': '182',
+        'day': 'D1',
       },
     ];
     this.xiangqing = data;

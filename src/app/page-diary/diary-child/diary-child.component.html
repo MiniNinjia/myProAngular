@@ -16,7 +16,7 @@
       <div *ngFor="let item of xiangqing;let i=index;" class="back1_left2">
         <div class="back1_left2_left" id="aa{{i}}">
           <div class="circle">
-            D1
+            {{item.day}}
           </div>
           <p class="date"><a></a> {{item.date2}}</p>
         </div>
@@ -24,7 +24,7 @@
           <p class="info">
             {{item.info}}
             <span class="viewall" (click)="showall(i)">
-              <span>显示全部>></span> </span>
+              <span><a>显示全部>></a></span> </span>
             <!--*ngIf="del==true"-->
             <!--<span class="viewall" (click)="shou(1)">-->
               <!--<span *ngIf="del==false">收起>></span> </span>-->
@@ -34,8 +34,8 @@
             <ul>
               <li><img src="../../../assets/diary-images/气泡.png" height="16" width="16"/> <span class="count">{{item.count}} </span>条评论
               </li>
-              <li class="a"><img src="../../../assets/diary-images/五角星.png" height="14" width="14"/> <span
-                class="sc">收藏</span></li>
+              <li class="a"><a><img src="../../../assets/diary-images/五角星.png" height="14" width="14"/> <span
+                class="sc">收藏</span></a></li>
             </ul>
           </div>
 

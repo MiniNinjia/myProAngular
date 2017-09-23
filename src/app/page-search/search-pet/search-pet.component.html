@@ -1,0 +1,43 @@
+<div class="second_flo">
+  <div class="left">
+    <div *ngFor="let item of info;let i=index;" class="module1">
+      <div class="title">
+        {{item.title}}
+      </div>
+      <!--<div class="imag"></div>-->
+      <img  class="imag" src="../../../assets/diary-images/111.jpg"/>
+
+      <div class="date">
+        <p class="small_title">{{item.smalltitle}}</p>
+        <p>{{item.detail}}</p>
+      </div>
+    </div>
+    <!--<div *ngFor="let item of skill;let i=index;" class="skill">-->
+      <!--<div class="main_title">-->
+        <!--{{item.title}}-->
+      <!--</div>-->
+      <!--<div class="skill_title">-->
+        <!--{{item.skilltitle}}-->
+      <!--</div>-->
+      <!--<div class="skill_detail">-->
+        <!--{{item.skliidetail}}-->
+      <!--</div>-->
+
+    <!--</div>-->
+  </div>
+  <div class="right">
+    <div class="line1">
+      <div class="history">历史搜索</div>
+      <div class="empty">清空</div>
+    </div>
+    <div  *ngFor="let item of history;let i=index;"class="history_detail">
+      <img src="../../assets/diary-images/时钟.png" height="16" width="16"/>
+      &nbsp;
+      <span>{{item.name}}</span>
+    </div>
+  </div>
+
+
+
+
+</div>

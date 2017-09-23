@@ -1,0 +1,37 @@
+<app-header>
+
+</app-header>
+<router-outlet>
+
+</router-outlet>
+
+<div class="back">
+<div class="first_flo">
+  <div class="search_text">
+  <input  class="text" type="text">
+    <div class="search_btn">
+      搜索
+    </div>
+  </div>
+  <div class="search_head">
+    <ul class="head">
+      <li (click)=" search(0)">全部<span>(2000+)</span></li>
+      <li (click)=" search(1)">宠物<span>(2000+)</span></li>
+      <li (click)=" search(2)">日志<span>(2000+)</span></li>
+      <li (click)=" search(3)">技巧<span>(2000+)</span></li>
+    </ul>
+  </div>
+</div>
+  <div [ngSwitch]="menu" >
+  <app-search-all *ngSwitchCase="0"></app-search-all>
+
+  <app-search-pet *ngSwitchCase="1"></app-search-pet>
+
+  <app-search-diary *ngSwitchCase="2"></app-search-diary>
+
+  <app-search-skill *ngSwitchCase="3"></app-search-skill>
+
+</div>
+
+
+</div>

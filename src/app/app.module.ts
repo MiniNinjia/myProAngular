@@ -68,6 +68,11 @@ import {MyInfoComponent} from './page-personal-center/my-info/my-info.component'
 import {PagePublishComponent} from './page-publish/page-publish.component'
 import { PageOutComponent } from './page-out/page-out.component';
 import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
+import { PageSearchComponent } from './page-search/page-search.component';
+import { SearchDiaryComponent } from './page-search/search-diary/search-diary.component';
+import { SearchSkillComponent } from './page-search/search-skill/search-skill.component';
+import { SearchPetComponent } from './page-search/search-pet/search-pet.component';
+import { SearchAllComponent } from './page-search/search-all/search-all.component';
 
 
 @NgModule({
@@ -119,7 +124,12 @@ import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.com
     PageOutComponent,
     DiaryChild2Component,
     PageOutComponent,
-    PagePublishComponent
+    PagePublishComponent,
+    PageSearchComponent,
+    SearchDiaryComponent,
+    SearchSkillComponent,
+    SearchPetComponent,
+    SearchAllComponent
   ],
   imports: [
     FormsModule,

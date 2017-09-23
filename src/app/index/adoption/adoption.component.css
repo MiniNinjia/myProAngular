@@ -21,7 +21,7 @@
   height: 306px;
   margin: 10px;
   box-sizing: border-box;
-  border: solid 1px #797979;
+  box-shadow:3px 3px 5px #a2a2a2;
   background-color: white;
 }
 
@@ -74,16 +74,15 @@
 
 #index-container-adoption-btn {
   background-color: white;
-  border: solid 1px #ffc907;
+  border: solid 1px #c6c6c6;
   font-size: 20px;
   padding: 5px 20px;
-  margin-top: 25px;
   outline: none;
 }
 
 #index-container-adoption-btn:hover {
-  border-color: #ffc907;
-  box-shadow: 0 0 20px #ffc907;
+  border-color: #d6d6d6;
+  box-shadow: 0 0 20px #c6c6c6;
   /*margin-top: 20px;*/
   /*margin-bottom: 5px;*/
 }

@@ -1,12 +1,13 @@
 .background_imag{
   width: 100%;
-
+  background: url("../../../assets/images/bj2.png");
+  /*background: no-repeat;*/
 }
 .main{
   width: 1200px;
-  height: 1000px;
+  /*height: 1000px;*/
   margin: 0 auto;
-  background-color: #ffab8e;
+  /*background-color: #ffab8e;*/
 }
 .main:after{
   content: '';
@@ -16,11 +17,11 @@
 }
 .back {
   width: 1000px;
-  height: 1000px;
+  /*height: 1000px;*/
   margin: 0 auto;
-  padding-top: 250px;
+  padding-top: 180px;
   box-sizing: border-box;
-  background-color: #9ca3b1;
+  /*background-color: #9ca3b1;*/
 }
 .left{
   width: 250px;
@@ -63,14 +64,20 @@
   box-sizing: border-box;
   margin: 0 auto;
   border-radius: 180px;
-
 }
+.pet_imag1{
+  width: 80px;
+  height: 80px;
+  /*border: solid 5px white;*/
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 180px;
+}
+
 .up{
   width: 1000px;
   height: 400px;
-  background-color: #ff4502;
-
-
+  /*background-color: #ff4502;*/
   /*margin-top: -600px;*/
   /*float: left;*/
 }
@@ -83,14 +90,14 @@
 .right_left{
   width: 250px;
   height: 400px;
-  background-color: #ff2846;
+  /*background-color: #ff2846;*/
   float: left;
 
 }
 .right_right{
   width: 750px;
   height: 400px;
-  background-color: #87f8ff;
+  background-color: white;
   float: right;
 
 }
@@ -108,7 +115,7 @@
 }
 .right_right1{
   width: 750px;
-  height: 80px;
+  height: 60px;
   padding-left: 20px;
   padding-top: 20px;
   background-color: white;
@@ -119,4 +126,171 @@
   height: 60px;
   background-color: #eaeaea;
   border-right:solid 1px #62dfff;
+  padding-right: 5px;
+
 }
+.diary_info{
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 15px;
+  float: left;
+}
+.diary_info li{
+  margin-left: 10px;
+  float: left;
+  color: #444444;
+}
+.diary_info span{
+  color: #79bcff;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.fabu{
+  width: 80px;
+  height: 40px;
+  background-color: #ff5353;
+  float: right;
+  margin-top: 10px;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 10px;
+}
+.right_right3{
+  width: 746px;
+  height: 165px;
+  background-color: #434c54;
+  color: white;
+  position: relative;
+
+}
+.right_right3:after{
+  content: '';
+  display: block;
+  clear: both;
+  width: 10px;
+  height: 10px;
+  background-color: #434c54;
+  position: absolute;
+  left: 700px;
+  top: -5px;
+  transform:rotate(45deg)
+
+}
+.detail1{
+  width: 746px;
+  height: 55px;
+  border-bottom: solid 1px white;
+}
+.detail2{
+  width: 746px;
+  height: 10px;
+  background-color: #eaeaea;
+}
+.right_right3_one{
+  width: 100%;
+  height: 50px;
+  /*background-color: white;*/
+  line-height: 50px;
+  padding-left: 20px;
+}
+.send_diary{
+  font-size: 1.2em;
+  float: left;
+}
+.total{
+  margin-left: 20px;
+  float: left;
+}
+.right_right3_one ul{
+  float: right;
+  margin-right: 20px;
+}
+
+.right_right3_one ul li{
+  float: left;
+  margin-left: 5px;
+}
+.photo{
+  width: 90px;
+  height: 90px;
+  border: dashed 3px #9c92ff;
+  margin-left: 20px;
+  float: left;
+  margin-top: 5px;
+  padding-left: 30px;
+  padding-top: 30px;
+  /*background-color: #62dfff;*/
+}
+.diary_detail{
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  float: left;
+  margin-left: 20px;
+}
+.dowm{
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  margin-top: 20px;
+}
+.object{
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  padding-top: 20px;
+  color: #444444;
+  font-size: 1.1em;
+
+}
+.message{
+  width: 960px;
+  height: 150px;
+  /*border: 1px solid #a1a1a1;*/
+  /*background-color: #bdbdbd;*/
+  margin-left: 20px;
+}
+.fabiao{
+  width: 100px;
+  height: 40px;
+  background-color: #7fd451;
+  margin-left: 20px;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 40px;
+}
+.liuyan{
+  height: 40px;
+  /*background-color: #62dfff;*/
+  color: #444444;
+  padding-left: 20px;
+  padding-top: 10px;
+
+}
+.liuyan_detail{
+  width: 960px;
+  height: 60px;
+  /*background-color: #9ca3b1;*/
+  margin-left: 20px;
+}
+.file{
+  width: 90px;
+  height: 90px;
+  background-color: #2cff47;
+  float: left;
+  margin-left: 20px;
+  margin-top: -110px;
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+/*.empty{*/
+  /*width: 90px;*/
+  /*height: 90px;*/
+  /*background-color: #ffab8e;*/
+  /*float: left;*/
+/*}*/
