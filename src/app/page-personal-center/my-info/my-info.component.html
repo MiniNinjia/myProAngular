@@ -20,20 +20,19 @@
         <input type="text" *ngIf="del==true" name="addres" required [(ngModel)]="addres" value="addres">
       </p>
 
-
       <div class="form-group">
         <p><span class="sp1">电话tel：</span>
-          <span *ngIf="del==!true">{{tel}}</span>
-          <input type="text" name="tele" id="tele"
-                 #tele="ngModel" pattern="1[34578]\d{9}$" *ngIf="del==true"  [(ngModel)]="tel"
+          <span *ngIf="del==!true">{{mytel}}</span>
+          <input type="text" name="tel" id="tel"
+                 #tele="ngModel" pattern="1[34578]\d{9}$" [hidden]="del==false"  [(ngModel)]="tel"
                   required minlength="11">
         </p>
       </div>
 
-      <!--<div *ngIf="tele.invalid  && (tele.dirty||tele.touched)" class="alert alert-danger">-->
-        <!--<div *ngIf="tele.errors.required">号码不能为空</div>-->
-        <!--<div *ngIf="tele.errors.pattern">号码格式 不正确</div>-->
-      <!--</div>-->
+      <div *ngIf="tel.invalid  && (tel.dirty||tel.touched)" class="alert alert-danger">
+        <div *ngIf="tel.errors.required">号码不能为空</div>
+        <div *ngIf="tel.errors.pattern">号码格式 不正确</div>
+      </div>
 
 
       <p><span class="sp1">年龄：</span>

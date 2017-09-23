@@ -122,7 +122,7 @@ import { FroalaComponent } from './froala/froala.component';
     DiaryChild2Component,
     PageOutComponent,
     PagePublishComponent,
-    ProtectedComponent
+    ProtectedComponent,
     PagePublishComponent,
     FroalaComponent
   ],

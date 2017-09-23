@@ -22,7 +22,7 @@ export class MyInfoComponent implements OnInit {
   user:any;
   sex:any;
   addres:any;
-  tel:any;
+  mytel:any;
   age:any;
 
   constructor() {
@@ -30,7 +30,7 @@ export class MyInfoComponent implements OnInit {
     this.age =this.inof.age;
     this.user=this.inof.user;
     this.sex=this.inof.sex;
-    this.tel=this.inof.tel;
+    this.mytel=this.inof.tel;
 
   }
 
@@ -44,11 +44,11 @@ export class MyInfoComponent implements OnInit {
     this.del=!this.del;
     this. inof={
       'id':1,
-      'user':this.inof.user,
-      'sex':this.inof.sex,
-      'addres':this.inof.addres,
-      'tel':this.inof.tel,
-      'age':this.inof.age,
+      'user':this.user,
+      'sex':this.sex,
+      'addres':this.addres,
+      'tel':this.mytel,
+      'age':this.age,
     };
   }
 
