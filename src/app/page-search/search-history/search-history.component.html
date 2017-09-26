@@ -1,0 +1,11 @@
+<div class="right">
+  <div class="line1">
+    <div class="history">历史搜索</div>
+    <div class="empty">清空</div>
+  </div>
+  <div  *ngFor="let item of history;let i=index;"class="history_detail">
+    <img src="../../assets/diary-images/时钟.png" height="16" width="16"/>
+    &nbsp;
+    <span>{{item.name}}</span>
+  </div>
+</div>

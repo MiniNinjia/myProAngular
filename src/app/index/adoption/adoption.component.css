@@ -7,8 +7,9 @@
 
 .index-container-adoption-a {
   font-size: 30px;
-  color: #333333;
+  color: #444444;
 }
+
 
 .index-container-adoption-ul {
   width: 1200px;
@@ -20,9 +21,12 @@
   width: 280px;
   height: 306px;
   margin: 10px;
-  box-sizing: border-box;
-  box-shadow:3px 3px 5px #a2a2a2;
+ border: solid 1px #CCCCCC;
   background-color: white;
+}
+.index-container-adoption-li:hover{
+  border-color: #CCCCCC;
+  box-shadow: 0 0 20px #aaaaaa;
 }
 
 .index-container-adoption-userInfo {
@@ -77,6 +81,7 @@
   border: solid 1px #c6c6c6;
   font-size: 20px;
   padding: 5px 20px;
+  margin-top: 30px;
   outline: none;
 }
 
@@ -86,3 +91,4 @@
   /*margin-top: 20px;*/
   /*margin-bottom: 5px;*/
 }
+

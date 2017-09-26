@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
+import {SkillService} from '../../services/skill.service';
+import {GlobalPropertyService} from '../../services/global-property.service';
+import {CookieService} from 'angular2-cookie/services/cookies.service';
 @Component({
   selector: 'app-skill-main',
   templateUrl: './skill-main.component.html',
   styleUrls: ['./skill-main.component.css']
 })
 export class SkillMainComponent implements OnInit {
+  list_data: any;
+  skillService: any;
   skill = [
     {
       'id':'1',
@@ -43,9 +47,18 @@ export class SkillMainComponent implements OnInit {
       'ground':'浏览次数（533）',
     },
   ]
-  constructor() { }
+  constructor(private glo: GlobalPropertyService,
+              private ds: SkillService,
+              private _cookieService: CookieService) { }
 
   ngOnInit() {
   }
-
+  skillMaindata() {
+    const that = this;
+    this.ds.getskillMain(this.skillService, function (result) {
+      if (result._body !== 'err') {
+        that.list_data.diary = JSON.parse(result._body);
+      }
+    });
+  }
 }
