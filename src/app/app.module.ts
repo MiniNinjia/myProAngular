@@ -77,6 +77,9 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
 
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { FroalaComponent } from './froala/froala.component';
+import { SearchHistoryComponent } from './page-search/search-history/search-history.component';
+import { BottomComponent } from './bottom/bottom.component';
+import { PageBackstageComponent } from './page-backstage/page-backstage.component';
 @NgModule({
   declarations: [
     NumberPipePipe,
@@ -133,7 +136,10 @@ import { FroalaComponent } from './froala/froala.component';
     SearchPetComponent,
     SearchAllComponent,
     ProtectedComponent,
-    FroalaComponent
+    FroalaComponent,
+    SearchHistoryComponent,
+    BottomComponent,
+    PageBackstageComponent
   ],
   imports: [
     FormsModule,

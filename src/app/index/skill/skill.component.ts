@@ -41,36 +41,36 @@ export class SkillComponent implements OnInit {
 
   datas = [[
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'哈士奇.jpg',
+      'middlewords':' 哈士奇能不能吃海鲜？',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'狗1.jpg',
+      'middlewords':' 狗狗饲养需要注意的问题？',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'罗福梗犬.jpg',
+      'middlewords':' 罗福梗犬好养吗 罗福梗犬还是比较好养',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'圣伯纳.jpg',
+      'middlewords':'圣伯纳犬的食量 圣伯纳犬好养但是食量',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'贵宾幼犬1.jpg',
+      'middlewords':' 如何挑选一只好的纯种贵宾幼犬',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'哈士奇2.jpg',
+      'middlewords':'宠物狗哈士奇的饲养方法',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'苏牧1.jpg',
+      'middlewords':'苏格兰牧羊犬眼屎多怎么回事？',
     },
     {
-      'imag':'狗狗.png',
-      'middlewords':' 健康没有毛病，第一针疫苗做完，洗过澡了指甲剪了，希望您想好对它负责。',
+      'imag':'苏牧2.jpg',
+      'middlewords':' 苏格兰牧羊犬得了细小怎么办？',
     },
   ]]
   // time: any;

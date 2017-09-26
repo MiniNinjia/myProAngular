@@ -72,32 +72,3 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.history{
-  float: left;
-  margin-left: 20px;
-  margin-top: 20px;
-  color: #9ca3b1;
-}
-.empty{
-  color: #9ca3b1;
-  float: right;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-.line1{
-  width: 100%;
-  float: left;
-}
-.history_detail{
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  float: left;
-  margin-top: 20px;
-  padding-left: 20px;
-
-
-}
-.history_detail:hover{
-  background-color: #e7e7e7;
-}

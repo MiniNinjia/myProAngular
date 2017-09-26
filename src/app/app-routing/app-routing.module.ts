@@ -11,6 +11,7 @@ import {PageCommunityComponent} from '../page-community/page-community.component
 import {PagePersonalCenterComponent} from '../page-personal-center/page-personal-center.component'
 import { PagePublishComponent } from '../page-publish/page-publish.component';
 import { PageSearchComponent } from '../page-search/page-search.component';
+import { PageBackstageComponent } from '../page-backstage/page-backstage.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'index',
     component: IndexComponent
+  },
+  {
+    path: 'admin',
+    component: PageBackstageComponent
   },
   {
     path: 'shop',
