@@ -1,22 +1,23 @@
 <div class="row">
   <div class="index-container-diary-div">
-    <a class="index-container-adoption-a">领养日记</a>
+    <div class="index-container-diary-a" >领养日记</div>
     <div class="pppp">
       <ul class="index-container-diary-ul" [@change]="state" >
         <li *ngFor="let items of datas">
           <div *ngFor="let item of items.items">
-            <img src="../../../assets/images/{{item.id}}" height="390" width="390"/>
+            <img src="../../../assets/images/{{item.id}}" height="300" width="300"/>
+
           </div>
         </li>
       </ul>
     </div>
     <ul class="index-container-diary-ul-list">
-      <li id="list0" (click)="change(1)"><a><i></i></a></li>
-      <li id="list1" (click)="change(2)"><a><i></i></a></li>
-      <li id="list2" (click)="change(3)"><a><i></i></a></li>
-      <li id="list3" (click)="change(4)"><a><i></i></a></li>
-      <li id="list4" (click)="change(5)"><a><i></i></a></li>
+      <li id="list0"  (click)="change(1)"><a><i [class.qqq]="state==1" ></i></a></li>
+      <li id="list1"  (click)="change(2)"><a><i [class.qqq]="state==2" ></i></a></li>
+      <li id="list2"  (click)="change(3)"><a><i [class.qqq]="state==3" ></i></a></li>
+      <li id="list3"  (click)="change(4)"><a><i [class.qqq]="state==4" ></i></a></li>
+      <li id="list4"  (click)="change(5)"><a><i [class.qqq]="state==5" ></i></a></li>
     </ul>
-    <button id="index-container-diary-btn">查看更多日记</button>
+    <div id="index-container-diary-btn">查看更多日记</div>
   </div>
 </div><!--领养日记-->

@@ -1,12 +1,13 @@
 
-.main{
+.main {
   width: 1200px;
   margin: 0 auto;
   padding-top: 80px;
   cursor: default;
   padding-bottom: 30px;
 }
-.top{
+
+.top {
   width: 100%;
   background-color: white;
   box-shadow: 2px 1px 5px #888888;
@@ -16,113 +17,137 @@
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
-.left{
+
+.left {
   width: 830px;
   float: left;
 }
-.left::after{
+
+.left::after {
   clear: both;
   content: ' ';
 }
-.right{
+
+.right {
   position: absolute;
   right: 0;
   z-index: 50;
-  top:0px;
+  top: 0px;
 }
-.title{
+
+.title {
   width: 900px;
   height: 80px;
   line-height: 80px;
   font-size: 30px;
   float: left;
 }
-.count{
+
+.count {
   width: 200px;
   height: 60px;
   float: right;
   text-align: center;
 }
-.count_left{
+
+.count_left {
   width: 50%;
   box-sizing: border-box;
   height: 60px;
   border-right: solid 1px #d7d7d7;
   float: left;
 }
-.count p{
+
+.count p {
   margin: 0;
   line-height: 30px;
 }
-.text{
+
+.text {
   width: 800px;
   overflow: hidden;
   padding-bottom: 20px;
   float: left;
 }
-.count_cat{
+
+.dn {
+  display: none;
+}
+
+.count_cat {
   color: #ababab;
 }
-.middle{
+
+.middle {
   width: 100%;
   position: relative;
 }
-.middle:after{
+
+.middle:after {
   /* 必须设置一个空的congtent,否则不起作用  */
   content: "";
   /* 转换成块元素  */
   display: block;
   clear: both;
 }
-.showAll{
+
+.showAll {
   clear: both;
   color: #ababab;
   text-align: center;
   width: 800px;
 }
-.info{
+
+.info {
   box-shadow: 2px 1px 5px #888888;
   background-color: white;
   width: 350px;
   overflow: hidden;
 }
-.info_top{
+
+.info_top {
   width: 100%;
   font-size: 18px;
   line-height: 50px;
   border-bottom: solid 1px #ababab;
   padding-left: 15px;
 }
-.info_user{
+
+.info_user {
   width: 320px;
   height: 100px;
   margin: 0 15px;
   border-bottom: solid 1px #ababab;
   padding-top: 15px;
 }
+
 .info_user img {
   width: 70px;
   height: 70px;
   border-radius: 10px;
   float: left;
 }
-.info_user_info{
+
+.info_user_info {
   width: 250px;
   height: 70px;
   float: right;
   padding-left: 15px;
 }
-.info_user_info a{
+
+.info_user_info a {
   font-size: 18px;
   line-height: 40px;
 }
-.info_count{
+
+.info_count {
   clear: both;
   width: 100%;
   height: 100px;
   padding-top: 20px;
 }
-.info_count li{
+
+.info_count li {
   width: 70px;
   height: 70px;
   float: left;
@@ -131,10 +156,12 @@
   line-height: 35px;
   font-size: 16px;
 }
-.info_count li a{
+
+.info_count li a {
   color: #ababab;
 }
-.collection_btn,.review_btn{
+
+.collection_btn, .review_btn {
   width: 120px;
   height: 34px;
   line-height: 34px;
@@ -142,21 +169,24 @@
   margin-bottom: 20px;
   border-radius: 5px;
 }
-.collection_btn{
-  float:left;
+
+.collection_btn {
+  float: left;
   margin-left: 15px;
   background-color: #ffc907;
   border: none;
   color: white;
 }
-.review_btn{
+
+.review_btn {
   float: right;
   margin-right: 15px;
   background-color: white;
   border: solid 1px #ffc907;
   color: #ffc907;
 }
-.message_btn,.follow_btn{
+
+.message_btn, .follow_btn {
   width: 120px;
   height: 34px;
   line-height: 34px;
@@ -165,21 +195,24 @@
   border-radius: 5px;
 
 }
-.follow_btn{
-  float:left;
+
+.follow_btn {
+  float: left;
   margin-left: 30px;
   background-color: #ffc907;
   border: none;
   color: white;
 }
-.message_btn{
+
+.message_btn {
   float: right;
   margin-right: 30px;
   background-color: white;
   border: solid 1px #ababab;
   color: #ababab;
 }
-.list{
+
+.list {
   width: 100%;
   padding-left: 30px;
   padding-top: 15px;
@@ -190,34 +223,42 @@
   margin-bottom: 15px;
   overflow: hidden;
 }
-.headimg{
+
+.headimg {
   width: 60px;
+  height: 60px;
+  border-radius: 10px;
 }
-.username{
+
+.username {
   font-size: 20px;
   padding-left: 30px;
 }
-.review_text{
+
+.review_text {
   width: 100%;
   margin-top: 15px;
 }
-.bottom{
+
+.bottom {
   width: 100%;
   height: 35px;
   margin-top: 15px;
-
 }
-.bottom a{
+
+.bottom a {
   padding: 0 15px;
   color: #777777;
 }
-.time{
+
+.time {
   padding-right: 15px;
   text-align: right;
   color: #777777;
   float: right;
 }
-.report{
+
+.report {
   width: 150px;
   height: 60px;
   margin-right: 15px;
@@ -226,9 +267,11 @@
   line-height: 60px;
 
 }
-.report a{
+
+.report a {
   color: #777777;
 }
+
 .page_out {
   height: 30px;
   width: 800px;
@@ -237,9 +280,11 @@
   text-align: center;
   margin-top: 30px;
 }
-.page_out:hover{
+
+.page_out:hover {
   cursor: default;
 }
+
 .page_tag {
   width: 30px;
   height: 30px;
@@ -252,12 +297,15 @@
 .page_tag:hover {
   background-color: #d0d0d0;
 }
-.page_tag_active{
+
+.page_tag_active {
   background-color: #a1a1a1;
 }
-.page_btn_enable{
+
+.page_btn_enable {
   color: #d0d0d0 !important;
 }
+
 .first,
 .end,
 .next,
@@ -265,7 +313,8 @@
   padding: 0 10px;
   color: #6a6a6a;
 }
-.aaa{
+
+.aaa {
   width: 300px;
   height: 30px;
   float: right;
@@ -273,18 +322,113 @@
   position: relative;
   bottom: 35px;
 }
-.showAll_report{
+
+.showAll_report {
   float: left;
   background-color: white;
   border: none;
-  outline: none ;
+  outline: none;
 }
-.showAll_time{
+
+.showAll_time {
   float: right;
   background-color: white;
   border: none;
-  outline: none ;
-}
-button{
   outline: none;
+}
+
+button {
+  outline: none;
+}
+
+.review_review {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.review_review img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+.review_review_list {
+  width: 100%;
+  margin: 10px auto;
+  overflow: -webkit-paged-y;
+}
+
+.review_review_list:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.contai:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.count1:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.review_input:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.review_input:before {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.padd {
+  padding-left: 30px;
+}
+
+.reviewname {
+  color: #d1b034;
+  font-weight: bolder;
+}
+
+.count1 {
+  float: right;
+  height: 30px;
+  width: 250px;
+  text-align: right;
+}
+
+.count1 a {
+  color: #777777;
+  padding: 0 5px;
+}
+
+.review_input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 15px;
+}
+
+.review_input input {
+  outline: none;
+  box-sizing: border-box;
+  width: 80%;
+  height: 30px;
+  border: solid 1px #ffc907;
+  border-radius: 10px;
+}
+
+.btn_review {
+  width: 60px;
+  height: 30px;
+  border: none;
+  background-color: #ffc907;
+  margin-left: -60px;
 }

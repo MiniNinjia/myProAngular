@@ -1,0 +1,53 @@
+.back{
+  width: 1200px;
+  min-height: 1000px;
+  background-color: #ffab8e;
+  margin: 0 auto;
+}
+.left{
+  width: 200px;
+  min-height: 1000px;
+  background-color: #777777;
+  float: left;
+}
+.right{
+  width: 1000px;
+  height: 1000px;
+  background-color: white;
+  float: left;
+}
+.head{
+  width: 100%;
+  height:80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 22.5px;
+  padding-bottom: 22.5px;
+  /*background-color: #f3dd00;*/
+}
+
+.list{
+  width:100%;
+}
+.list_details li{
+  height: 50px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  /*background-color: #2cff47;*/
+}
+.list_details li:hover{
+  background-color: rgba(255, 199, 8, 0.72);
+}
+.username{
+  height: 50px;
+  /*background-color: #ffab8e;*/
+  color: white;
+  text-align:center;
+
+}
+.name{
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 1.2em;
+}

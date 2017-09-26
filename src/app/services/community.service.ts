@@ -19,4 +19,59 @@ export class CommunityService {
     );
   }
 
+  getCommunityPageCount(callback) {
+    this.http.get(this._url + '/community/getPageCount').subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  collect(postData, callback) {
+    this.http.post(this._url + '/community/collect', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  getCommunityDetail(postData, callback) {
+    this.http.post(this._url + '/community/communityDetail', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  getCommunityReviewCount(postData, callback) {
+    this.http.post(this._url + '/community/getCommunityReviewCount', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  getCommunityReview(postData, callback) {
+    this.http.post(this._url + '/community/getCommunityReview', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  CommunityReviewLike(postData, callback) {
+    this.http.post(this._url + '/community/CommunityReviewLike', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  CommunityReviewAdd(postData, callback) {
+    this.http.post(this._url + '/community/CommunityReviewAdd', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
 }

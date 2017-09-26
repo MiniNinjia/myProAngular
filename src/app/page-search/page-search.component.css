@@ -39,6 +39,9 @@ div{
   text-align: center;
   line-height: 40px;
 }
+.search_btn:hover{
+  background-color: #388f56;
+}
 .search_text{
   margin: 0 auto;
 }

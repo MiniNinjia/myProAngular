@@ -78,6 +78,10 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
 
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { FroalaComponent } from './froala/froala.component';
+import { SearchHistoryComponent } from './page-search/search-history/search-history.component';
+import { BottomComponent } from './bottom/bottom.component';
+import { PageBackstageComponent } from './page-backstage/page-backstage.component';
+import { HeadimgPipe } from './headimg.pipe';
 import { MyMessageComponent } from './page-personal-center/my-message/my-message.component';
 import { PageReportComponent } from './page-report/page-report.component';
 @NgModule({
@@ -136,8 +140,14 @@ import { PageReportComponent } from './page-report/page-report.component';
     SearchPetComponent,
     SearchAllComponent,
     ProtectedComponent,
+    FroalaComponent,
+    SearchHistoryComponent,
+    BottomComponent,
+    PageBackstageComponent,
     ProtectedComponent,
     PagePublishComponent,
+    FroalaComponent,
+    HeadimgPipe
     FroalaComponent,
     MyMessageComponent,
     PageReportComponent

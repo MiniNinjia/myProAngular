@@ -1,12 +1,15 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'numberPipe'
 })
 export class NumberPipePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(value: string, length: number): string {
+    if (value.length > length) {
+      return value.substring(0, length) + '...';
+    } else {
+      return value;
+    }
   }
-
 }
