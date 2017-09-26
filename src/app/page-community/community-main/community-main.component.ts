@@ -11,66 +11,33 @@ import {GlobalPropertyService} from '../../services/global-property.service';
 export class CommunityMainComponent implements OnInit {
   pageNumber = 1;//默认第一页
   sort = 'default'; //排序方式
-  list_data = {
-    'totalPage': 20,
-    'pageNow': 1,
-    'article': [
-      {
-        'id': '1',
-        'title': '南京市玄武区后酬谢五千寻找泰迪',
-        'userImg': 'dog.png',
-        'userName': '用户名',
-        'time': '2017-09-09 10:31',
-        'text': '南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪...',
-        'communtCount': '180',
-        'isCollect': false,
-        'viewCount': '300'
-      },
-      {
-        'id': '2',
-        'title': '南京市玄武区后酬谢五千寻找泰迪',
-        'userImg': 'dog.png',
-        'userName': '用户名',
-        'time': '2017-09-09 10:31',
-        'text': '南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪...',
-        'communtCount': '180',
-        'isCollect': true,
-        'viewCount': '300'
-      },
-      {
-        'id': '3',
-        'title': '南京市玄武区后酬谢五千寻找泰迪',
-        'userImg': 'dog.png',
-        'userName': '用户名',
-        'time': '2017-10-09 10:31',
-        'text': '南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪...',
-        'communtCount': '600',
-        'isCollect': false,
-        'viewCount': '1000'
-      },
-      {
-        'id': '4',
-        'title': '南京市玄武区后酬谢五千寻找泰迪',
-        'userImg': 'dog.png',
-        'userName': '用户名',
-        'time': '2017-09-11 10:31',
-        'text': '南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪南京市玄武区后酬谢五千寻找泰迪...',
-        'communtCount': '50',
-        'isCollect': true,
-        'viewCount': '100'
-      }
-    ]
-  };
-  pageList = [1, 2, 3, 4, 5, 6, 7];
+  list_data: any;
+  pageList: any;
+  postData: any;
+  _uploadUrl: any;
+  _unheadimg:any;
 
   constructor(private glo: GlobalPropertyService,
               private cs: CommunityService,
               private _cookieService: CookieService) {
+    this.postData = {
+      uid: null,
+      pageNumber: this.pageNumber,
+      sort: this.sort,
+      pageSize: 5,
+    };
+    if (this._cookieService.get('user')) {
+      this.postData.uid = JSON.parse(this._cookieService.get('user')).uid;
+    }
+    this._uploadUrl = glo.uploadUrl;
+    this._unheadimg = 'upload/headimg/default.jpg';
   }
 
-
   changeSort(sort: string) {//修改排序方式
+    this.postData.sort = sort;
     this.sort = sort;
+    this.loaddata();
+    this.changePageList();
   }//修改排序方式
   changePageList() {//修改pagelist数组
     this.pageList = [];
@@ -99,9 +66,52 @@ export class CommunityMainComponent implements OnInit {
   changePageNumber(j: any) { //修改当前页面
     if (j > 0 && j <= this.list_data.totalPage) {
       this.pageNumber = j;
+      this.loaddata();
       this.changePageList();
     }
   }//修改当前页面
   ngOnInit() {
+    const that = this;
+    this.cs.getCommunityPageCount(function (result) {
+      if (result._body !== 'err') {
+        that.list_data = {
+          totalPage: Math.ceil(JSON.parse(result._body).count / 5),
+          pageNow: that.pageNumber,
+          article: []
+        };
+        that.changePageList();
+      }
+    });
+    that.loaddata();
+  }
+
+  loaddata() {
+    const that = this;
+    this.postData.pageNumber = this.pageNumber;
+    this.cs.getCommunityList(this.postData, function (result) {
+      if (result._body !== 'err') {
+        that.list_data.article = JSON.parse(result._body);
+      }
+    });
+  }
+
+  collect(i: any) {
+    const that = this;
+    if (that.postData.uid) {
+      const postdata = {
+        uid: that.postData.uid,
+        state: that.list_data.article[i].collectstate,
+        cid: that.list_data.article[i].communityID
+      };
+      that.cs.collect(postdata, function (result) {
+        if (result._body !== 'err') {
+          that.list_data.article[i].collectstate = !that.list_data.article[i].collectstate;
+        } else {
+          alert('点赞失败！');
+        }
+      });
+    } else {
+      alert('未登陆');
+    }
   }
 }

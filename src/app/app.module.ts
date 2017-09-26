@@ -78,6 +78,7 @@ import { SearchAllComponent } from './page-search/search-all/search-all.componen
 
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { FroalaComponent } from './froala/froala.component';
+import { HeadimgPipe } from './headimg.pipe';
 @NgModule({
   declarations: [
     NumberPipePipe,
@@ -136,7 +137,8 @@ import { FroalaComponent } from './froala/froala.component';
     ProtectedComponent,
     ProtectedComponent,
     PagePublishComponent,
-    FroalaComponent
+    FroalaComponent,
+    HeadimgPipe
   ],
   imports: [
     FormsModule,

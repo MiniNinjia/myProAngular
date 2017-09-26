@@ -1,5 +1,5 @@
 import {Directive, ElementRef, Input, HostListener} from '@angular/core';
-
+declare var $:any
 @Directive({selector: '[appMyscroll]'})
 export class MyscrollDirective {
   top: any;
@@ -16,7 +16,7 @@ export class MyscrollDirective {
     };
   }
 
-  @Input() set appMyscroll(top: any) {
+  @Input() set appMyscroll(top) {
     this.top = top;
   }
 
