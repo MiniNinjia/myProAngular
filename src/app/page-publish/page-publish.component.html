@@ -2,57 +2,74 @@
 
 </app-header>
 <div class="max">
-<div class="big">
-  <div class="mbig">
-    <p class="title">基础信息</p>
-    <form action="">
-      <p>
-        <span class="sp1"><span class="col">*</span>供求</span>
-      <input type="radio" name="give" id="give1"/>赠送
-      <input type="radio" name="give" id="give2"/>领养
-      </p>
-      <p>
-        <span class="sp1" ><span class="col">*</span>宠物年龄</span>
-              <input type="text" id="age" class="add1">
-      </p>
-      <p>
-        <span class="sp1" ><span class="col">*</span>标题</span>
-        <input type="text" id="detail" class="til">
-      </p>
-      <p>
-        <span class="sp1 sp0" ><span class="col">*</span>详细说明</span>
+  <div class="big">
+    <div class="mbig">
+      <p class="title">基础信息</p>
+      <form action="">
+        <p>
+          <span class="sp1"><span class="col">*</span>供求</span>
+          <input type="radio" name="give" id="give1"/>赠送
+          <input type="radio" name="give" id="give2"/>领养
+        </p>
+        <p>
+          <span class="sp1"><span class="col">*</span>宠物年龄</span>
+          <input type="text" id="age" class="add1">
+        </p>
+        <p>
+          <span class="sp1"><span class="col">*</span>标题</span>
+          <input type="text" id="detail" class="til">
+        </p>
+        <p class="psp1">
+          <span class="sp1 psp1">上传图片</span>
 
-      </p>
-      <div class="bianji">
-      <blog-froala (froala)="froalaContent($event)"></blog-froala>
+        </p>
+        <div class="pbig">
+          <div class="fil">
+            <input type="file" class="fil2">
+          </div>
+          <div class="pic3">
+            <div class="pic4">上传电脑中图片</div>
+            <div class="camera">
+              <img src="../../assets/images/camera.png" alt="">
+              <p class="carm">选择电脑图片上传</p>
+            </div>
+          </div>
+        </div>
+        <p class="tuch"><span>联系方式</span></p>
+
+        <p>
+          <span class="sp1">详细地址</span>
+          <select class="add1" name="" id="add1" (change)="pro($event)">
+            <option value="">请选择省</option>
+            <option [value]="i" *ngFor="let item of data;let i=index">{{item.provence}}</option>
+          </select>
+          <select class="add1" name="" id="add2">
+            <option value="">请选择市</option>
+            <option value="" *ngFor="let item of cit;let j=index">{{item}}</option>
+
+          </select>
+        </p>
+
+        <p>
+          <span class="sp1">联系人</span>
+          <input type="text" id="att" class="tex">
+        </p>
+        <p>
+          <span class="sp1">联系电话</span>
+          <input type="text" id="tel" class="tex">
+        </p>
+
+        <p>
+          <span class="sp1 sp0"><span class="col">*</span>详细说明</span>
+        </p>
+
+
+        <div class="bianji">
+          <blog-froala (froala)="froalaContent($event)"></blog-froala>
+        </div>
+        <div class="last">发布</div>
+      </form>
     </div>
-     <div class="pic">
-
-     </div>
-      <p class="tuch"><span>联系方式</span></p>
-
-      <p>
-        <span class="sp1" >详细地址</span>
-        <select class="add1" name="" id="add1" (change)="pro($event)">
-          <option value="">请选择省</option>
-          <option [value]="i"  *ngFor="let item of data;let i=index">{{item.provence}}</option>
-        </select>
-        <select class="add1" name="" id="add2">
-          <option value="">请选择市</option>
-          <option value="" *ngFor="let item of cit;let i=index">{{item}}</option>
-        </select>
-      </p>
-      <p>
-        <span class="sp1" >联系人</span>
-        <input type="text" id="att" class="tex">
-      </p>
-      <p>
-        <span class="sp1" >联系电话</span>
-        <input type="text" id="tel" class="tex">
-      </p>
-      <div class="last">发布</div>
-    </form>
   </div>
-</div>
 </div>
 <app-protected></app-protected>

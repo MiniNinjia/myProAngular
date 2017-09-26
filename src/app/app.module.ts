@@ -20,6 +20,7 @@ import {UserInfoService} from './services/userInfo.service';
 import {AdvsService} from './services/advs.service';
 import {AdoptionService} from './services/adoption.service';
 import {DiaryService} from './services/diary.service';
+import {CommunityService} from './services/community.service';
 //导入组件模块
 import {AdoptionComponent} from './index/adoption/adoption.component';
 import {DiaryComponent} from './index/diary/diary.component';
@@ -139,7 +140,10 @@ import { PageBackstageComponent } from './page-backstage/page-backstage.componen
     FroalaComponent,
     SearchHistoryComponent,
     BottomComponent,
-    PageBackstageComponent
+    PageBackstageComponent,
+    ProtectedComponent,
+    PagePublishComponent,
+    FroalaComponent
   ],
   imports: [
     FormsModule,
@@ -165,6 +169,7 @@ import { PageBackstageComponent } from './page-backstage/page-backstage.componen
     AdvsService,
     AdoptionService,
     DiaryService,
+    CommunityService
   ],
   bootstrap: [AppComponent]
 })

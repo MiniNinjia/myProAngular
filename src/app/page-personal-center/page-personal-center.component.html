@@ -48,10 +48,15 @@
             </ul>
           </div>
         <div class="left_main" ngSwitch="{{selectIndex}}">
+
             <app-my-publish *ngSwitchCase="1"></app-my-publish>
+
             <app-my-adoption *ngSwitchCase="2"></app-my-adoption>
+
             <app-my-diary *ngSwitchCase="3"></app-my-diary>
+
             <app-my-community *ngSwitchCase="4"></app-my-community>
+
             <app-my-info *ngSwitchCase="5"></app-my-info>
         </div>
       </div>
@@ -63,4 +68,4 @@
 
   </div>
 
-<app-protected></app-protected>
+<!--<app-protected></app-protected>-->
