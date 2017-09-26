@@ -8,10 +8,10 @@ import {ActivatedRoute, ParamMap} from '@angular/router';
 })
 export class CommunityDetailsComponent implements OnInit {
   articleId: string;
-
+   aa:any;
   constructor(private route: ActivatedRoute) {
   }
-
+quxiao=false
   pageNumber = 1;//默认第一页
   sort = 'default'; //排序方式
   pageList = [1, 2, 3, 4, 5, 6, 7];
@@ -116,10 +116,14 @@ export class CommunityDetailsComponent implements OnInit {
   }//修改当前页面
   ngOnInit() {
     this.articleId = this.route.snapshot.paramMap.get('article');
+    scrollTo(0,0);
   }
 
   showall() {
     this.test = this.test1;
+  }
+  jubao(){
+    this.aa=!this.aa;
   }
 
   scrollYx() {

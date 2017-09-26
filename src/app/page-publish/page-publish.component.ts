@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Http} from '@angular/http';
 @Component({
   selector: 'app-page-publish',
   templateUrl: './page-publish.component.html',
@@ -10,7 +10,6 @@ export class PagePublishComponent implements OnInit {
     console.log(event)
     console.log('11111');
   }
-
 
   data=[
     {
@@ -33,9 +32,37 @@ export class PagePublishComponent implements OnInit {
   ngOnInit() {
   }
   pro(event:any){
-    //console.log(event.target.value)
+
   this.cit=this.data[event.target.value].city;
-    //console.log(this.cit);
+
   }
+
+
+
+
+  //onFileChanged(fileList: FileList) {
+  //  if (fileList.length > 0) {
+  //    let file: File = fileList[0];
+  //    let formData: FormData = new FormData();
+  //    formData.append('uploadFile', file, file.name);
+  //    let headers = new Headers({
+  //      "Accept": "application/json"
+  //    });
+  //    let options = new RequestOptions({ headers });
+  //    this.http.post("https://localhost:44372/api/uploadFile", formData, options)
+  //      .map(res => res.json())
+  //      .catch(error => Observable.throw(error))
+  //      .subscribe(
+  //        data => console.log('success' + data),
+  //        error => console.log(error)
+  //      )
+  //  }
+  //}
+
+
+
+
+
+
 
 }

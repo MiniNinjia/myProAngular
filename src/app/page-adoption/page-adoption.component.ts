@@ -10,6 +10,7 @@ export class PageAdoptionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    scrollTo(0,0);
   }
 
 }

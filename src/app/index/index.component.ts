@@ -12,6 +12,7 @@ export class IndexComponent implements OnInit {
 
 
   ngOnInit() {
+    scrollTo(0,0);
   }
 
 }

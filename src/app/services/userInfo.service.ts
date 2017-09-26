@@ -65,4 +65,36 @@ export class UserInfoService {
       }
     );
   }
+
+  getCommunitylist(uid, callback) {
+  const params = new URLSearchParams();
+  params.set('uid', uid);
+  this.http.get(this._url + '/personal/getCommunitylist', {search: params}).subscribe(
+    function (result) {
+      callback(result);
+    }
+  );
+}
+
+
+  getMessageList(uid, callback) {
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getMessageList', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  getpersonalCollect(uid, callback) {
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getpersonalCollect', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
 }

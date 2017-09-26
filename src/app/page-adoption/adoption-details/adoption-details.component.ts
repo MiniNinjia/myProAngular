@@ -21,6 +21,23 @@ export class AdoptionDetailsComponent implements OnInit {
   currentPic = 0;
   now = 0;
   next: any;
+
+  //领养申请数据
+  buyuser:any;
+  buytel:any;
+  radi:any;
+  buyaddres:any;
+  reason:any;
+  applyData={
+    'petid':1,
+    'buser':null ,
+    'btel':null,
+    'radi':null,
+    'baddres':null,
+    'breason':null,
+  };
+
+
   data = {
     'carousel': [
       {
@@ -38,6 +55,7 @@ export class AdoptionDetailsComponent implements OnInit {
     ],
     'details': [
       {
+        'petid':1,
         'title': '超极品柴犬宝宝 血统好 签订协议',
         'popularity': 433,
         'host': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑',
@@ -117,7 +135,7 @@ export class AdoptionDetailsComponent implements OnInit {
   ];
 
   menunow = 0;
-
+     aa=false ;
   constructor(private route: ActivatedRoute) {
   }
 
@@ -125,6 +143,7 @@ export class AdoptionDetailsComponent implements OnInit {
     this.petId = this.route.snapshot.paramMap.get('petid');
     this.imgnow = this.data.carousel[0].img;
     this.go();
+   scrollTo(0,0);
   }
 
   change(i: any, j: any) {
@@ -139,11 +158,34 @@ export class AdoptionDetailsComponent implements OnInit {
     this.id = i;
     this.go()
   }
-
   go() {
     this.time = setInterval(() => {
       this.carousel(this.id === 3 ? 0 : this.id + 1);
     }, 3000);
+  }
+  buy(){
+    this.aa=!this.aa;
+
+  }
+
+  checke(give:any){
+    if(give==1){
+      this.radi='赠送';
+    }else {
+      this.radi='领养';
+    }
+    console.log(this.radi);
+  }
+  apply(){
+    this.applyData={
+      'petid':1,
+      'buser':this.buyuser ,
+      'btel':this.buytel ,
+      'radi':this.radi,
+      'baddres':this.buyaddres ,
+      'breason':this.reason,
+    };
+    this.aa=!this.aa;
   }
 
 }

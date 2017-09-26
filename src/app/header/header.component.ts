@@ -89,5 +89,6 @@ export class HeaderComponent implements OnInit {
     //     }
     //   });
     // }
+    scrollTo(0,0);
   }
 }

@@ -44,6 +44,20 @@ export class PagePersonalCenterComponent implements OnInit {
           that.introduce = that.userinfo.introduce ? that.userinfo.introduce : '暂无介绍';
         }
       });
+      //我的收藏
+      this.uis.getpersonalCollect(that.user.uid, function (result) {
+        if (result._body !== 'err') {
+          that.userinfo = JSON.parse(result._body)[0];
+          that.introduce = that.userinfo.introduce ? that.userinfo.introduce : '暂无介绍';
+        }
+      });
+
+
     }
+    scrollTo(0,0);
   }
+
+
+
+
 }

@@ -263,7 +263,7 @@
           </a>
           <a>
             <i class="fa fa-flag " aria-hidden="true"></i>
-           <span>举报 </span>
+           <span (click)="jubao()">举报 </span>
           </a>
           <span class="time"> <b>评论于 2017-9-18</b></span>
         </div>
@@ -315,3 +315,4 @@
 
 
 </div>
+<app-page-report [] *ngIf="aa"></app-page-report>

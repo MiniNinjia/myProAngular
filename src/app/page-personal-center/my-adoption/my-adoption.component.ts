@@ -9,12 +9,12 @@ import {UserInfoService} from '../../services/userInfo.service';
 })
 export class MyAdoptionComponent implements OnInit {
   user: any;
-  data = [];
+  adoptiondata = [];
   _uploadUrl = this.glo.uploadUrl;
-
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
               private uis: UserInfoService) {
+
   }
 
   ngOnInit() {
@@ -24,10 +24,16 @@ export class MyAdoptionComponent implements OnInit {
       that.uis.getAdoptionList(that.user.uid, function (result) {
         if (result._body !== 'err') {
           //console.log(JSON.parse(result._body));
-          that.data = JSON.parse(result._body);
+          that.adoptiondata = JSON.parse(result._body);
         }
       });
     }
+
   }
+
+
+
+
+
 
 }

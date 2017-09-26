@@ -6,7 +6,6 @@ export class AdvsService {
   constructor(private http: Http,
               private glo: GlobalPropertyService) {
   }
-
   _url = this.glo.serverUrl;
 
   getAdv(postdata: any, callback) {

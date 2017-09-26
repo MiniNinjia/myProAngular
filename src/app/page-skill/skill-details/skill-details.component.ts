@@ -7,10 +7,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SkillDetailsComponent implements OnInit {
 
-  constructor() {
+  constructor(
+
+  ) {
   }
 
   ngOnInit() {
+    scrollTo(0,0);
   }
 
 }

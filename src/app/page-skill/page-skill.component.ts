@@ -10,6 +10,7 @@ export class PageSkillComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    scrollTo(0,0);
   }
 
 }
