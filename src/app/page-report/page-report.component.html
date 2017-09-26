@@ -1,0 +1,25 @@
+<div *ngIf="quxiao">
+<div class="warning"></div>
+<div class="bbig">
+  <form action="">
+    <p class="btitle">举报</p>
+    <span class="quxiao"(click)="buy()">×</span>
+    <p>
+      <span class="bsp1" ><span class="bcol">*</span>理由</span>
+      <select type="" id="user" class="btil"  name="buyuser" [(ngModel)]="reasons">
+        <option value="">语言不当具有攻击性</option>
+        <option value="">不雅头像</option>
+        <option value="">钓鱼或可疑消息</option>
+        <option value="">安全隐患</option>
+        </select>
+    </p>
+
+    <p>
+      <span class="bsp1"><span class="bcol">*</span>详细说明</span>
+      <textarea class="aa" name="reason" [(ngModel)]="morereason" id="" cols="30" rows="5" ></textarea>
+    </p>
+
+    <button class="blast" (click)="apply()" >提交申请</button>
+  </form>
+</div>
+</div>

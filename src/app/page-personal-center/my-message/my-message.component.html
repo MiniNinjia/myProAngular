@@ -1,0 +1,25 @@
+<div class="big" *ngFor="let item of buyinfo;let i=index">
+  <div class="main">
+    <!--<img class="rimg" src="{{item.pimg}}" alt="">-->
+
+  <div class="rword">
+  <p class="rtitle" routerLink="../../adoption/detail/id" >{{item.title}}</p>
+    <p><span>申请人信息</span></p>
+  <p><span>姓名：</span><span>{{item.user}}</span></p>
+
+  <p><span>电话：</span><span>{{item.tel}}</span></p>
+
+  <p><span>地址：</span><span>{{item.addres}}</span></p>
+
+  <p><span>是否养过宠物：</span><span>{{item.exp}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+
+  <p><span>申请理由：</span>
+
+  </p><div class="reason">{{item.reason}}</div>
+
+    <button class="detail1">同意</button>
+    <button class="detail">拒绝</button>
+
+  </div>
+</div>
+</div>
