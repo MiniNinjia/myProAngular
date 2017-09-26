@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpModule} from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 
 //导入localstrong模块
 import {LocalStorage} from './app.local.storage';
@@ -67,23 +67,24 @@ import {MyDiaryComponent} from './page-personal-center/my-diary/my-diary.compone
 import {MyCommunityComponent} from './page-personal-center/my-community/my-community.component';
 import {MyInfoComponent} from './page-personal-center/my-info/my-info.component';
 import {PagePublishComponent} from './page-publish/page-publish.component';
-import { PageOutComponent } from './page-out/page-out.component';
-import { DiaryChild2Component } from './page-diary/diary-child2/diary-child2.component';
-import { ProtectedComponent } from './protected/protected.component';
-import { PageSearchComponent } from './page-search/page-search.component';
-import { SearchDiaryComponent } from './page-search/search-diary/search-diary.component';
-import { SearchSkillComponent } from './page-search/search-skill/search-skill.component';
-import { SearchPetComponent } from './page-search/search-pet/search-pet.component';
-import { SearchAllComponent } from './page-search/search-all/search-all.component';
+import {PageOutComponent} from './page-out/page-out.component';
+import {DiaryChild2Component} from './page-diary/diary-child2/diary-child2.component';
+import {ProtectedComponent} from './protected/protected.component';
+import {PageSearchComponent} from './page-search/page-search.component';
+import {SearchDiaryComponent} from './page-search/search-diary/search-diary.component';
+import {SearchSkillComponent} from './page-search/search-skill/search-skill.component';
+import {SearchPetComponent} from './page-search/search-pet/search-pet.component';
+import {SearchAllComponent} from './page-search/search-all/search-all.component';
 
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
-import { FroalaComponent } from './froala/froala.component';
-import { SearchHistoryComponent } from './page-search/search-history/search-history.component';
-import { BottomComponent } from './bottom/bottom.component';
-import { PageBackstageComponent } from './page-backstage/page-backstage.component';
-import { HeadimgPipe } from './headimg.pipe';
-import { MyMessageComponent } from './page-personal-center/my-message/my-message.component';
-import { PageReportComponent } from './page-report/page-report.component';
+import {FroalaEditorModule, FroalaViewModule} from 'angular-froala-wysiwyg';
+import {FroalaComponent} from './froala/froala.component';
+import {SearchHistoryComponent} from './page-search/search-history/search-history.component';
+import {BottomComponent} from './bottom/bottom.component';
+import {PageBackstageComponent} from './page-backstage/page-backstage.component';
+import {HeadimgPipe} from './headimg.pipe';
+import {MyMessageComponent} from './page-personal-center/my-message/my-message.component';
+import {PageReportComponent} from './page-report/page-report.component';
+import {SkillService} from "./services/skill.service";
 @NgModule({
   declarations: [
     NumberPipePipe,
@@ -147,7 +148,7 @@ import { PageReportComponent } from './page-report/page-report.component';
     ProtectedComponent,
     PagePublishComponent,
     FroalaComponent,
-    HeadimgPipe
+    HeadimgPipe,
     FroalaComponent,
     MyMessageComponent,
     PageReportComponent
@@ -176,6 +177,7 @@ import { PageReportComponent } from './page-report/page-report.component';
     AdvsService,
     AdoptionService,
     DiaryService,
+    SkillService,
     CommunityService
   ],
   bootstrap: [AppComponent]

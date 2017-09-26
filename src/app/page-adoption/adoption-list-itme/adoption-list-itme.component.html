@@ -17,17 +17,10 @@
       <!--市-->
       <div id="citySel">
         <ul>
-          <li class="cn" *ngFor="let item of cit;let j=index"(click)="citye(j)">{{item}}</li>
+          <li class="cn" *ngFor="let item of cit;let j=index" (click)="citye(j)">{{item}}</li>
         </ul>
       </div>
     </div>
-
-
-
-
-
-
-
 
 
     <div class="listright">
@@ -41,11 +34,8 @@
   <div class="list-div">
 
 
-
-
-
-    <ul class="flo" >
-      <li >
+    <ul class="flo">
+      <li>
         <div *ngFor="let item of data;let i=index">
           <div class="list" *ngIf="i%4==1">
             <div class="user">
@@ -60,21 +50,21 @@
               <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
-            <span class="dat">{{item.date}}</span>
-            <span class="liulancishu">浏览次数{{item.browse}}</span></div>
+              <span class="dat">{{item.date}}</span>
+              <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
-              <p  >
+              <p>
                 <a routerLink="../detail/id">{{item.introduce}}</a>
               </p>
 
-                <span>{{item.commentcount}}条评论</span>
-                <span class="shoucang" (click)="exchange(i)">
+              <span>{{item.commentcount}}条评论</span>
+              <span class="shoucang" (click)="exchange(i)">
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
                   <span *ngIf="item.isCollect">已收藏</span>
                 </span>
-                <br>
+              <br>
 
 
               <p></p>
@@ -103,7 +93,7 @@
               <span class="dat">{{item.date}}</span>
               <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
-              <p  ><a routerLink="../detail/id">{{item.introduce}}</a></p>
+              <p><a routerLink="../detail/id">{{item.introduce}}</a></p>
 
               <span>{{item.commentcount}}条评论</span>
               <span class="shoucang" (click)="exchange(i)">
@@ -141,7 +131,7 @@
               <span class="dat">{{item.date}}</span>
               <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
-              <p  ><a routerLink="../detail/id">{{item.introduce}}</a></p>
+              <p><a routerLink="../detail/id">{{item.introduce}}</a></p>
 
               <span>{{item.commentcount}}条评论</span>
               <span class="shoucang" (click)="exchange(i)">
@@ -172,14 +162,14 @@
                 <p class="uname01">{{item.uname}}</p>
               </div>
             </div>
-            <div class="petimg" >
+            <div class="petimg">
               <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
               <span class="liulancishu">浏览次数{{item.browse}}</span></div>
             <div class="introduce">
-              <p  ><a routerLink="../detail/id">{{item.introduce}}</a></p>
+              <p><a routerLink="../detail/id">{{item.introduce}}</a></p>
 
               <span>{{item.commentcount}}条评论</span>
               <span class="shoucang" (click)="exchange(i)">

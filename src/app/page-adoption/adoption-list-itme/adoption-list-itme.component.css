@@ -1,14 +1,13 @@
 
-.max{
+.max {
   width: 1200px;
-
   margin: 0 auto;
-  /*background-color: #f3f3f3;*/
+  overflow: hidden;
 }
-.area{
+
+.area {
   font-size: 20px;
   margin-top: 40px;
-  /*background-color: #9E9E9E;*/
   width: 100px;
   display: inline-block;
   float: left;
@@ -18,40 +17,46 @@
 
 }
 
-.area span{
+.area span {
   cursor: pointer;
 }
-.sanjiao{
-  width:0;
-  height:0;
-  overflow:hidden;
-  border:5px solid #f3f3f3;
-  border-top:5px solid #0F0;
+
+.sanjiao {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0F0;
 
 }
+
 .listright {
   padding-top: 40px;
   box-sizing: border-box;
   text-align: center;
 
 }
-.listright p{
+
+.listright p {
   font-size: 1.2em;
   float: right;
   margin-left: 30px;
   /*border: 1px solid#9ca3b1;*/
 }
-.adcol{
+
+.adcol {
   color: #f1e04e;
 }
-.head{
+
+.head {
   width: 1145px;
   height: 100px;
   margin: auto;
   box-sizing: border-box;
 }
-.list{
-  width:265px ;
+
+.list {
+  width: 265px;
   /*height: 340px;*/
   background-color: white;
   margin-left: 28px;
@@ -61,74 +66,84 @@
   margin-bottom: 28px;
 }
 
-.list:hover{
-  box-shadow:3px 3px 5px #a2a2a2;
+.list:hover {
+  box-shadow: 3px 3px 5px #a2a2a2;
   transition: transform 0.3s;
   transform: scale(1.01) translate(-5px, -5px);
 }
-.user{
+
+.user {
   width: 100%;
-  height:60px;
+  height: 60px;
   cursor: pointer;
 
 }
-.uimg{
+
+.uimg {
   display: inline-block;
   width: 50px;
   height: 50px;
   background-color: #FCE1E5;
   border-radius: 100%;
 }
-.uname{
+
+.uname {
   display: inline-block;
-  width:150px ;
-  height:40px ;
+  width: 150px;
+  height: 40px;
 }
-.petimg{
-width: 100%;
+
+.petimg {
+  width: 100%;
   cursor: pointer;
 
 }
-.introduce{
+
+.introduce {
   padding: 10px;
 }
-.introduce span{
+
+.introduce span {
   cursor: pointer;
 }
+
 .introduce span {
 
   color: #ababab;
 }
-.con{
+
+.con {
   width: 284px;
   float: left;
 }
-.flo{
-  float:left ;
+
+.flo {
+  float: left;
 }
-.dat{
+
+.dat {
   margin-left: 5px;
   margin-bottom: -5px;
   cursor: pointer;
 }
-.liulancishu{
-margin-left: 80px;
+
+.liulancishu {
+  margin-left: 80px;
   cursor: pointer;
 }
-.aa{
+
+.aa {
   padding-top: 10px;
   padding-left: 5px;
 }
-.shoucang{
+
+.shoucang {
   margin-left: 20px;
 }
-.uname01{
+
+.uname01 {
   margin-left: 10px;
 }
-
-
-
-
 
 #containe {
   top: 120px;
@@ -173,13 +188,13 @@ margin-left: 80px;
 
 }
 
-
-.pn:hover,.cn:hover {
+.pn:hover, .cn:hover {
   color: white;
   background-color: #00b38a;
   cursor: pointer;
 }
-.cn{
+
+.cn {
   float: left;
   width: 60px;
   margin-left: 5px;

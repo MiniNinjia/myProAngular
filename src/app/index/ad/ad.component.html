@@ -3,7 +3,7 @@
     <ul class="index_adv_item">
       <li *ngFor="let item of items;let i=index;" [class.li_active]="i==currentPic">
         <a>
-          <img src="{{_uploadUrl}}{{item.imgurl}}" alt="">
+          <img src="{{_uploadUrl}}{{item?.imgurl}}" alt="">
         </a>
       </li>
     </ul>
@@ -13,7 +13,7 @@
       </li>
     </ul>
     <ul class="index_adv_btn">
-      <li class="index_adv_btn_left" (click)="changebanner(currentPic-1>=0?currentPic-1:items.length-1)"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+      <li class="index_adv_btn_left" (click)="changebanner(currentPic-1>=0?currentPic-1:items?.length-1)"><a><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
       <li class="index_adv_btn_right" (click)="changebanner(currentPic+1<=items.length-1?currentPic+1:0)"><a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
       </li>
     </ul>

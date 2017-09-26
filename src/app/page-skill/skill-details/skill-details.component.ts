@@ -10,18 +10,16 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 export class SkillDetailsComponent implements OnInit {
   list_data: any;
   skillService: any;
+
   constructor(private glo: GlobalPropertyService,
               private ds: SkillService,
               private _cookieService: CookieService) {
-
-  constructor(
-
-  ) {
   }
 
   ngOnInit() {
-    scrollTo(0,0);
+    scrollTo(0, 0);
   }
+
   skillDetailsdata() {
     const that = this;
     this.ds.getskillDetails(this.skillService, function (result) {

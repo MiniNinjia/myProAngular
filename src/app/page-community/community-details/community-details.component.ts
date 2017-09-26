@@ -13,10 +13,6 @@ export class CommunityDetailsComponent implements OnInit {
   showAllFlag = false;
   article: any;
   articleId: string;
-   aa:any;
-  constructor(private route: ActivatedRoute) {
-  }
-quxiao=false
   postData: any;
   _uploadUrl: any;
   pageNumber = 1;//默认第一页
@@ -28,6 +24,10 @@ quxiao=false
   reviewData: any;
   reviewstate = false;
   rereview = '';
+
+
+  aa: any;
+  quxiao = false;
 
   constructor(private route: ActivatedRoute,
               private glo: GlobalPropertyService,
@@ -86,14 +86,15 @@ quxiao=false
     this.loadDetail();
     this.loadReviewCount();
     this.loadReview();
-    scrollTo(0,0);
+    scrollTo(0, 0);
   }
 
   showall() {
     this.showAllFlag = !this.showAllFlag;
   }
-  jubao(){
-    this.aa=!this.aa;
+
+  jubao() {
+    this.aa = !this.aa;
   }
 
   loadDetail() {
@@ -195,7 +196,7 @@ quxiao=false
       const postdata = {
         uid: that.postData.uid,
         state: that.article.colloctstate,
-        cid:  that.article.communityID,
+        cid: that.article.communityID,
       };
       that.cs.collect(postdata, function (result) {
         if (result._body !== 'err') {
