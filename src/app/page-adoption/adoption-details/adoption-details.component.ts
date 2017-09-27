@@ -41,16 +41,16 @@ export class AdoptionDetailsComponent implements OnInit {
   data = {
     'carousel': [
       {
-        'img': '../../../assets/images/dog1.png'
+        'img': '../../../assets/adoption_detail/10.1.jpg'
       },
       {
-        'img': '../../../assets/images/adv1.png'
+        'img': '../../../assets/adoption_detail/10.2.jpg'
       },
       {
-        'img': '../../../assets/images/dog1.png'
+        'img': '../../../assets/adoption_detail/10.3.jpg'
       },
       {
-        'img': '../../../assets/images/adv1.png'
+        'img': '../../../assets/adoption_detail/10.4.jpg'
       },
     ],
     'details': [
@@ -79,7 +79,7 @@ export class AdoptionDetailsComponent implements OnInit {
   recommend = [
     {
       'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
+      'pimg': '../../../assets/adoption_detail/1.1.jpg',
       'uimg': '../../../assets/images/skill-t1.jpg',
       'uname': 'tom',
       'kind': '萨摩耶',
@@ -88,7 +88,7 @@ export class AdoptionDetailsComponent implements OnInit {
     },
     {
       'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
+      'pimg': '../../../assets/adoption_detail/2.1.jpg',
       'uimg': '../../../assets/images/skill-t1.jpg',
       'uname': 'tom',
       'kind': '萨摩耶',
