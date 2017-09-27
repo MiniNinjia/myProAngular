@@ -1,7 +1,7 @@
-<div class="main">
+<div class="main" >
   <div class="top">
     <div class="title">
-      <p>{{article?.title}}</p>
+      <p>{{article?.title|numberPipe:30}}</p>
     </div>
     <div class="count">
       <div class="count_left">
@@ -20,8 +20,8 @@
     <div class="showAll">
       <button class="showAll_report"><i class="fa fa-flag" aria-hidden="true"></i> 举报</button>
       <button class="showAll_time"> {{article?.time|date:'yyyy-MM-dd'}}</button>
-      <a [class.dn]="showAllFlag" (click)="showall()">显示全部 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-      <a [class.dn]="!showAllFlag" (click)="showall()">收起 <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+      <a [class.dn]="showAllFlag" *ngIf="article?.content.length>200" (click)="showall()">显示全部 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+      <a [class.dn]="!showAllFlag" *ngIf="article?.content.length>200" (click)="showall()">收起 <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     </div>
     <div class="aaa">
       <button *ngIf="!article?.colloctstate" (click)="collect()" class="collection_btn"><i class="fa fa-star"

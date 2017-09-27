@@ -53,14 +53,12 @@ export class AdComponent implements OnInit {
     const that = this;
     this.time = setInterval(() => {
       that.currentPic = (that.currentPic + 1) % that.items.length;
-      console.log(that.currentPic);
     }, 3000);
   }
 
   changebanner(id) {
     clearInterval(this.time);
     this.currentPic = id;
-    console.log(id);
     this.go();
   }
 

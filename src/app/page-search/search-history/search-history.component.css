@@ -1,7 +1,5 @@
 .right{
   width: 300px;
-  /*height: 1000px;*/
-  /*background-color: #ffecaa;*/
   float: left;
   border-bottom: solid 1px #bac2d0;
   box-shadow: 0px 3px 5px -2px rgb(170, 170, 170);
@@ -29,8 +27,6 @@
   float: left;
   margin-top: 20px;
   padding-left: 20px;
-
-
 }
 .history_detail:hover{
   background-color: #e7e7e7;

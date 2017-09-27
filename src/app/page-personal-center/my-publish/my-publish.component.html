@@ -12,8 +12,8 @@
               <span> <i class="fa fa-star " aria-hidden="true"></i>  {{item?.collectcount}}次收藏</span><br>
             </div>
             <div class="href">
-              <button class="detail" routerLink="/adoption/detail/{{item?.petid}}"  *ngIf="item.state">详细信息</button>
-              <button class="diary" routerLink="/diary/detail/{{item?.petid}}"  *ngIf="!item.state">TA的日记</button>
+              <button class="detail" routerLink="../../adoption/detail/{{item?.petid}}"  *ngIf="!item.state">详细信息</button>
+              <button class="diary" routerLink="../../diary/detail/{{item?.petid}}"  *ngIf="item.state">TA的日记</button>
             </div>
           </div>
           <span class="title">{{item?.title}}</span><br>

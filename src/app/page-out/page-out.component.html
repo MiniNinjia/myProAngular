@@ -1,4 +1,4 @@
-<div class="page_out">
+<div class="page_out" *ngIf="list_data.totalPage>0">
   <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
   <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
   <a class="page_tag"
@@ -6,4 +6,7 @@
      (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
   <a class="next" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
   <a class="end" [class.page_btn_enable]="pageNumber==list_data.totalPage" (click)="changePageNumber(list_data.totalPage)">尾页</a>
+</div>
+<div *ngIf="list_data.totalPage==0">
+  没有搜索到任何东西哦
 </div>
