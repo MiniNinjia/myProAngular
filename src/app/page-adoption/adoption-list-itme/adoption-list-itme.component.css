@@ -16,6 +16,7 @@
   text-align: center;
   cursor: pointer;
   background-color: #ffffff;
+  /*background-color: white;*/
 
 
 }
@@ -109,7 +110,6 @@
 .petimg {
   width: 100%;
   cursor: pointer;
-
 }
 
 .introduce {

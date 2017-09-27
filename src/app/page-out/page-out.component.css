@@ -5,6 +5,7 @@
   max-width: 800px;
   text-align: center;
   float: left;
+  margin-top: 30px;
 }
 .page_out:hover{
   cursor: default;

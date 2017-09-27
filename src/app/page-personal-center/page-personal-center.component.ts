@@ -17,6 +17,10 @@ export class PagePersonalCenterComponent implements OnInit {
   introduce: '暂无介绍';
   userinfo: any;
 
+
+  myCollect: any;
+
+
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
               private uis: UserInfoService) {
@@ -47,17 +51,12 @@ export class PagePersonalCenterComponent implements OnInit {
       //我的收藏
       this.uis.getpersonalCollect(that.user.uid, function (result) {
         if (result._body !== 'err') {
-          that.userinfo = JSON.parse(result._body)[0];
-          that.introduce = that.userinfo.introduce ? that.userinfo.introduce : '暂无介绍';
+          that.myCollect = JSON.parse(result._body);
         }
       });
-
-
     }
-    scrollTo(0,0);
+    scrollTo(0, 0);
   }
-
-
 
 
 }

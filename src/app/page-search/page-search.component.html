@@ -1,37 +1,31 @@
 <app-header>
 
 </app-header>
-<router-outlet>
-
-</router-outlet>
-
 <div class="back">
-<div class="first_flo">
-  <div class="search_text">
-  <input  class="text" type="text">
-    <div class="search_btn">
-      搜索
+  <div class="first_flo">
+    <div class="search_text">
+      <input class="text" type="text" [(ngModel)]="searchText">
+      <div class="search_btn" (click)="Search()">搜索</div>
+    </div>
+    <div class="search_head">
+      <ul class="head">
+        <li (click)=" change(0)" [class.aa]="menu==0">全部<span>({{data?.all?.length}}+)</span></li>
+        <li (click)=" change(1)" [class.aa]="menu==1">宠物<span>({{data?.info?.length}}+)</span></li>
+        <li (click)=" change(2)" [class.aa]="menu==2">日志<span>({{data?.diary?.length}}+)</span></li>
+        <li (click)=" change(3)" [class.aa]="menu==3">社区<span>({{data?.community?.length}}+)</span></li>
+      </ul>
     </div>
   </div>
-  <div class="search_head">
-    <ul class="head">
-      <li (click)=" search(0)">全部<span class="aa">(2000+)</span></li>
-      <li (click)=" search(1)">宠物<span>(2000+)</span></li>
-      <li (click)=" search(2)">日志<span>(2000+)</span></li>
-      <li (click)=" search(3)">技巧<span>(2000+)</span></li>
-    </ul>
+  <div [ngSwitch]="menu">
+    <app-search-all *ngSwitchCase="0" [data]="data"></app-search-all>
+
+    <app-search-pet *ngSwitchCase="1" [data]="data"></app-search-pet>
+
+    <app-search-diary *ngSwitchCase="2" [data]="data"></app-search-diary>
+
+    <app-search-skill *ngSwitchCase="3" [data]="data"></app-search-skill>
+
+    <app-search-history (_search)="_search($event)" [text]="_searchText" ></app-search-history>
+
   </div>
-</div>
-  <div [ngSwitch]="menu" >
-  <app-search-all *ngSwitchCase="0"></app-search-all>
-
-  <app-search-pet *ngSwitchCase="1"></app-search-pet>
-
-  <app-search-diary *ngSwitchCase="2"></app-search-diary>
-
-  <app-search-skill *ngSwitchCase="3"></app-search-skill>
-
-</div>
-
-
 </div>

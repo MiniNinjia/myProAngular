@@ -1,90 +1,82 @@
 <app-header></app-header>
-  <div class="main">
-    <div class="top">
-      <img class="bg" src="../../assets/images/personalbg.png" alt="">
-      <div class="info">
-        <img class="headimg" src="{{_uploadUrl}}{{headimg}}" alt="">
-        <div class="username">
-          <p><b>{{nickname}}</b></p>
-          <p>{{introduce}}</p>
-        </div>
+<div class="main">
+  <div class="top">
+    <img class="bg" src="../../assets/images/personalbg.png" alt="">
+    <div class="info">
+      <img class="headimg" src="{{_uploadUrl}}{{headimg}}" alt="">
+      <div class="username">
+        <p><b>{{nickname}}</b></p>
+        <p>{{introduce}}</p>
       </div>
     </div>
+  </div>
 
-    <div class="middle">
-      <div class="left">
-          <div class="menu">
-            <ul>
-              <li>
-                <a [class.active]="selectIndex==1" (click)="changeIndex(1)">
-                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                  &nbsp;&nbsp;我发布的
-                </a>
-              </li>
-              <li>
-                <a [class.active]="selectIndex==2" (click)="changeIndex(2)">
-                  <i class="fa fa-heart" aria-hidden="true"></i>
-                  &nbsp;&nbsp;我收养的
-                </a>
-              </li>
-              <li>
-                <a [class.active]="selectIndex==3" (click)="changeIndex(3)">
-                  <i class="fa fa-pencil-square" aria-hidden="true"></i>
-                  &nbsp;&nbsp;我的日记
-                </a>
-              </li>
-              <li>
-                <a [class.active]="selectIndex==4" (click)="changeIndex(4)">
-                  <i class="fa fa-users" aria-hidden="true"></i>
-                  &nbsp;&nbsp;我的社区
-                </a>
-              </li>   <li>
-              <a [class.active]="selectIndex==5" (click)="changeIndex(5)">
-                <i class="fa fa-commenting" aria-hidden="true"></i>
-                &nbsp;&nbsp;我的消息
-              </a>
-            </li>
-              <li>
-                <a [class.active]="selectIndex==6" (click)="changeIndex(6)">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  &nbsp;&nbsp;我的资料
-                </a>
-              </li>
+  <div class="middle">
+    <div class="left">
+      <div class="menu">
+        <ul>
+          <li>
+            <a [class.active]="selectIndex==1" (click)="changeIndex(1)">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              &nbsp;&nbsp;我发布的
+            </a>
+          </li>
+          <li>
+            <a [class.active]="selectIndex==2" (click)="changeIndex(2)">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              &nbsp;&nbsp;我收养的
+            </a>
+          </li>
+          <li>
+            <a [class.active]="selectIndex==3" (click)="changeIndex(3)">
+              <i class="fa fa-pencil-square" aria-hidden="true"></i>
+              &nbsp;&nbsp;我的日记
+            </a>
+          </li>
+          <li>
+            <a [class.active]="selectIndex==4" (click)="changeIndex(4)">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              &nbsp;&nbsp;我的社区
+            </a>
+          </li>
+          <li>
+            <a [class.active]="selectIndex==5" (click)="changeIndex(5)">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+              &nbsp;&nbsp;我的消息
+            </a>
+          </li>
+          <li>
+            <a [class.active]="selectIndex==6" (click)="changeIndex(6)">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              &nbsp;&nbsp;我的资料
+            </a>
+          </li>
 
-            </ul>
-          </div>
-        <div class="left_main" ngSwitch="{{selectIndex}}">
-
-            <app-my-publish *ngSwitchCase="1"></app-my-publish>
-
-            <app-my-adoption *ngSwitchCase="2"></app-my-adoption>
-
-            <app-my-diary *ngSwitchCase="3"></app-my-diary>
-
-            <app-my-community *ngSwitchCase="4"></app-my-community>
-
-          <app-my-message *ngSwitchCase="5"></app-my-message>
-
-            <app-my-info *ngSwitchCase="6"></app-my-info>
-
-
-        </div>
+        </ul>
       </div>
-      <div class="right">
-        <div class="rhead">
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <span class="conl">我的收藏(<span class="num">22</span>)</span>
-        </div>
-        <div class="rmin">
-          <img class="rimg" src="../../assets/images/dog1.png" alt="">
-          <div class="rtitle">超极品柴犬宝宝 血统好 签订协议</div>
-          <div class="btn">
-            <button class="detail">取消收藏</button>
-            <button class="detail" routerLink="../../adoption/detail/id">查看详情</button>
-          </div>
+      <div class="left_main" ngSwitch="{{selectIndex}}">
+        <app-my-publish *ngSwitchCase="1"></app-my-publish>
+        <app-my-adoption *ngSwitchCase="2"></app-my-adoption>
+        <app-my-diary *ngSwitchCase="3"></app-my-diary>
+        <app-my-community *ngSwitchCase="4"></app-my-community>
+        <app-my-message *ngSwitchCase="5"></app-my-message>
+        <app-my-info *ngSwitchCase="6"></app-my-info>
+      </div>
+    </div>
+    <div class="right">
+      <div class="rhead">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span class="conl">我的收藏(<span class="num">{{myCollect?.length}}</span>)</span>
+      </div>
+      <div class="rmin" *ngFor="let item of myCollect">
+        <div class="rtitle">{{item?.title}}</div>
+        <div class="btn_div">
+          <button class="detail">取消收藏</button>
+          <button class="detail" routerLink="../../{{item?.url}}">查看详情</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 <!--<app-protected></app-protected>-->

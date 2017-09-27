@@ -21,6 +21,9 @@ import {AdvsService} from './services/advs.service';
 import {AdoptionService} from './services/adoption.service';
 import {DiaryService} from './services/diary.service';
 import {CommunityService} from './services/community.service';
+import {SkillService} from './services/skill.service';
+import {SearchService} from './services/search.service';
+
 //导入组件模块
 import {AdoptionComponent} from './index/adoption/adoption.component';
 import {DiaryComponent} from './index/diary/diary.component';
@@ -84,6 +87,7 @@ import {PageBackstageComponent} from './page-backstage/page-backstage.component'
 import {HeadimgPipe} from './headimg.pipe';
 import {MyMessageComponent} from './page-personal-center/my-message/my-message.component';
 import {PageReportComponent} from './page-report/page-report.component';
+import { PagePipe } from './page.pipe';
 import {SkillService} from "./services/skill.service";
 import { CommonModule }     from '@angular/common';
 import { FileUploadModule } from 'ng2-file-upload';
@@ -156,7 +160,10 @@ import {PublishService} from "./services/publish.service";
     HeadimgPipe,
     FroalaComponent,
     MyMessageComponent,
-    PageReportComponent
+    PageReportComponent,
+    PagePipe,
+    PageReportComponent,
+
   ],
   imports: [
     FormsModule,
@@ -184,6 +191,7 @@ import {PublishService} from "./services/publish.service";
     AdoptionService,
     DiaryService,
     SkillService,
+    SearchService,
     CommunityService,
     PublishService
   ],

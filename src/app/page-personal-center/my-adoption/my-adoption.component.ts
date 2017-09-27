@@ -9,7 +9,7 @@ import {UserInfoService} from '../../services/userInfo.service';
 })
 export class MyAdoptionComponent implements OnInit {
   user: any;
-  adoptiondata = [];
+  data = [];
   _uploadUrl = this.glo.uploadUrl;
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
@@ -23,12 +23,10 @@ export class MyAdoptionComponent implements OnInit {
     if (that.user) {
       that.uis.getAdoptionList(that.user.uid, function (result) {
         if (result._body !== 'err') {
-          //console.log(JSON.parse(result._body));
-          that.adoptiondata = JSON.parse(result._body);
+          that.data = JSON.parse(result._body);
         }
       });
     }
-
   }
 
 

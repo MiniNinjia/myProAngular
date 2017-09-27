@@ -92,6 +92,7 @@ export class UserInfoService {
     params.set('uid', uid);
     this.http.get(this._url + '/personal/getpersonalCollect', {search: params}).subscribe(
       function (result) {
+
         callback(result);
       }
     );

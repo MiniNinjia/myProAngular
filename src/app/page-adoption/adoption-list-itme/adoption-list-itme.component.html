@@ -89,7 +89,7 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p class="uname01">{{item.uname}}44444</p>
+                <p class="uname01">{{item.uname}}</p>
               </div>
             </div>
             <div class="petimg">
@@ -182,6 +182,7 @@
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
+
                   <span *ngIf="item.isCollect">已收藏</span>
                 </span>
               <br>

@@ -14,6 +14,7 @@ export class DiaryChild2Component implements OnInit {
     'time': '10:45',
     'username': '乔乔',
     'headimag': '头像3.jpg',
+    'imgSrc' : '1.png'
   },
   ]
 
@@ -21,5 +22,4 @@ export class DiaryChild2Component implements OnInit {
 
   ngOnInit() {
   }
-
 }

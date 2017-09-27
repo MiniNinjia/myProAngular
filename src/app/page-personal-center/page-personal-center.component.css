@@ -1,28 +1,33 @@
-.main{
+.main {
   width: 1200px;
   margin: 0 auto;
   cursor: default;
 }
-.top{
+
+.top {
   width: 100%;
-  height:380px;
+  height: 380px;
   background-color: white;
 }
-.bg{
+
+.bg {
   width: 100%;
 }
-.info{
+
+.info {
   width: 100%;
   height: 100px;
 }
-.headimg{
+
+.headimg {
   margin-top: -50px;
   width: 150px;
   height: 150px;
   margin-left: 50px;
   border-radius: 100%;
 }
-.username{
+
+.username {
   font-size: 16px;
   float: right;
   height: 100px;
@@ -30,27 +35,32 @@
   padding-top: 20px;
   color: #9ca3b1;
 }
-.username p:first-child{
+
+.username p:first-child {
   font-size: 25px;
   color: #444444;
 }
-.middle{
+
+.middle {
   width: 100%;
   margin-top: 20px;
 }
-.left{
+
+.left {
   width: 850px;
   height: 200px;
   background-color: white;
   float: left;
 }
-.middle::after{
+
+.middle::after {
   content: '';
   display: block;
   clear: both;
 }
-.right{
-  width:330px;
+
+.right {
+  width: 330px;
   height: 520px;
   background-color: white;
   float: right;
@@ -58,79 +68,90 @@
   /*padding:20px 20px;*/
 }
 
-.menu{
+.menu {
   width: 100%;
   height: 50px;
   border-bottom: solid 1px #ababab;
 }
-.menu li{
+
+.menu li {
   width: 100px;
   height: 50px;
   float: left;
   margin: 0 15px;
   text-align: center;
 }
-.menu li a{
+
+.menu li a {
   display: inline-block;
   height: 50px;
   line-height: 50px;
   width: 100px;
   color: #444444;
 }
-.active{
+
+.active {
   border-bottom: solid 4px #ffc907;
 }
-.left_main{
+
+.left_main {
   width: 100%;
   background-color: white;
   padding-top: 30px;
 }
-.left_main:after{
+
+.left_main:after {
   content: '';
   display: block;
   clear: both;
 }
-.rmin{
+
+.rmin {
   width: 100%;
-  height: 130px;
-  /*background-color: #e5d1f3;*/
+  height: 100px;
+  padding:0 15px;
   margin-top: 15px;
-  padding: 5px;
   border-bottom: 1px solid #9ca3b1;
 }
-.num{
+
+.num {
   color: #f3682c;
 }
-.rimg{
+
+.rimg {
   width: 100px;
   height: 100%;
   float: left;
 }
+
 .rhead {
   margin: 20px;
 }
-.rhead span{
+
+.rhead span {
   margin-right: 20px;
 }
-.rtitle{
+
+.rtitle {
   font-size: 14px;
-  float: left;
-  width: 170px;
+  width: 100%;
   margin-left: 5px;
   cursor: pointer;
 }
-.btn{
-  width: 170px;
+
+.btn_div {
+  width: 100%;
   height: 30px;
-  float: left;
-  margin-top: 34px;
-  /*margin-left: 5px;*/
+  margin-top: 30px;
 }
-.btn button{
+
+.btn_div button {
   margin-right: 10px;
   font-size: 14px;
+  float: left;
 }
-.detail{
+
+.detail {
   background-color: #fbfff9;
   border: solid 1px #ababab;
   color: #ababab;
@@ -138,6 +159,6 @@
   height: 30px;
   border-radius: 5px;
   outline: none;
-  display:inline-block;
+  display: inline-block;
   margin-bottom: 10px;
 }

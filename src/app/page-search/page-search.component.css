@@ -25,6 +25,7 @@ div{
   margin-top: 50px;
   margin-left: 200px;
   float: left;
+  outline: none;
 }
 .search_btn{
   width: 85px;
@@ -38,6 +39,7 @@ div{
   font-size: 1.3em;
   text-align: center;
   line-height: 40px;
+  cursor: pointer;
 }
 .search_btn:hover{
   background-color: #388f56;
@@ -62,6 +64,7 @@ div{
   color: #707070;
   text-align: center;
   line-height:90px;
+  cursor: pointer;
 }
 
 .head{
@@ -78,5 +81,6 @@ margin-top: 0px;
   overflow: hidden;
 }
 .aa{
-
+  border-bottom: 2px solid #3f9f5f;
+  overflow: hidden;
 }
