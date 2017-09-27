@@ -10,6 +10,7 @@ import {UserInfoService} from '../../services/userInfo.service';
 export class MyCommunityComponent implements OnInit {
   user: any;
   communitydata = [];
+  _uploadUrl = this.glo.uploadUrl;
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
               private uis: UserInfoService) {

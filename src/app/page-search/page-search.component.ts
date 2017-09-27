@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {SearchService} from '../services/search.service';
+import {Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-page-search',
   templateUrl: './page-search.component.html',
@@ -16,12 +17,17 @@ export class PageSearchComponent implements OnInit {
   @Input() searchText: any;
   _searchText: any;
 
-  constructor(private ss: SearchService) {
+  constructor(private ss: SearchService,
+              private router: Router,
+              private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
-    // this._search('狗');
+    const text = this.route.snapshot.paramMap.get('text');
+    if (text) {
+      this._search(text);
+    }
   }
 
   change(i: any) {

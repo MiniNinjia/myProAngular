@@ -9,6 +9,7 @@
 }
 .page_out:hover{
   cursor: default;
+  margin-bottom: 30px;
 }
 .page_tag {
   width: 30px;
