@@ -8,20 +8,33 @@
 .area {
   font-size: 20px;
   margin-top: 40px;
-  width: 100px;
+  width: 150px;
+  height: 50px;
   display: inline-block;
   float: left;
-  border: 1px solid #eae937;
+  /*border: 1px solid #eae937;*/
   text-align: center;
   cursor: pointer;
+  background-color: #ffffff;
   /*background-color: white;*/
 
-}
 
-.area span {
-  cursor: pointer;
 }
-
+.pbtn{
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+}
+.pbtnp{
+  display: inline-block;
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+}
 .sanjiao {
   width: 0;
   height: 0;
@@ -105,10 +118,6 @@
 
 .introduce span {
   cursor: pointer;
-}
-
-.introduce span {
-
   color: #ababab;
 }
 
@@ -147,56 +156,76 @@
 
 #containe {
   top: 120px;
-  width: 230px;
-  background-color: #ff3c1f;
+  width: 300px;
   position: absolute;
   z-index: 20;
-  height: 150px;
+  height: 300px;
   color: black;
   border: solid 1px #bdbdbd;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
 }
 
 #provinceSel {
-  width: 30%;
+  width: 50%;
   background-color: white;
   position: relative;
   z-index: 20;
-  height: 150px;
+  height: 100%;
   color: black;
   border: solid 1px #bdbdbd;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   box-sizing: border-box;
   float: left;
-  overflow-y: scroll;
+  overflow-y:scroll;
 
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #dbdbdb;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4);
 }
 
 #citySel {
-  width: 70%;
-  background-color: white;
+  width: 50%;
+  background-color: #f4f4f4;
   position: relative;
   z-index: 20;
-  height: 150px;
+  height: 100%;
   color: black;
   border: solid 1px #bdbdbd;
-  border-radius: 5px;
   box-sizing: border-box;
-  float: right;
-  overflow-y: scroll;
+  float: left;
+  overflow-y:scroll;
+  overflow-x: hidden;
 
 }
 
 .pn:hover, .cn:hover {
   color: white;
-  background-color: #00b38a;
+  background-color: #f1e04e;
   cursor: pointer;
 }
-
 .cn {
   float: left;
-  width: 60px;
   margin-left: 5px;
-  /*background-color: #d5bcff;*/
+  padding-left: 28px;
+  line-height: 50px;
+  cursor: pointer;
+  background-color: #e2e5ec;
+  width: 100%;
 }
+.pn{
+  width: 100%;
+  padding-left: 28px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #c8ccd9;
+}
+

@@ -2,16 +2,18 @@
 
 <div class="max">
   <div class="head">
-    <div class="area" (click)="placee()">
-      <span>{{choose}}</span>
-      <i class="fa fa-caret-down" aria-hidden="true"></i>
+<div>
+  <!--全国-->
+    <div class="area"  (click)="placee()">
+      <div class="pbtn" id="_area">{{choose}}</div>
+      <i class="fa fa-caret-down pbtnp" aria-hidden="true"></i>
     </div>
-
-    <div id="containe" class="bn" [hidden]="pla">
+  <!--省市-->
+    <div id="containe" class="bn"  [hidden]="pla">
       <!--省-->
       <div id="provinceSel">
         <ul>
-          <li class="pn" *ngFor="let item of place;let i=index" (click)="pro(i)">{{item.provence}}</li>
+          <li class="pn" *ngFor="let item of place;let i=index" (click)="pro($event,i)">{{item.provence}}</li>
         </ul>
       </div>
       <!--市-->
@@ -22,6 +24,8 @@
       </div>
     </div>
 
+  </div>
+
 
     <div class="listright">
       <nav>
@@ -31,9 +35,11 @@
       </nav>
     </div>
   </div>
+
+
+
+
   <div class="list-div">
-
-
     <ul class="flo">
       <li>
         <div *ngFor="let item of data;let i=index">
@@ -47,7 +53,7 @@
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id"class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -121,11 +127,11 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p class="uname01">{{item.uname}}</p>
+                <p class="uname01">{{item.uname}}55555</p>
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id"  class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -159,11 +165,11 @@
                 <img class="uimg" src="{{item.uimg}}" alt="">
               </div>
               <div class="uname">
-                <p class="uname01">{{item.uname}}</p>
+                <p class="uname01">{{item.uname}}666666</p>
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id"class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>

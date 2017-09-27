@@ -88,8 +88,14 @@ import {HeadimgPipe} from './headimg.pipe';
 import {MyMessageComponent} from './page-personal-center/my-message/my-message.component';
 import {PageReportComponent} from './page-report/page-report.component';
 import { PagePipe } from './page.pipe';
+import {SkillService} from "./services/skill.service";
+import { CommonModule }     from '@angular/common';
+import { FileUploadModule } from 'ng2-file-upload';
+import {PublishService} from "./services/publish.service";
+
 @NgModule({
   declarations: [
+
     NumberPipePipe,
     SkillDetailsComponent,
     PetIntroduceComponent,
@@ -169,7 +175,8 @@ import { PagePipe } from './page.pipe';
     AdoptionRoutingModule,
     SkillRoutingModule,
     AppRoutingModule,
-
+    CommonModule,
+    FileUploadModule,
     BrowserAnimationsModule,
     HttpModule,
     FroalaEditorModule.forRoot(),
@@ -185,7 +192,8 @@ import { PagePipe } from './page.pipe';
     DiaryService,
     SkillService,
     SearchService,
-    CommunityService
+    CommunityService,
+    PublishService
   ],
   bootstrap: [AppComponent]
 })

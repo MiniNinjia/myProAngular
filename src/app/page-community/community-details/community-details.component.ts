@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit,Output} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {CommunityService} from '../../services/community.service';
 import {UserInfoService} from '../../services/userInfo.service';
@@ -26,8 +26,8 @@ export class CommunityDetailsComponent implements OnInit {
   rereview = '';
 
 
-  aa: any;
-  quxiao = false;
+aa=false;
+
 
   constructor(private route: ActivatedRoute,
               private glo: GlobalPropertyService,
@@ -45,6 +45,17 @@ export class CommunityDetailsComponent implements OnInit {
     }
     this._uploadUrl = glo.uploadUrl;
   }
+  //举报模态框
+  jubao() {
+    this.aa = !this.aa;
+    console.log(this.aa+'举报');
+  }
+
+  receive(mes:boolean){
+    this.aa=!mes;
+    console.log(this.aa+'re');
+  }
+
 
 
   changePageList() {//修改pagelist数组
@@ -87,15 +98,15 @@ export class CommunityDetailsComponent implements OnInit {
     this.loadReviewCount();
     this.loadReview();
     scrollTo(0, 0);
+  };
+  ngOnChanges(){
+    this.receive(this.aa);
   }
 
   showall() {
     this.showAllFlag = !this.showAllFlag;
   }
 
-  jubao() {
-    this.aa = !this.aa;
-  }
 
   loadDetail() {
     const that = this;
