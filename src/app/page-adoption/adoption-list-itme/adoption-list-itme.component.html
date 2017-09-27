@@ -47,7 +47,7 @@
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id"class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -87,7 +87,7 @@
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -125,7 +125,7 @@
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -163,7 +163,7 @@
               </div>
             </div>
             <div class="petimg">
-              <img routerLink="../detail/id" height="{{item.height}}" class="petimg" src="{{item.img}}" alt="">
+              <img routerLink="../detail/id" class="petimg" src="{{item.img}}" alt="">
             </div>
             <div class="aa">
               <span class="dat">{{item.date}}</span>
@@ -176,6 +176,7 @@
                   <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
                   <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
                   <span *ngIf="!item.isCollect">收藏</span>
+
                   <span *ngIf="item.isCollect">已收藏</span>
                 </span>
               <br>

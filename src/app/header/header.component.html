@@ -4,7 +4,7 @@
   </div>
   <div class="index_main">
     <ul class="index_main_menu" [@searchBox]="state">
-      <li class="active"><a routerLink="/index" routerLinkActive="active">首页</a></li>
+      <li ><a routerLink="/index" routerLinkActive="active">首页</a></li>
       <li><a routerLink="/adoption" routerLinkActive="active">领养中心</a></li>
       <li><a routerLink="/diary" routerLinkActive="active">领养日志</a></li>
       <li><a routerLink="/skill" routerLinkActive="active">养宠技巧</a></li>
@@ -27,7 +27,8 @@
       <div *ngIf="!userInfo?.nickname">
         <li id="index_search" [@searchBtn]="state" (click)="toggleState()">
           <a>
-            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-search vv" aria-hidden="true"></i>
+
           </a>
         </li>
         <li><a href='{{_url}}/users/regist'>注册</a></li>

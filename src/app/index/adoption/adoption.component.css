@@ -77,9 +77,11 @@
 }
 
 #index-container-adoption-btn {
+  height: 40px;
   background-color: white;
   border: solid 1px #c6c6c6;
-  font-size: 20px;
+  font-size: 0.9em;
+  border-radius: 5px;
   padding: 5px 20px;
   margin-top: 30px;
   outline: none;
@@ -87,7 +89,8 @@
 
 #index-container-adoption-btn:hover {
   border-color: #d6d6d6;
-  box-shadow: 0 0 20px #c6c6c6;
+  box-shadow: 0 0 5px #aeaeae;
+  /*background-color: #f3dd00;*/
   /*margin-top: 20px;*/
   /*margin-bottom: 5px;*/
 }

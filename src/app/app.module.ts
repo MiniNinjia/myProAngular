@@ -156,6 +156,7 @@ import { PagePipe } from './page.pipe';
     MyMessageComponent,
     PageReportComponent,
     PagePipe
+    PageReportComponent,
   ],
   imports: [
     FormsModule,

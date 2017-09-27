@@ -6,9 +6,10 @@
 .back1{
   position: relative;
   width: 1200px;
-  height: 1200px;
+  /*height: 1200px;*/
   /*float: inherit;*/
   /*background-color: #9E9E9E;*/
+  overflow: hidden;
   margin: 0 auto;
 }
 .back1_left{
@@ -106,7 +107,7 @@ li{
   color: #444444;
 }
 .back1_left2_right{
-  width: 663px;
+  width: 650px;
   /*height: 150px;*/
   float: left;
   border-left: 1px solid #cfcfcf;
