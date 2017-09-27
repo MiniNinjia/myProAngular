@@ -18,7 +18,7 @@
       <span [class.dn]="!showAllFlag">{{article?.content}}</span>
     </div>
     <div class="showAll">
-      <button class="showAll_report"><i class="fa fa-flag" aria-hidden="true"></i> 举报</button>
+      <button class="showAll_report" (click)="jubao()"><i class="fa fa-flag" aria-hidden="true"></i> 举报</button>
       <button class="showAll_time"> {{article?.time|date:'yyyy-MM-dd'}}</button>
       <a [class.dn]="showAllFlag" *ngIf="article?.content.length>200" (click)="showall()">显示全部 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
       <a [class.dn]="!showAllFlag" *ngIf="article?.content.length>200" (click)="showall()">收起 <i class="fa fa-chevron-up" aria-hidden="true"></i></a>
@@ -142,6 +142,6 @@
       </div>
     </div>
   </div>
-
-
 </div>
+
+  <app-page-report *ngIf="aa" [Sitem]="aa"(TOparent)="receive($event)"></app-page-report>

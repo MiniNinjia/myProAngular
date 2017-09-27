@@ -37,7 +37,6 @@ export class SearchHistoryComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log('ngOnChanges>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
     if (this.text) {
       const data = {
         name: this.text

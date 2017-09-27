@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../../services/global-property.service';
 import {UserInfoService} from '../../services/userInfo.service';
