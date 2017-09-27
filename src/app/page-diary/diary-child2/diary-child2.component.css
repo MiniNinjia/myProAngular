@@ -102,6 +102,7 @@
 
 }
 .name{
+  cursor: none;
   width: 100px;
   height: 80px;
   /*background-color: #f3dd00;*/
@@ -109,11 +110,13 @@
   margin-top: -100px;
 }
 .pet_name{
+  cursor: none;
   font-size: 1.2em;
   color: #444444;
   font-weight: 600;
 }
 .right_right1{
+  cursor: none;
   width: 750px;
   height: 60px;
   padding-left: 20px;
@@ -135,6 +138,7 @@
   line-height: 60px;
   margin-left: 15px;
   float: left;
+  cursor: none;
 }
 .diary_info li{
   margin-left: 10px;
@@ -157,6 +161,7 @@
   text-align: center;
   line-height: 40px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .right_right3{
   width: 746px;
@@ -192,6 +197,7 @@
 .right_right3_one{
   width: 100%;
   height: 50px;
+
   /*background-color: white;*/
   line-height: 50px;
   padding-left: 20px;
@@ -199,13 +205,16 @@
 .send_diary{
   font-size: 1.2em;
   float: left;
+  cursor: none;
 }
 .total{
   margin-left: 20px;
   float: left;
+  cursor: none;
 }
 .right_right3_one ul{
   float: right;
+  cursor: none;
   margin-right: 20px;
 }
 
@@ -227,13 +236,20 @@
 .diary_detail{
   width: 600px;
   height: 100px;
-  background-color: white;
+  /*background-color: #5baaff;*/
   float: left;
   margin-left: 20px;
 }
+.diary_title1{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  /*margin-top: 35px;*/
+  color: black;
+}
 .dowm{
   width: 100%;
-  height: 350px;
+  /*height: 350px;*/
   background-color: white;
   margin-top: 20px;
 }
@@ -262,6 +278,20 @@
   font-size: 1.2em;
   text-align: center;
   line-height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.queding{
+  width: 100px;
+  height: 35px;
+  background-color: #7fd451;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 35px;
+  margin-top: 10px;
+  margin-left: 500px;
+  cursor: pointer;
 }
 .liuyan{
   height: 40px;

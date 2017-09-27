@@ -151,7 +151,7 @@ import {SkillService} from "./services/skill.service";
     HeadimgPipe,
     FroalaComponent,
     MyMessageComponent,
-    PageReportComponent
+    PageReportComponent,
   ],
   imports: [
     FormsModule,

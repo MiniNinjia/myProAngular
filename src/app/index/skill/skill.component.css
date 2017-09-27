@@ -1,7 +1,7 @@
 .index-container-skill-div {
   clear: both;
   width: 100%;
-  height: 1000px;
+  height: 900px;
   background-color: #ffffff;
   padding-top: 25px;
   text-align: center;
@@ -42,14 +42,15 @@
 }
 .index-container-skill-ul li .all:hover{
   border-color: #CCCCCC;
-  box-shadow: 0 0 20px #c8c8c8;
+  /*box-shadow: 0 0 20px #c8c8c8;*/
 }
 .piv{
+  cursor: pointer;
   width: 280px;
   height: 350px;
   /*margin: 10px;*/
   /*z-index: 22;*/
-  background-color: rgba(98, 98, 98, 0.31);
+  background-color: rgba(232, 208, 171, 0.5);
   position: absolute;
   left: -10px;
   top: -10px;
@@ -64,15 +65,15 @@
   display: block;
   width: 50px;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.29);
+  background-color: rgba(98, 98, 98, 0.36);
   border-radius: 100%;
   margin-left: 115px;
   margin-top: 128px;
-  font-weight: 700;
+  /*font-weight: 600;*/
   color: white;
   font-size: 2em;
   line-height: 50px;
-  text-align: center;
+  padding-left: 5px;
   /*border: solid 2px white;*/
   /*z-index: 768;*/
 }
@@ -146,14 +147,17 @@
   border: solid 1px #c6c6c6;
   font-size: 20px;
   padding: 5px 20px;
-  /*margin-top: 25px;*/
+  margin-top: 25px;
   outline: none;
+  border-radius: 3px;
+  font-size: 0.9em;
+  height: 40px;
 }
 .pppp{
   width: 1200px;
-  height: 800px;
+  height: 750px;
   margin: 0 auto;
-  margin-top: 25px;
+  /*margin-top: 10px;*/
   /*margin-bottom: 40px;*/
   overflow: hidden;
   position: relative;
@@ -167,12 +171,13 @@
 
 #index-container-skill-btn:hover {
   border-color: #bfbfbf;
-  box-shadow: 0 0 20px #bfbfbf;
+  box-shadow: 0 0 5px #aeaeae;
+  /*background-color: #f3dd00;*/
   /*margin-top: 20px;*/
   /*margin-bottom: 5px;*/
 }
 .index-container-skill-a{
-  font-size: 2em;
+  font-size: 30px;
 }
 /*.all:before{*/
   /*content: '';*/

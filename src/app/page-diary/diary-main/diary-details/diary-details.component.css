@@ -1,4 +1,9 @@
-
+.ooo{
+  width: 100%;
+  height: 1200px;
+  background-color: white;
+  overflow: hidden;
+}
 .aaa{
   margin: 0 auto;
   width: 1075px;
@@ -32,7 +37,7 @@
 .detail-1{
   width: 100%;
   /*height: 200px;*/
-  background-color:white;
+  /*background-color:white;*/
   float: left;
   padding-top: 0px;
   position: relative;
@@ -128,19 +133,22 @@ ul{
 .guanggao_1{
   width: 330px;
   height: 450px;
-  background-color: #999999;
+  /*background-color: #999999;*/
+  border: 1px solid #CCCCCC;
 }
 .guanggao_2{
   width: 330px;
-  height: 100px;
-  background-color: #999999;
+  height: 150px;
+  /*background-color: #999999;*/
+  border: 1px solid #CCCCCC;
   margin-top: 20px;
 
 }
 .guanggao_3{
   width: 330px;
-  height: 100px;
-  background-color: #999999;
+  height: 150px;
+  border: 1px solid #CCCCCC;
+  /*background-color: #999999;*/
   margin-top: 20px;
 
 }
@@ -155,6 +163,7 @@ ul{
   margin-top: 15px;
   height:50px;
   overflow: hidden;
+  cursor: pointer;
 }
 .page{
   width: 100%;
