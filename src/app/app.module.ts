@@ -155,8 +155,9 @@ import { PagePipe } from './page.pipe';
     FroalaComponent,
     MyMessageComponent,
     PageReportComponent,
-    PagePipe
+    PagePipe,
     PageReportComponent,
+
   ],
   imports: [
     FormsModule,
