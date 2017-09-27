@@ -25,7 +25,9 @@
         </p>
         <div class="pbig">
           <div class="fil">
-            <input type="file" (change)="onFileChanged($event.target.files)" class="fil2" placeholder="Upload file" accept="image/*">
+            <input type="file"
+                  class="fil2" placeholder="Upload file"
+                   ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" multiple>
           </div>
           <div class="pic3">
             <div class="pic4">上传电脑中图片</div>
@@ -47,7 +49,7 @@
 
 
         </div>
-        <p class="tuch"><span>联系方式</span></p>
+
 
         <p>
           <span class="sp1">详细地址</span>
