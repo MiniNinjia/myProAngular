@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Http} from '@angular/http';
-import { FileUploader } from 'ng2-file-upload';
+import {FileUploader} from 'ng2-file-upload';
 //import {GlobalPropertyService} from '../services/global-property.service';
-import {PublishService} from '../services/publish.service'
+import {PublishService} from '../services/publish.service';
+import {AdoptionService} from '../services/adoption.service';
+
 @Component({
   selector: 'app-page-publish',
   templateUrl: './page-publish.component.html',
@@ -10,64 +12,61 @@ import {PublishService} from '../services/publish.service'
 
 })
 export class PagePublishComponent implements OnInit {
-  froalaContent(event) {
-    console.log(event)
-    console.log('11111');
-  }
-
-  data=[
-    {
-      provence:'四川',
-      city:['宜宾市','广安市','达州市','雅安市','巴中市','资阳市']
-    },
-    {
-      provence:'四川1',
-      city:['宜宾市2','广安市2','达州市2','雅安市2','巴中市2','资阳市2']
-    },
-    {
-      provence:'四川2',
-      city:['宜宾市2','广安市2','达州市2','雅安市2','巴中市2','资阳市2']
-    }
-  ];
-
-   cit:any;
-  publishData:any;
+  data = [];
+  place: any;
+  cit: any;
+  publishData: any;
   postData: any;
-  constructor(
-              private ps: PublishService
-          ){ }
+  choose: any;
 
+  constructor(private ps: PublishService,
+              private as: AdoptionService) {
+  }
   ngOnInit() {
-
-
+    const that = this;
+    this.as.getcity(function (result) {
+      if (result._body !== 'err') {
+        that.data = JSON.parse(result._body);
+        that.cit = that.data[0].city;
+        that.choose = that.data[0].city[0];
+      }
+    });
   }
-  pro(event:any){
 
-  this.cit=this.data[event.target.value].city;
-
+  froalaContent(event) {
+    console.log(event);
   }
 
-  public uploader:FileUploader = new FileUploader({
+  pro(event: any) {
+    this.cit = this.data[event.target.value].city;
+  }
+
+  _choose(e) {
+    this.choose = this.cit[e.target.value];
+  }
+
+  public uploader: FileUploader = new FileUploader({
     url: "http://localhost:3000/ng2/uploadFile",
     method: "POST",
     itemAlias: "uploadedfile"
   });
   // C: 定义事件，选择文件
-  selectedFileOnChanged(event:any) {
+  selectedFileOnChanged(event: any) {
     // 打印文件选择名称
     console.log(event.target.value);
   }
+
   // D: 定义事件，上传文件
   uploadFile() {
     // 上传
     this.uploader.queue[0].onSuccess = function (response, status, headers) {
       // 上传文件成功
-      if (status == 200) {
+      if (status === 200) {
         // 上传文件后获取服务器返回的数据
-        let tempRes = JSON.parse(response);
+        const tempRes = JSON.parse(response);
       } else {
         // 上传文件后获取服务器返回的数据错误
-        alert("");
+        alert('');
       }
     };
     this.uploader.queue[0].upload(); // 开始上传
@@ -85,7 +84,7 @@ export class PagePublishComponent implements OnInit {
   }
 
 
-  //onFileChanged(fileList: FileList) {
+  // onFileChanged(fileList: FileList) {
   //  if (fileList.length > 0) {
   //    let file: File = fileList[0];
   //    let formData: FormData = new FormData();
@@ -102,12 +101,7 @@ export class PagePublishComponent implements OnInit {
   //        error => console.log(error)
   //      )
   //  }
-  //}
-
-
-
-
-
+  // }
 
 
 }

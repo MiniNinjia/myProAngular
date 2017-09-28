@@ -1,129 +1,105 @@
 <div class="bb">
-<div class="big">
-  <div class="top" >
-<!--轮播块————————————————————————-->
-    <div class="left">
-      <div class="bpic">
-        <img class="bpic" src="{{data.carousel[id].img}}" alt="">
-      </div>
-      <div class="spic">
-        <ul><li class="pics"(mouseover)="carousel(i)"  (click)="carousel(i)"  *ngFor="let item of data.carousel;let i=index">
-          <img class="picss" src="{{item.img}}" alt="">
-        </li></ul>
-      </div>
-    </div>
-<!--详情块————————————————————————————-->
-    <div class="right" *ngFor="let item of data.details;let i=index">
-      <div >
-        <p class="title">{{item.title}} </p>
-        <div class="goodsprice">
-          <p class="span4"><span class="span0">人&nbsp;&nbsp;&nbsp;气&nbsp;&nbsp;&nbsp;&nbsp;：</span><span class="span3">{{item.popularity}}</span></p>
-
-          <p class="span4"><span class="span0">卖家承诺：</span><span class="span3">{{item.host}}</span></p>
+  <div class="big">
+    <div class="top">
+      <!--轮播块————————————————————————-->
+      <div class="left">
+        <div class="bpic">
+          <img class="bpic" src="{{_uploadUrl}}{{data?.carousel[id]?.img}}" alt="">
         </div>
-        <div class="goodsinfo">
-          <p>
-           <span class="span1"> 狗狗品种：</span><span>{{item.breed}}</span>
-          </p>
-          <p>
-         <span class="span1"> 有&nbsp;&nbsp;效&nbsp;&nbsp;期：</span><span>{{item.validity}}</span>
-        </p>
-          <p>
-            <span class="span1">狗狗性别：</span> <span>{{item.sex}}</span>
-          </p>
-          <p>
-           <span class="span1"> 联&nbsp;&nbsp;系&nbsp;人：</span><span>{{item.contact}}</span>
-          </p>
-          <p>
-            <span class="span1">疫苗情况：</span><span>{{item.vaccine}}</span>
-          </p>
-          <p>
-            <span class="span1">所在地区：</span><span>{{item.location}}</span>
-          </p>
-          <p>
-            <span class="span1">狗狗年龄：</span><span>{{item.age}}</span>
-          </p>
-          <p>
-           <span class="span1">联系电话：</span> <span>{{item.tel}}</span>
-          </p>
-          <p>
-            <span class="span1">驱虫情况：</span><span>{{item.worm}}</span>
-          </p>
-          <p>
-           <span class="span1">微信账号：</span> <span>{{item.weixin}}</span>
-          </p>
-          <p>
-          <span class="span1">能否视频：</span><span>{{item.video}}</span>
-          </p>
-          <p>
-          <span class="span1">QQ账号&nbsp;：</span><span>{{item.QQ}}</span>
-          </p>
-
+        <div class="spic">
+          <ul>
+            <li class="pics" (mouseover)="carousel(i)" (click)="carousel(i)"
+                *ngFor="let item of data?.carousel;let i=index">
+              <img class="picss" src="{{_uploadUrl}}{{item?.img}}" alt="">
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="btn" (click)="buy()">立即收养</div>
-    </div>
+      <!--详情块————————————————————————————-->
+      <div class="right">
+        <div>
+          <p class="title">{{data?.details?.title| numberPipe:20}} </p>
+          <div class="goodsprice">
+            <p class="span4"><span class="span0">人&nbsp;&nbsp;&nbsp;气&nbsp;&nbsp;&nbsp;&nbsp;：</span><span
+              class="span3">{{data?.details?.likecount *100}}</span></p>
 
-  </div>
-
-  <div class="bottom">
-    <div class="BLhead">
-    <span class="shown" [class.contant]="contan=='detail'" (click)="change(0,'detail')">宠物详情</span>
-    <span class="shown fa fa-comment-o" [class.contant]="contan=='message'" (click)="change(1,'message')">留言板</span>
-  </div>
-<!--留言版块————————————————————————————————————-->
-    <div class="bleft">
-
-      <div class="leftt" [ngSwitch]="menunow">
-
-        <app-pet-introduce *ngSwitchCase="0"></app-pet-introduce>
-
-
-        <app-pet-messagenote *ngSwitchCase="1"></app-pet-messagenote>
-      </div>
-    </div>
-
-    <div class="bright">
-      <!--推荐版块————————————————————————————-->
-<p class="men">萌宠推荐</p>
-      <div class="main" *ngFor="let item of recommend;let i=index">
-        <div class="petlft">
-          <img class="img" src="{{item.pimg}}" alt="">
+          </div>
+          <div class="goodsinfo">
+            <p>
+              <span class="span1"> 品&nbsp;&nbsp;&nbsp;&nbsp;种&nbsp;&nbsp;&nbsp;&nbsp;：</span><span>{{data?.details?.category}}</span>
+            </p>
+            <p>
+              <span class="span1"> 发布日期：</span><span>{{data?.details?.time|date:'yyyy-MM-dd'}}</span>
+            </p>
+            <p>
+              <span class="span1">狗狗性别：</span> <span>{{data?.details?.sex?'MM':'GG'}}</span>
+            </p>
+            <p>
+              <span class="span1"> 联&nbsp;&nbsp;系&nbsp;人：</span><span>{{data?.details?.people}}</span>
+            </p>
+            <p>
+              <span class="span1">所在地区：</span><span>{{data?.details?.province}}{{data?.details?.city}}</span>
+            </p>
+            <p>
+              <span class="span1">狗狗年龄：</span><span>{{data?.details?.age}}</span>
+            </p>
+            <p>
+              <span class="span1">联系电话：</span> <span>{{data?.details?.tel}}</span>
+            </p>
+          </div>
         </div>
-        <div class="petrig">
-          <!--<p><img class="uimg" src="{{item.uimg}}" alt="">{{item.uname}}</p>-->
-          <p>品种：{{item.kind}}</p>
-          <p>{{item.word}}</p>
-          <!--<p>{{item.date}}</p>-->
+        <div class="btn" *ngIf="adoptstate==0" (click)="buy()">立即收养</div>
+        <div class="btn" *ngIf="adoptstate!=0">已被收养</div>
+        <div class="btn" (click)="collect()" *ngIf="data?.details?.collectstate==0">收藏</div>
+        <div class="btn" (click)="collect()" *ngIf="data?.details?.collectstate!=0">已收藏</div>
+      </div>
+
+    </div>
+
+    <div class="bottom">
+      <div class="BLhead">
+        <span class="shown" [class.contant]="contan=='detail'" (click)="change(0,'detail')">宠物详情</span>
+        <span class="shown fa fa-comment-o" [class.contant]="contan=='message'" (click)="change(1,'message')">留言板</span>
+      </div>
+      <!--留言版块————————————————————————————————————-->
+      <div class="bleft">
+        <div class="leftt" [ngSwitch]="menunow">
+          <app-pet-introduce *ngSwitchCase="0" [data]="data?.details?.describe"></app-pet-introduce>
+          <app-pet-messagenote *ngSwitchCase="1" [petid]="petId"></app-pet-messagenote>
+        </div>
+      </div>
+
+      <div class="bright">
+        <!--推荐版块————————————————————————————-->
+        <p class="men">萌宠推荐</p>
+        <div class="main" *ngFor="let item of recommend;let i=index">
+          <div class="petlft">
+            <img class="img" src="{{item.pimg}}" alt="">
+          </div>
+          <div class="petrig">
+            <p>品种：{{item.kind}}</p>
+            <p>{{item.word}}</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div >
 <div class="buy" *ngIf="aa">
-
-
-
-
-
-
-
-
 
 
   <div class="bbig">
     <form action="">
       <p class="btitle">提交领养申请</p>
-      <span class="quxiao"(click)="buy()">×</span>
+      <span class="quxiao" (click)="buy()">×</span>
       <p>
-        <span class="bsp1" ><span class="bcol">*</span>姓名</span>
-        <input type="text" id="user" class="btil"  name="buyuser" [(ngModel)]="buyuser">
+        <span class="bsp1"><span class="bcol">*</span>姓名</span>
+        <input type="text" id="user" class="btil" name="buyuser" [(ngModel)]="buyuser">
       </p>
 
 
       <div class="form-group">
-        <p> <span class="bsp1"><span class="bcol">*</span>电话</span>
+        <p><span class="bsp1"><span class="bcol">*</span>电话</span>
           <input type="text" name="tele" id="tele" class="btil"
                  #tel="ngModel" pattern="1[34578]\d{9}$"
                  [(ngModel)]="buytel" required minlength="11">
@@ -131,10 +107,10 @@
       </div>
       <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
            class=" full">
-        <div  *ngIf="tel.errors.required">
+        <div *ngIf="tel.errors.required">
           电话不能为空.
         </div>
-        <div  *ngIf="tel.errors.pattern">
+        <div *ngIf="tel.errors.pattern">
           电话格式不正确.
         </div>
       </div>
@@ -150,15 +126,15 @@
         <span class="bsp2"><span class="bcol">*</span>是否养过宠物</span>
 
         <input value="song" type="radio" (change)="checke(1)" class="ra" name="give" id="give1"/>赠送
-        <input value="yang" type="radio" (click)="checke(2)"  class="ra" name="give" id="give2"/>领养
+        <input value="yang" type="radio" (click)="checke(2)" class="ra" name="give" id="give2"/>领养
       </p>
 
       <p>
         <span class="bsp1"><span class="bcol">*</span>申请理由</span>
-        <textarea name="reason" [(ngModel)]="reason" id="" cols="30" rows="5" ></textarea>
+        <textarea name="reason" [(ngModel)]="reason" id="" cols="30" rows="5"></textarea>
       </p>
 
-      <button class="blast" (click)="apply()" >提交申请</button>
+      <button class="blast" (click)="apply()">提交申请</button>
     </form>
   </div>
 

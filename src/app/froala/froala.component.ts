@@ -1,4 +1,5 @@
 import {Component, Output, EventEmitter, OnInit} from "@angular/core";
+import {GlobalPropertyService} from '../services/global-property.service'
 @Component({
   selector: "blog-froala",
   templateUrl: "./froala.component.html"
@@ -8,13 +9,15 @@ export class FroalaComponent implements OnInit {
 
   option: Object;
   froalaText: string;
+  serverUrl: any;
 
-  constructor() {
+  constructor(private glo: GlobalPropertyService) {
     this.froalaText = '';
 
   }
 
   ngOnInit() {
+    this.serverUrl = this.glo.serverUrl;
     // 在事件中要使用外部的this,因为函数内部也有this所以讲this的值赋给that
     const that = this;
     // 参数配置
@@ -23,6 +26,8 @@ export class FroalaComponent implements OnInit {
       heightMax: 800,
       widthMax: 800,
       heightMin: 90,
+      imageDefaultAlign: 'left',
+      imageDefaultWidth: 500,
       toolbarVisibleWithoutSelection: true,
       theme: 'gray',
       language: 'zh_cn', //配置语言
@@ -36,16 +41,16 @@ export class FroalaComponent implements OnInit {
       codeMirrorOptions: { // 配置html代码参数
         tabSize: 4
       },
+      imageResize: false,
       // 上传图片，视频等稳健配置
-      imageUploadURL: 'sns/uploadPhoto',//GLOBAL.INCONFIG.getIP()+接口名称,
+      imageUploadURL: this.glo.serverUrl + '/upload',//GLOBAL.INCONFIG.getIP()+接口名称,
       //imageUploadURL:"http://11.177.50.63:9999/emanager/sns/uploadPhoto",//本地路径
       imageUploadParams: {uid: '111'},//接口其他传参,默认为空对象{},
       imageUploadMethod: 'POST',//POST/GET,
       // 事件, 每次输入,就将值传递给父组件, 或者使用失去焦点的时候传递。
       events: {
-        'froalaEditor.contentChanged': function (e, editor) {
-          that.froala.emit(that.froalaText);
-          console.log(editor.selection.get());
+        'froalaEditor.html.get': function (e, editor, html) {
+          that.froala.emit(html);
         }
       }
     };

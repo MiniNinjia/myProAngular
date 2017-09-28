@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CommunityService} from '../../services/community.service';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../../services/global-property.service';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-community-main',
@@ -15,11 +16,21 @@ export class CommunityMainComponent implements OnInit {
   pageList: any;
   postData: any;
   _uploadUrl: any;
-  _unheadimg:any;
+  _unheadimg: any;
+
+  writestate = false;
+  writecontent = {
+    title: null,
+    content: null,
+    uid: null,
+    time: null
+  };
+
 
   constructor(private glo: GlobalPropertyService,
               private cs: CommunityService,
-              private _cookieService: CookieService) {
+              private _cookieService: CookieService,
+              private sanitizer: DomSanitizer) {
     this.postData = {
       uid: null,
       pageNumber: this.pageNumber,
@@ -85,12 +96,41 @@ export class CommunityMainComponent implements OnInit {
     that.loaddata();
   }
 
+  write() {
+    if (this.postData.uid) {
+      this.writestate = !this.writestate;
+      this.writecontent.uid = this.postData.uid;
+    } else {
+      alert('未登录');
+    }
+  }
+
+  submit() {
+    const that = this;
+    this.writecontent.time = new Date().getTime();
+    this.cs.addcommunity(this.writecontent, function (result) {
+      if (result._body !== 'err') {
+        // that.list_data.article = JSON.parse(result._body);
+      }
+      that.write();
+      that.loaddata();
+    });
+  }
+
+  froalaContent(event) {
+    this.writecontent.content = event;
+    console.log(this.writecontent.content);
+  }
+
   loaddata() {
     const that = this;
     this.postData.pageNumber = this.pageNumber;
     this.cs.getCommunityList(this.postData, function (result) {
       if (result._body !== 'err') {
         that.list_data.article = JSON.parse(result._body);
+        that.list_data.article.forEach(function (item, index) {
+          that.list_data.article[index].content = that.sanitizer.bypassSecurityTrustHtml(item.content);
+        });
       }
     });
   }

@@ -2,34 +2,34 @@
 <div class="mid">
 
       <p><span class="sp1">用户名：</span>
-        <span *ngIf="del==!true">{{user}}</span>
-        <input type="text" *ngIf="del==true" name="user" [(ngModel)]="user" value="{{user}}">
+        <span *ngIf="del==!true">{{inof?.users}}</span>
+        <input type="text" *ngIf="del==true" name="user" [(ngModel)]="inof.users" value="{{user}}">
       </p>
 
       <p>
         <span class="sp1">性别：</span>
-        <span *ngIf="del==!true">{{sex}}</span>
-        <select name="sex" id="sex" *ngIf="del==true" [(ngModel)]="sex" value="{{sex}}">
+        <span *ngIf="del==!true">{{inof?.sex}}</span>
+        <select name="sex" id="sex" *ngIf="del==true" [(ngModel)]="inof.sex" value="{{sex}}">
           <option>男</option>
           <option>女</option>
         </select>
       </p>
 
       <p><span class="sp1">地址：</span>
-        <span *ngIf="del==!true">{{addres}}</span>
-        <input type="text" *ngIf="del==true" name="addres" required [(ngModel)]="addres" value="addres">
+        <span *ngIf="del==!true">{{inof?.addres}}</span>
+        <input type="text" *ngIf="del==true" name="addres" required [(ngModel)]="inof.addres" value="addres">
       </p>
 
     <div class="form-group">
       <p><span class="sp1">电话tel：</span>
-        <span *ngIf="del==!true">{{mytel}}</span>
+        <span *ngIf="del==!true">{{inof?.tel}}</span>
         <input type="text" name="tel" id="tel"
                #tel="ngModel" pattern="1[34578]\d{9}$"
                [(ngModel)]="inof.tel" [hidden]="del==false"
                required minlength="11">
       </p>
     </div>
-    <div  *ngIf="tel.invalid && (tel.dirty || tel.touched)"
+    <div *ngIf="tel.invalid && (tel.dirty || tel.touched)"
          class="aa" [hidden]="del==false">
       <div *ngIf="tel.errors.required">
         电话不能为空.
@@ -40,10 +40,6 @@
     </div>
 
 
-      <p><span class="sp1">年龄：</span>
-        <span *ngIf="del==!true">{{age}}</span>
-        <input type="text" *ngIf="del==true" name="age" [(ngModel)]="age" value="age">
-      </p>
     <button class="btn" (click)="revamp()" *ngIf="del==false">修改信息</button>
     <button class="btn" (click)="revamp2()" *ngIf="del==true" [disabled]="tel.invalid">确认修改</button>
     <button class="btn" (click)="revamp3()" *ngIf="del==true">取消</button>

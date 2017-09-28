@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../services/global-property.service';
 import {UserInfoService} from '../services/userInfo.service';
+import {CommunityService} from '../services/community.service';
 @Component({
   selector: 'app-page-personal-center',
   templateUrl: './page-personal-center.component.html',
@@ -23,7 +24,8 @@ export class PagePersonalCenterComponent implements OnInit {
 
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
-              private uis: UserInfoService) {
+              private uis: UserInfoService,
+              private cs: CommunityService) {
   }
 
 
@@ -58,5 +60,26 @@ export class PagePersonalCenterComponent implements OnInit {
     scrollTo(0, 0);
   }
 
+  dodelcollect(type, id) {
+
+    if (type === 'community') {
+      const __myData = {
+        uid: this.user.uid,
+        state: 1,
+        cid: id
+      }
+      const that = this;
+      this.cs.collect(__myData, function (result) {
+        console.log(result._body )
+        if (result._body !== 'err') {
+          that.uis.getpersonalCollect(that.user.uid, function (result1) {
+            if (result._body !== 'err') {
+              that.myCollect = JSON.parse(result1._body);
+            }
+          });
+        }
+      });
+    }
+  }
 
 }

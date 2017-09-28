@@ -1,15 +1,16 @@
-import {Component, OnInit,Output} from '@angular/core';
+import {Component, OnChanges, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {CommunityService} from '../../services/community.service';
 import {UserInfoService} from '../../services/userInfo.service';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../../services/global-property.service';
+import {DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-community-details',
   templateUrl: './community-details.component.html',
   styleUrls: ['./community-details.component.css']
 })
-export class CommunityDetailsComponent implements OnInit {
+export class CommunityDetailsComponent implements OnInit, OnChanges {
   showAllFlag = false;
   article: any;
   articleId: string;
@@ -26,14 +27,15 @@ export class CommunityDetailsComponent implements OnInit {
   rereview = '';
 
 
-aa=false;
+  aa = false;
 
 
   constructor(private route: ActivatedRoute,
               private glo: GlobalPropertyService,
               private cs: CommunityService,
               private _cookieService: CookieService,
-              private uis: UserInfoService) {
+              private uis: UserInfoService,
+              private sanitizer: DomSanitizer) {
     this.postData = {
       uid: null,
       cid: null,
@@ -45,17 +47,17 @@ aa=false;
     }
     this._uploadUrl = glo.uploadUrl;
   }
+
   //举报模态框
   jubao() {
     this.aa = !this.aa;
-    console.log(this.aa+'举报');
+    console.log(this.aa + '举报');
   }
 
-  receive(mes:boolean){
-    this.aa=!mes;
-    console.log(this.aa+'re');
+  receive(mes: boolean) {
+    this.aa = !mes;
+    console.log(this.aa + 're');
   }
-
 
 
   changePageList() {//修改pagelist数组
@@ -99,7 +101,8 @@ aa=false;
     this.loadReview();
     scrollTo(0, 0);
   };
-  ngOnChanges(){
+
+  ngOnChanges() {
     this.receive(this.aa);
   }
 
@@ -113,6 +116,7 @@ aa=false;
     this.cs.getCommunityDetail(this.postData, function (result) {
       if (result._body !== 'err') {
         that.article = JSON.parse(result._body);
+        that.article.content = that.sanitizer.bypassSecurityTrustHtml(that.article.content);
       }
     });
   }

@@ -73,8 +73,17 @@
   overflow: hidden;
   padding-bottom: 20px;
   float: left;
+  border-right: solid 1px #444444;
 }
-
+.__myImg{
+  width: 500px;
+}
+.fr-fic{
+  width: 500px;
+}
+.text image{
+  width: 500px !important;
+}
 .dn {
   display: none;
 }

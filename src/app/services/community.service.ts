@@ -74,4 +74,11 @@ export class CommunityService {
     );
   }
 
+  addcommunity(postData, callback) {
+    this.http.post(this._url + '/community/addcommunity', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
 }

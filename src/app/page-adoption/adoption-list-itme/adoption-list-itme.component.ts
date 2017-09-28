@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-
+import {AdoptionService} from '../../services/adoption.service';
+import {CookieService} from 'angular2-cookie/services/cookies.service';
+import {GlobalPropertyService} from '../../services/global-property.service'
 @Component({
   selector: 'app-adoption-list-itme',
   templateUrl: './adoption-list-itme.component.html',
@@ -10,13 +12,18 @@ export class AdoptionListItmeComponent implements OnInit {
   pla = true;
   choose: any;
   provence: any;
+  _uploadUrl: any;
+  postData = {
+    uid: null
+  };
 
-  constructor() {
+  constructor(private as: AdoptionService,
+              private _cookieService: CookieService,
+              private glo: GlobalPropertyService) {
   }
 
   data: any;
   cindex: any;
-
   pet = [
     {
       nav: '其他',
@@ -38,61 +45,38 @@ export class AdoptionListItmeComponent implements OnInit {
           'isCollect': true
 
         },
-        {
-          'id': 1,
-          'uname': '张三dog2',
-
-          'uimg': '../../../../assets/images/qqq.jpg',
-          'fristname': '日本',
-          'img': '../../../../assets/images/adoption/qqq.jpg',
-          'introduce': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责',
-          'date': '2017-4-5',
-          'name': 'shabi',
-          'Ename': 'sha',
-          'form': '柯基',
-          'special': '腿短',
-          'commentcount': '12',
-          'browse': 300,
-          'isCollect': true
-        },
-        {
-          'id': 1,
-          'uname': '张三dog3',
-
-          'uimg': '../../../../assets/images/dog.png',
-          'fristname': '日本',
-          'img': '../../../../assets/images/adoption/www.jpg',
-          'introduce': '健康没毛病,第一针疫苗打完，洗过澡了，指甲剪了，希望你好好对他负责',
-          'date': '2017-4-5',
-          'name': 'shabi',
-          'Ename': 'sha',
-          'form': '柯基',
-          'special': '腿短',
-          'commentcount': '1232',
-          'browse': 300,
-          'isCollect': true
-        }
       ]
     }
   ]
-
   place = [
     {
-      provence: '四川',
-      city: ['宜宾市', '广安市', '达州市', '雅安市', '巴中市', '资阳市']
-    },
-    {
-      provence: '四川1',
-      city: ['宜宾市2', '广安市2', '达州市2', '雅安市2', '巴中市2', '资阳市2']
+      provence: null,
+      city: []
     },
   ];
+
   ngOnInit() {
-    this.data = this.pet[0].pett;
-    this.cit = this.place[0].city;
-    this.provence = this.place [0];
-    this.choose = '全国';
-    scrollTo(0, 0);
+    this._uploadUrl = this.glo.uploadUrl;
     const that = this;
+    if (this._cookieService.get('user')) {
+      this.postData.uid = JSON.parse(this._cookieService.get('user')).uid;
+    }
+    this.as.getcity(function (result) {
+      if (result._body !== 'err') {
+        that.place = JSON.parse(result._body);
+        that.cit = that.place[0].city;
+        that.provence = that.place;
+        that.choose = that.place[0].city[0];
+      }
+    });
+    this.as.getlist(this.postData, function (result) {
+      if (result._body !== 'err') {
+        that.pet[0].pett = JSON.parse(result._body);
+        that.data = that.pet[0].pett;
+      }
+    });
+
+    scrollTo(0, 0);
     document.body.onclick = function (e) {
       if (e.target !== document.getElementById('_area')) {
         that.pla = true;
@@ -102,19 +86,33 @@ export class AdoptionListItmeComponent implements OnInit {
 
 
   exchange(i: any) {
-    this.data[i].isCollect = !this.data[i].isCollect;
+    const that = this;
+    if (that.postData.uid) {
+      const postdata = {
+        uid: that.postData.uid,
+        state: that.data[i].collectstate,
+        petid: that.data[i].petId
+      };
+      that.as.collect(postdata, function (result) {
+        if (result._body !== 'err') {
+          that.data[i].collectstate = !that.data[i].collectstate;
+        } else {
+          alert('点赞失败！');
+        }
+      });
+    } else {
+      alert('未登陆');
+    }
   }
 
   showaa(i: any) {
     this.data = this.pet[i].pett;
     this.cindex = i;
-
   }
 
 //省
   pro(e, i: any) {
     this.cit = this.place[i].city;
-
     e.stopPropagation();
   }
 
@@ -124,11 +122,8 @@ export class AdoptionListItmeComponent implements OnInit {
   }
 
   citye(j) {
-    console.log(j);
-    this.choose = this.cit[j]
+    this.choose = this.cit[j];
     this.pla = !this.pla;
-    console.log(this.pla);
   }
-
 
 }

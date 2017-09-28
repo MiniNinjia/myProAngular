@@ -15,12 +15,10 @@ export class MyInfoComponent implements OnInit {
   user: any;
   infoData: any;
   inof = {
-    'id': 1,
-    'users': '张三',
-    'sex': '女',
-    'addres': '天堂街88888号',
-    'tel': 158759795,
-    'age': 34,
+    'users': null,
+    'sex': null,
+    'addres': null,
+    'tel': null,
   };
 
   del = false;
@@ -28,31 +26,18 @@ export class MyInfoComponent implements OnInit {
   sex: any;
   addres: any;
   mytel: any;
-  age: any;
 
   constructor(private _cookieService: CookieService,
               private glo: GlobalPropertyService,
               private uis: UserInfoService) {
     this.addres = this.inof.addres;
-    this.age = this.inof.age;
     this.users = this.inof.users;
     this.sex = this.inof.sex;
     this.mytel = this.inof.tel;
-
-
   }
 
   ngOnInit() {
-    this.user = this._cookieService.getObject('user');
-    const that = this;
-    if (that.user) {
-      that.uis.getinfo(that.user.uid, function (result) {
-        if (result._body !== 'err') {
-          that.infoData = JSON.parse(result._body);
-        }
-      });
-    }
-
+    this.loadinfo();
   }
 
   revamp() {
@@ -61,25 +46,54 @@ export class MyInfoComponent implements OnInit {
 
   revamp2() {
     this.del = !this.del;
-    this.inof = {
-      'id': 1,
-      'users': this.user,
-      'sex': this.sex,
-      'addres': this.addres,
-      'tel': this.mytel,
-      'age': this.age,
-    };
+    this.commitChange();
   }
 
   revamp3() {
+    const that = this;
     this.del = !this.del;
     this.inof = {
-      'id': 1,
-      'users': '张三',
-      'sex': '女',
-      'addres': '天堂街88888号',
-      'tel': 158759795,
-      'age': 34,
+      'users': that.infoData.nickname,
+      'sex': that.infoData.sex === 0 ? '女' : '男',
+      'addres': that.infoData.city,
+      'tel': that.infoData.telphone,
     };
+  }
+
+  commitChange() {
+    this.user = this._cookieService.getObject('user');
+    const that = this;
+    if (that.user) {
+      const data = {
+        'uid': that.user.uid,
+        'users': that.inof.users,
+        'sex': that.inof.sex === '男' ? 1 : 0,
+        'addres': that.inof.addres,
+        'tel': that.inof.tel,
+      };
+      that.uis.commitChange(data, function (result) {
+        if (result._body !== 'err') {
+          that.loadinfo();
+        }
+      });
+    }
+  }
+
+  loadinfo() {
+    this.user = this._cookieService.getObject('user');
+    const that = this;
+    if (that.user) {
+      that.uis.getinfo(that.user.uid, function (result) {
+        if (result._body !== 'err') {
+          that.infoData = JSON.parse(result._body)[0];
+          that.inof = {
+            'users': that.infoData.nickname,
+            'sex': that.infoData.sex === 0 ? '女' : '男',
+            'addres': that.infoData.city,
+            'tel': that.infoData.telphone,
+          };
+        }
+      });
+    }
   }
 }

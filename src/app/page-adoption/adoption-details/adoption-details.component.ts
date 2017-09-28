@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap}from'@angular/router';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import {AdoptionService} from '../../services/adoption.service';
+import {GlobalPropertyService} from '../../services/global-property.service';
+import {CookieService} from 'angular2-cookie/services/cookies.service';
+
 import {
   trigger,
   state,
@@ -21,59 +25,32 @@ export class AdoptionDetailsComponent implements OnInit {
   currentPic = 0;
   now = 0;
   next: any;
+  adoptstate: any;
+  _uploadUrl: any;
+  __myData: any;
 
   //领养申请数据
-  buyuser:any;
-  buytel:any;
-  radi:any;
-  buyaddres:any;
-  reason:any;
-  applyData={
-    'petid':1,
-    'buser':null ,
-    'btel':null,
-    'radi':null,
-    'baddres':null,
-    'breason':null,
+  buyuser: any;
+  buytel: any;
+  radi: any;
+  buyaddres: any;
+  reason: any;
+  applyData = {
+    'petid': 1,
+    'buser': null,
+    'btel': null,
+    'radi': null,
+    'baddres': null,
+    'breason': null,
   };
 
 
   data = {
-    'carousel': [
-      {
-        'img': '../../../assets/images/dog1.png'
-      },
-      {
-        'img': '../../../assets/images/adv1.png'
-      },
-      {
-        'img': '../../../assets/images/dog1.png'
-      },
-      {
-        'img': '../../../assets/images/adv1.png'
-      },
-    ],
-    'details': [
-      {
-        'petid':1,
-        'title': '超极品柴犬宝宝 血统好 签订协议',
-        'popularity': 433,
-        'host': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑',
-        'breed': '萨摩耶',
-        'sex': '公',
-        'vaccine': '三针疫苗',
-        'age': '三个月',
-        'worm': '已驱虫',
-        'video': '可视频看狗狗',
-        'validity': '信息有效',
-        'contact': '王先生',
-        'location': '苏州吴中区',
-        'tel': 1887098907,
-        'weixin': 84784989,
-        'QQ': 98479759
-      },
-
-    ]
+    'carousel': [],
+    'details': {
+      petId: null,
+      collectstate: null
+    },
   };
 
   recommend = [
@@ -135,15 +112,44 @@ export class AdoptionDetailsComponent implements OnInit {
   ];
 
   menunow = 0;
-     aa=false ;
-  constructor(private route: ActivatedRoute) {
+  aa = false;
+  id = 0;
+
+  constructor(private route: ActivatedRoute,
+              private as: AdoptionService,
+              private _cookieService: CookieService,
+              private glo: GlobalPropertyService) {
   }
 
   ngOnInit() {
+    this._uploadUrl = this.glo.uploadUrl;
     this.petId = this.route.snapshot.paramMap.get('petid');
-    this.imgnow = this.data.carousel[0].img;
-    this.go();
-   scrollTo(0,0);
+    const that = this;
+    that.__myData = {
+      uid: null,
+      petid: this.petId
+    }
+    if (this._cookieService.get('user')) {
+      that.__myData.uid = JSON.parse(this._cookieService.get('user')).uid;
+    }
+    this.as.getpetdetail(that.__myData, function (result) {
+      if (result._body !== 'err') {
+        that.data.details = (JSON.parse(result._body)[0]);
+        if ((JSON.parse(result._body)[0]).imgs) {
+          that.data.carousel = JSON.parse((JSON.parse(result._body)[0]).imgs);
+          that.imgnow = that.data.carousel[0].img;
+          that.go();
+        }
+      }
+    });
+    this.as.checkadopt(that.__myData, function (result) {
+      if (result._body !== 'err') {
+        that.adoptstate = JSON.parse(result._body)[0].adoptstate;
+      }
+    });
+
+
+    scrollTo(0, 0);
   }
 
   change(i: any, j: any) {
@@ -151,41 +157,61 @@ export class AdoptionDetailsComponent implements OnInit {
     this.contan = j;
   }
 
-  id = 0;
+  collect() {
+    const that = this;
+    if (that.__myData.uid) {
+      const postdata = {
+        uid: that.__myData.uid,
+        state: that.data.details.collectstate,
+        petid: that.data.details.petId
+      };
+      that.as.collect(postdata, function (result) {
+        if (result._body !== 'err') {
+          that.data.details.collectstate = !that.data.details.collectstate;
+        } else {
+          alert('点赞失败！');
+        }
+      });
+    } else {
+      alert('未登陆');
+    }
+  }
 
   carousel(i: any) {
     clearInterval(this.time);
     this.id = i;
-    this.go()
+    this.go();
   }
+
   go() {
     this.time = setInterval(() => {
       this.carousel(this.id === 3 ? 0 : this.id + 1);
     }, 3000);
   }
-  buy(){
-    this.aa=!this.aa;
 
+  buy() {
+    this.aa = !this.aa;
   }
 
-  checke(give:any){
-    if(give==1){
-      this.radi='赠送';
-    }else {
-      this.radi='领养';
+  checke(give: any) {
+    if (give === 1) {
+      this.radi = '赠送';
+    } else {
+      this.radi = '领养';
     }
     console.log(this.radi);
   }
-  apply(){
-    this.applyData={
-      'petid':1,
-      'buser':this.buyuser ,
-      'btel':this.buytel ,
-      'radi':this.radi,
-      'baddres':this.buyaddres ,
-      'breason':this.reason,
+
+  apply() {
+    this.applyData = {
+      'petid': 1,
+      'buser': this.buyuser,
+      'btel': this.buytel,
+      'radi': this.radi,
+      'baddres': this.buyaddres,
+      'breason': this.reason,
     };
-    this.aa=!this.aa;
+    this.aa = !this.aa;
   }
 
 }

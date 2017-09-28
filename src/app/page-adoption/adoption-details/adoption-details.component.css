@@ -220,15 +220,15 @@ hr {
 }
 
 .btn {
-  margin-left: 120px;
   width: 150px;
   height: 40px;
   background-color: #ff4502;
   border-radius: 5%;
   color: white;
   font-size: 20px;
-  display: inline-block;
   font-weight: 500;
+  float: left;
+  margin-left: 30px;
 }
 
 .btn2 {
@@ -333,5 +333,7 @@ hr {
   margin-top: -10px;
   background-color: white;
   border: 0;
-
+}
+.goodsinfo{
+  height: 260px;
 }

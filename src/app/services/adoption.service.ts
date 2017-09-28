@@ -18,4 +18,55 @@ export class AdoptionService {
       }
     );
   }
+  getpetbanner(callback) {
+    this.http.get(this._url + '/adoption/getpetbanner').subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  getcity(callback) {
+    this.http.get(this._url + '/adoption/getcity').subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  getpetdetail(postData, callback) {
+    this.http.post(this._url + '/adoption/getpetdetail', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  getlist(postData, callback) {
+    this.http.post(this._url + '/adoption/getlist', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  checkadopt(postData, callback) {
+    this.http.post(this._url + '/adoption/checkadopt', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+
+  collect(postData, callback) {
+    this.http.post(this._url + '/adoption/collect', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
+  getreview(postData, callback) {
+    this.http.post(this._url + '/adoption/getreview', postData).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
 }

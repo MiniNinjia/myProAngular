@@ -1,6 +1,6 @@
 <div class="second_flo" >
   <div class="left">
-    <div *ngFor="let item of data.all|page:page?.pagenumber:page?.pagesize;let i=index;" class="module1">
+    <div routerLink="{{item?.url}}" *ngFor="let item of data.all|page:page?.pagenumber:page?.pagesize;let i=index;" class="module1">
       <div class="title">
         {{item?.title|numberPipe:10}}
       </div>

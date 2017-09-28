@@ -35,6 +35,8 @@ margin-left: 50px;
   width: 470px;
   height: 150px;
   background-color: white;
+  outline: none;
+  cursor: pointer;
 }
 .petlft{
   width: 48%;

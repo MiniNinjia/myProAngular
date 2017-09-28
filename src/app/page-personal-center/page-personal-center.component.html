@@ -71,7 +71,7 @@
       <div class="rmin" *ngFor="let item of myCollect">
         <div class="rtitle">{{item?.title}}</div>
         <div class="btn_div">
-          <button class="detail">取消收藏</button>
+          <button class="detail" (click)="dodelcollect(item?.type,item.id)">取消收藏</button>
           <button class="detail" routerLink="../../{{item?.url}}">查看详情</button>
         </div>
       </div>

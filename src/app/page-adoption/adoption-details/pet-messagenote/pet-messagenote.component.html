@@ -1,20 +1,15 @@
-<div class="message">
-
-<div class="user" *ngFor="let item of message;let i=index">
-
-  <div class="left">
-    <img class="uing" src="{{item.uimg}}" alt="">
-    <p>{{item.uname}}</p>
+<div class="message" *ngIf="message.length>0">
+  <div class="user" *ngFor="let item of message;let i=index">
+    <div class="left">
+      <img class="uing" src="{{_uploadUrl}}{{item?.headimg}}" alt="">
+      <p><b>{{item?.nickname}}</b></p>
+    </div>
+    <div class="right">
+      <p><span>{{item?.time|date:'yyyy-MM-dd hh:mm:ss'}}</span></p>
+      <p>{{item?.content}}</p>
+    </div>
   </div>
-  <div class="right">
-    <p>{{item.mes}}</p>
-    <p><span>时间{{item.data}}</span> <span class="rright" >
-            <a (click)="exchange(i)">
-              <i class="fa fa-thumbs-up fa-2x" aria-hidden="true" *ngIf="!item.isCollect"></i>
-              <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="item.isCollect"></i>
-              <span >{{item.number}}次赞 </span>
-            </a></span></p>
-  </div>
-
 </div>
+<div *ngIf="message.length==0">
+  还没有评论等你来坐沙发哦
 </div>

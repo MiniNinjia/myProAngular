@@ -91,6 +91,7 @@ import {PagePipe} from './page.pipe';
 import {CommonModule} from '@angular/common';
 import {FileUploadModule} from 'ng2-file-upload';
 import {PublishService} from './services/publish.service';
+import { DefaultimgPipe } from './defaultimg.pipe';
 
 @NgModule({
   declarations: [
@@ -162,7 +163,7 @@ import {PublishService} from './services/publish.service';
     PageReportComponent,
     PagePipe,
     PageReportComponent,
-
+    DefaultimgPipe,
   ],
   imports: [
     FormsModule,

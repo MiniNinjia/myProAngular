@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-
+import {AdoptionService} from '../../../services/adoption.service'
+import {GlobalPropertyService} from '../../../services/global-property.service'
 @Component({
   selector: 'app-adoption-list',
   templateUrl: './adoption-list.component.html',
@@ -7,13 +8,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AdoptionListComponent implements OnInit {
 
-  constructor() {
+  constructor(private as: AdoptionService,
+              private glo: GlobalPropertyService) {
   }
-
+  _uploadUrl=this.glo.uploadUrl;
   data: any;
 
   ngOnInit() {
-    this.data = this.all;
+    const that = this;
+    this.as.getpetbanner(function (result) {
+      if (result._body !== 'err') {
+        that.data = JSON.parse(result._body);
+      }
+    })
+    //this.data = this.all;
   }
 
   all = [

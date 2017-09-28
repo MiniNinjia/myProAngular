@@ -7,8 +7,7 @@
       <div class="left">
         <ul>
           <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)"
-              *ngFor="let item of showpet;let i =index" routerLink="detail/id">
-
+              *ngFor="let item of showpet;let i =index">
             <ng-container *ngIf="i<6">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">
@@ -26,7 +25,7 @@
         <!--萌宠推荐版块右边------------------------------------------------------->
       <div class="right">
         <ul>
-          <li class="item " routerLink="detail/id" (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index" >
+          <li class="item " (mouseover)="toggleState(i)" (mouseout)="toggleState(i)" *ngFor="let item of showpet;let i =index" >
             <div class="aa" *ngIf="i>5">
               <a target="_blank">
                 <img width="{{item.width}}" height="{{item.height}}" src="{{item.img}}">

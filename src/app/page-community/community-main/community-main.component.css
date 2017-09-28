@@ -1,19 +1,31 @@
 .main {
   width: 1200px;
   margin: 0 auto;
-  height: 2000px;
   padding-top: 80px;
 }
-
+.main:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 .left {
   width: 800px;
   float: left;
 }
-
+.left:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 .right {
   width: 350px;
   float: right;
   height: 500px;
+}
+.right:after{
+  content: '';
+  display: block;
+  clear: both;
 }
 .right:hover{
   cursor: default;
@@ -101,6 +113,7 @@ h3{
   font-size: 16px;
   line-height: 30px;
   outline: none;
+  overflow: hidden;
 }
 
 .main_count {
@@ -183,7 +196,6 @@ span:hover, img:hover, h3:hover {
   width: 100%;
   margin-bottom: 30px;
   box-shadow: 2px 1px 5px #888888;
-
 }
 .ordermune_ul{
   height: 45px;
@@ -198,5 +210,67 @@ span:hover, img:hover, h3:hover {
   font-weight: bold;
 }
 .sort{
+  color: #ffc907;
+}
+.write{
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 1px 5px #888888;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 30px 15px;
+}
+.write_title{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+.write_title span{
+  font-size: 18px;
+}
+.write_input{
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  outline: none;
+}
+.write_body{
+  width: 100%;
+}
+.write_body:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.write:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.write_btn{
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+.btn_write{
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+}
+.btn_submit{
+  background-color:#ffc907 ;
+  float: left;
+  margin-left: 200px;
+  color: white;
+  border: none;
+}
+.btn_cancel{
+  float: right;
+  margin-right: 200px;
+  background-color: white;
+  border: solid 1px #ffc907;
   color: #ffc907;
 }

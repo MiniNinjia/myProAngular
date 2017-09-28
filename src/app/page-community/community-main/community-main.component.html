@@ -6,33 +6,45 @@
         <li class="ordermune_li" (click)="changeSort('hot')" [class.sort]="sort=='hot'">最热</li>
       </ul>
     </div>
+    <div class="write" *ngIf="writestate">
+      <div class="write_title">
+          <input class="write_input" type="text" placeholder="请输入标题,最多30字" maxlength="30" [(ngModel)]="writecontent.title">
+      </div>
+      <div class="write_body">
+          <blog-froala (froala)="froalaContent($event)"></blog-froala>
+      </div>
+      <div class="write_btn">
+        <button class="btn_write btn_submit" (click)="submit()">发表</button>
+        <button class="btn_write btn_cancel"  (click)="write()">不写了</button>
+      </div>
+    </div>
     <ul>
-      <li class="left_main" *ngFor="let article of list_data.article ;let i=index">
+      <li class="left_main" *ngFor="let article of list_data?.article ;let i=index">
         <div class="info">
-          <img class="info_img" src="{{_uploadUrl}}{{article.headimg}}" alt="">
-          <span class="username">{{article.nickname}}</span>
-          <span class="time">发表于{{article.time|date:'y-MM-dd'}}</span>
+          <img class="info_img" src="{{_uploadUrl}}{{article?.headimg}}" alt="">
+          <span class="username">{{article?.nickname}}</span>
+          <span class="time">发表于{{article?.time|date:'y-MM-dd'}}</span>
           <div class="report">
             举报
           </div>
         </div>
         <div class="text">
-          <h3 routerLink="detail/{{article.communityID}}" >{{article.title|numberPipe:20}}</h3>
-          <span routerLink="detail/{{article.communityID}}" class="main_text">{{article.content|numberPipe:50}}</span>
+          <h3 routerLink="detail/{{article?.communityID}}" >{{article?.title|numberPipe:20}}</h3>
+          <div routerLink="detail/{{article?.communityID}}" class="main_text" [innerHTML]="article?.content"></div>
         </div>
         <div class="main_count">
           <a>
             <i class="fa fa-comment" aria-hidden="true"></i>
-            <span>{{article.reviewcount}}</span><span>评论</span>
+            <span>{{article?.reviewcount}}</span><span>评论</span>
           </a>
           <a (click)="collect(i)">
-            <i class="fa fa-star" aria-hidden="true" *ngIf="article.collectstate"></i>
-            <i class="fa fa-star-o" aria-hidden="true" *ngIf="!article.collectstate"></i>
-            <span *ngIf="!article.collectstate">收藏</span>
-            <span *ngIf="article.collectstate">已收藏</span>
+            <i class="fa fa-star" aria-hidden="true" *ngIf="article?.collectstate"></i>
+            <i class="fa fa-star-o" aria-hidden="true" *ngIf="!article?.collectstate"></i>
+            <span *ngIf="!article?.collectstate">收藏</span>
+            <span *ngIf="article?.collectstate">已收藏</span>
           </a>
           <a>
-            <span> 浏览次数( {{article.viewcount}} )</span>
+            <span> 浏览次数( {{article?.viewcount}} )</span>
           </a>
         </div>
       </li>
@@ -52,7 +64,7 @@
   <div class="right">
     <ul class="right_1">
       <li class="right_item"><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</li>
-      <li class="right_item"><i class="fa fa-user-circle" aria-hidden="true"></i> 与我相关</li>
+      <li class="right_item" (click)="write()"><i class="fa fa-pencil" aria-hidden="true"></i> 发个帖子</li>
     </ul>
     <ul class="adv">
       <li class="adv_li"><a><img src="../../../assets/images/adv.png"/></a></li>

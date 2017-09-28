@@ -47,6 +47,7 @@ export class UserInfoService {
       }
     );
   }
+
   getPublishList(uid, callback) {
     const params = new URLSearchParams();
     params.set('uid', uid);
@@ -56,6 +57,7 @@ export class UserInfoService {
       }
     );
   }
+
   getDiaryList(uid, callback) {
     const params = new URLSearchParams();
     params.set('uid', uid);
@@ -67,14 +69,14 @@ export class UserInfoService {
   }
 
   getCommunitylist(uid, callback) {
-  const params = new URLSearchParams();
-  params.set('uid', uid);
-  this.http.get(this._url + '/personal/getCommunitylist', {search: params}).subscribe(
-    function (result) {
-      callback(result);
-    }
-  );
-}
+    const params = new URLSearchParams();
+    params.set('uid', uid);
+    this.http.get(this._url + '/personal/getCommunitylist', {search: params}).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+  }
 
 
   getMessageList(uid, callback) {
@@ -98,4 +100,12 @@ export class UserInfoService {
     );
   }
 
+  commitChange(data: any, callback) {
+    this.http.post(this._url + '/personal/edit', data).subscribe(
+      function (result) {
+        callback(result);
+      }
+    );
+    return null;
+  }
 }

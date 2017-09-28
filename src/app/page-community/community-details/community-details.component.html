@@ -13,9 +13,9 @@
         <p>{{article?.viewcount}}</p>
       </div>
     </div>
-    <div class="text" *ngIf="article?.content">
-      <span [class.dn]="showAllFlag">{{article?.content|numberPipe:200}}</span>
-      <span [class.dn]="!showAllFlag">{{article?.content}}</span>
+    <div class="text" *ngIf="article?.content" [innerHTML]="article?.content">
+      <!--<span [class.dn]="showAllFlag"></span>-->
+      <!--<span [class.dn]="!showAllFlag"></span>-->
     </div>
     <div class="showAll">
       <button class="showAll_report" (click)="jubao()"><i class="fa fa-flag" aria-hidden="true"></i> 举报</button>
