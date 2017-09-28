@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+
 import {Http} from '@angular/http';
 import {
   trigger,
@@ -8,7 +9,7 @@ import {
   transition,
   keyframes
 } from '@angular/animations';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {LocalStorage} from '../app.local.storage';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../services/global-property.service';
@@ -57,6 +58,7 @@ export class HeaderComponent implements OnInit {
   userInfoState = 'hide';
   userInfo: any;
   _url = this.glo.serverUrl;
+  _searchText: any;
 
   toggleState() {
     this.state = (this.state === 'show' ? 'hide' : 'show');
@@ -68,6 +70,7 @@ export class HeaderComponent implements OnInit {
   }
 
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private ls: LocalStorage,
               private _cookieService: CookieService,
               private glo: GlobalPropertyService,
@@ -88,6 +91,18 @@ export class HeaderComponent implements OnInit {
     //     }
     //   });
     // }
-    scrollTo(0,0);
+    scrollTo(0, 0);
+  }
+
+  listen(i) {
+    if (i.code === 'Enter') {
+      this.search(this._searchText);
+    }
+  }
+
+  search(text: any) {
+    if (text) {
+      this.router.navigate(['search', {text: text}]);
+    }
   }
 }

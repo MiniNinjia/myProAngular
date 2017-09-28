@@ -49,7 +49,7 @@ export class SkillComponent implements OnInit {
       'middlewords':' 狗狗饲养需要注意的问题？',
     },
     {
-      'imag':'罗福梗犬.jpg',
+      'imag':'罗福梗.jpg',
       'middlewords':' 罗福梗犬好养吗 罗福梗犬还是比较好养',
     },
     {

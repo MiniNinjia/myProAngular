@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // <--- JavaScript import from Angular
+import {Component, OnInit} from '@angular/core';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms'; // <--- JavaScript import from Angular
 import {CookieService} from 'angular2-cookie/services/cookies.service';
 import {GlobalPropertyService} from '../../services/global-property.service';
 import {UserInfoService} from '../../services/userInfo.service';
@@ -13,7 +13,7 @@ import {UserInfoService} from '../../services/userInfo.service';
 })
 export class MyInfoComponent implements OnInit {
   user: any;
-  infoData:any;
+  infoData: any;
   inof = {
     'id': 1,
     'users': '张三',
@@ -24,21 +24,20 @@ export class MyInfoComponent implements OnInit {
   };
 
   del = false;
-  users:any;
-  sex:any;
-  addres:any;
-  mytel:any;
-  age:any; constructor(private _cookieService: CookieService,
-                       private glo: GlobalPropertyService,
-                       private uis: UserInfoService)
+  users: any;
+  sex: any;
+  addres: any;
+  mytel: any;
+  age: any;
 
- {
+  constructor(private _cookieService: CookieService,
+              private glo: GlobalPropertyService,
+              private uis: UserInfoService) {
     this.addres = this.inof.addres;
     this.age = this.inof.age;
     this.users = this.inof.users;
     this.sex = this.inof.sex;
     this.mytel = this.inof.tel;
-
 
 
   }
@@ -49,13 +48,13 @@ export class MyInfoComponent implements OnInit {
     if (that.user) {
       that.uis.getinfo(that.user.uid, function (result) {
         if (result._body !== 'err') {
-          //console.log(JSON.parse(result._body));
           that.infoData = JSON.parse(result._body);
         }
       });
     }
 
   }
+
   revamp() {
     this.del = !this.del;
   }
@@ -82,6 +81,5 @@ export class MyInfoComponent implements OnInit {
       'tel': 158759795,
       'age': 34,
     };
-
   }
 }

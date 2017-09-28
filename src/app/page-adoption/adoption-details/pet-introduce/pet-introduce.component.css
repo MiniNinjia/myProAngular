@@ -1,5 +1,8 @@
 .aa{
-  margin: 0;
-  width: 770px;
+  margin: 30px;
+  line-height: 30px;
+  width: 720px;
+  font-size: 14px;
+  letter-spacing:4px
   /*background-color: #339966;*/
 }

@@ -40,6 +40,10 @@ const routes: Routes = [
     component: PageSearchComponent
   },
   {
+    path: 'search/:text',
+    component: PageSearchComponent
+  },
+  {
     path: 'diary',
     component: PageDiaryComponent
   },
