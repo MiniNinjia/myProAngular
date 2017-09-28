@@ -23,13 +23,14 @@ width: 500px;
   text-align: center;
   color: white;
   border-right: solid 1px white;
-
+  cursor: default;
 }
 .zz li:last-child{
   border-right: none;
 }
 .dowm{
   width: 100%;
+
 }
 .bb{
   clear: both;
@@ -38,6 +39,7 @@ width: 500px;
   padding-top: 20px;
   color: white;
   margin: 0 auto;
+  cursor: default;
 }
 /*.left{*/
   /*width: 33.33%;*/

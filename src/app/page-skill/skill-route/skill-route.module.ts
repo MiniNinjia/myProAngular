@@ -18,10 +18,11 @@ const routes: Routes = [
         component: SkillMainComponent,
       },
       {
-        path: 'detail/:peid',
+        path: 'detail/:pid',
         component: SkillDetailsComponent,
-      },]
-  },];
+      }]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

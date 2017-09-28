@@ -3,8 +3,8 @@
     <div class="index-container-diary-a" >领养日记</div>
     <div class="pppp">
       <ul class="index-container-diary-ul" [@change]="state" >
-        <li *ngFor="let items of datas">
-          <div *ngFor="let item of items.items">
+        <li class="dai" *ngFor="let items of datas">
+          <div class="dai" routerLink="../diary/detail/id" *ngFor="let item of items.items">
             <img src="../../../assets/upload/diary/{{item.id}}" height="300" width="300"/>
 
           </div>

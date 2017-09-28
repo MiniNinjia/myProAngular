@@ -20,7 +20,9 @@
   /*background-color: #2cff47;*/
   float: left;
   overflow: hidden;
+  outline: none;
 }
+
 
 .index-container-skill-ul li:first-child {
   width: 1200px;

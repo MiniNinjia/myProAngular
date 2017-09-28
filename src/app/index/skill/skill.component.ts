@@ -34,6 +34,7 @@ import {
   // ]
 })
 export class SkillComponent implements OnInit {
+pid:any;
 
   constructor() {
     // this.go();
@@ -90,5 +91,8 @@ export class SkillComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  getid( i: any ) {
+     this.pid = i;
+    console.log(this.pid);
+  }
 }
