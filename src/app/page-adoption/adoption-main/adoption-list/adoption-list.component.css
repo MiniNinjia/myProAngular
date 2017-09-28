@@ -6,6 +6,9 @@
 .aa{
   /*background-color: #ee57ad;*/
 }
+.main div{
+  outline: none;
+}
 nav{
   padding-left: 25%;
 }

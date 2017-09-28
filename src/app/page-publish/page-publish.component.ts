@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 import { FileUploader } from 'ng2-file-upload';
-//import {GlobalPropertyService} from '../services/global-property.service';
 import {PublishService} from '../services/publish.service'
 @Component({
   selector: 'app-page-publish',
@@ -10,10 +9,10 @@ import {PublishService} from '../services/publish.service'
 
 })
 export class PagePublishComponent implements OnInit {
-  froalaContent(event) {
-    console.log(event)
-    console.log('11111');
-  }
+  //froalaContent(event) {
+  //  console.log(event)
+  //  console.log('11111');
+  //}
 
   data=[
     {
@@ -29,23 +28,40 @@ export class PagePublishComponent implements OnInit {
       city:['宜宾市2','广安市2','达州市2','雅安市2','巴中市2','资阳市2']
     }
   ];
+ petkindof=[
+    {
+      petkind:'狗',
+      petkindof:['拉布拉多','柴犬','柯基','金毛','萨摩耶','藏獒']
+    },
+    {
+      petkind:'猫',
+      petkindof:['波斯猫','短尾猫','苏格兰折耳猫','挪威森林猫','狸猫','山东狮子猫']
+    }
+  ];
 
    cit:any;
   publishData:any;
   postData: any;
+  kindof:any;
   constructor(
-              private ps: PublishService
-          ){ }
+              private ps: PublishService){ }
 
   ngOnInit() {
 
-
   }
+  //城市
   pro(event:any){
 
   this.cit=this.data[event.target.value].city;
 
   }
+  //宠物分类
+  petkind(event:any){
+    this.kindof=this.petkindof[event.target.value].petkindof
+  }
+
+
+
 
   public uploader:FileUploader = new FileUploader({
     url: "http://localhost:3000/ng2/uploadFile",
@@ -83,6 +99,9 @@ export class PagePublishComponent implements OnInit {
       }
     });
   }
+
+
+  //发布内容保存
 
 
   //onFileChanged(fileList: FileList) {
