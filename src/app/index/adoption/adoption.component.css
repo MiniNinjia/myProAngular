@@ -9,7 +9,9 @@
   font-size: 30px;
   color: #444444;
 }
-
+.cbtn{
+  outline: none;
+}
 
 .index-container-adoption-ul {
   width: 1200px;

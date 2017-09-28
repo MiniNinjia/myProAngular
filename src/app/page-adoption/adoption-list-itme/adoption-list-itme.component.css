@@ -110,10 +110,14 @@
 .petimg {
   width: 100%;
   cursor: pointer;
+  outline: none ;
 }
 
 .introduce {
   padding: 10px;
+}
+.introduce p a{
+  outline: none;
 }
 
 .introduce span {

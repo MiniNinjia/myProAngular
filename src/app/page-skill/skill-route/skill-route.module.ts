@@ -6,7 +6,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {SkillMainComponent} from '../skill-main/skill-main.component';
 import {SkillDetailsComponent} from '../skill-details/skill-details.component';
 import {PageSkillComponent}from'../page-skill.component'
-import {from} from "rxjs/observable/from";
 
 const routes: Routes = [
   {
@@ -23,6 +22,7 @@ const routes: Routes = [
       }]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

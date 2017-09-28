@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {SkillService} from '../../services/skill.service';
-import {GlobalPropertyService} from '../../services/global-property.service';
-import {CookieService} from 'angular2-cookie/services/cookies.service';
+
 @Component({
   selector: 'app-skill-main',
   templateUrl: './skill-main.component.html',
   styleUrls: ['./skill-main.component.css']
 })
 export class SkillMainComponent implements OnInit {
-  list_data: any;
-  skillService: any;
   skill = [
     {
       'id':'1',
@@ -46,19 +42,16 @@ export class SkillMainComponent implements OnInit {
       'main':'  贵宾犬分为纯种贵宾与杂交贵宾，可是这两种贵宾外形差别不大（尤其是在狗狗小时候），那么如何挑选一条好的纯种贵宾幼犬呢？下面一些挑选纯种贵宾的经验，希望对想购买贵宾的朋友有所帮助。',
       'ground':'浏览次数（533）',
     },
-  ]
-  constructor(private glo: GlobalPropertyService,
-              private ds: SkillService,
-              private _cookieService: CookieService) { }
+  ];
+  pid:any;
+  constructor() { }
 
   ngOnInit() {
   }
-  skillMaindata() {
-    const that = this;
-    this.ds.getskillMain(this.skillService, function (result) {
-      if (result._body !== 'err') {
-        that.list_data.diary = JSON.parse(result._body);
-      }
-    });
+
+  getpid(i:any){
+    this.pid=i;
+    console.log(this.pid);
   }
+
 }

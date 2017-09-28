@@ -1,25 +1,43 @@
 <div class="big" *ngFor="let item of buyinfo;let i=index">
   <div class="main">
     <!--<img class="rimg" src="{{item.pimg}}" alt="">-->
+    <div class="tit" routerLink="../../adoption/detail/id">
+      <span class="rtitle">{{item.title}}</span>
+      <span>申请人信息</span>
+    </div>
+    <div class="rword">
 
-  <div class="rword">
-  <p class="rtitle" routerLink="../../adoption/detail/id" >{{item.title}}</p>
-    <p><span>申请人信息</span></p>
-  <p><span>姓名：</span><span>{{item.user}}</span></p>
 
-  <p><span>电话：</span><span>{{item.tel}}</span></p>
+      <div class="di">
+        <div class="sname">
+        <b>姓名：</b>
+        <span>{{item.user}}</span>
+      </div>
+        <div class="sname">
+        <b>电话：</b>
+        <span>{{item.tel}}</span>
+        </div>
+      </div>
 
-  <p><span>地址：</span><span>{{item.addres}}</span></p>
+      <div class="di">
+        <div class="sname">
+          <b>地址：</b>
+          <span>{{item.addres}}</span>
+          </div>
+        <div class="sname" > <b>是否养过宠物：</b><span>{{item.exp}}&nbsp;</span></div>
+      </div>
 
-  <p><span>是否养过宠物：</span><span>{{item.exp}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 
-  <p><span>申请理由：</span>
+    <div class="sreason">
+      <b>申请理由：</b>{{item.reason}}
+    </div>
+    </div>
 
-  </p><div class="reason">{{item.reason}}</div>
 
+    <div class="btnd">
     <button class="detail1">同意</button>
     <button class="detail">拒绝</button>
+  </div>
 
   </div>
-</div>
 </div>

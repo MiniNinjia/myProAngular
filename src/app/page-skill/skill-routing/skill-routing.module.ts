@@ -6,6 +6,7 @@ import {SkillDetailsComponent} from '../skill-details/skill-details.component';
 import {PageSkillComponent} from '../page-skill.component';
 //导入路由
 import {RouterModule, Routes} from '@angular/router';
+
 const routes: Routes = [
   {
     path: 'skill',
