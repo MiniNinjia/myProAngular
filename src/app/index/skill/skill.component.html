@@ -3,7 +3,7 @@
     <a class="index-container-skill-a">养宠技巧</a>
     <div class="pppp">
       <ul class="index-container-skill-ul">
-        <li *ngFor="let items of datas">
+        <li routerLink="../skill/detail/id" *ngFor="let items of datas" >
 
           <div  class="all" *ngFor="let item of items">
             <div class="piv" >
@@ -28,6 +28,6 @@
       <!--<li value="3" (click)="change(4)"><a><i></i></a></li>-->
       <!--<li value="4" (click)="change(5)"><a><i></i></a></li>-->
     <!--</ul>-->
-    <button id="index-container-skill-btn">查看更多技巧</button>
+    <button id="index-container-skill-btn" routerLink="../skill">查看更多技巧</button>
   </div>
 </div><!--领养技巧-->
