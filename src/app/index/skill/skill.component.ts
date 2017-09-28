@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import {
   trigger,
   state,
@@ -34,8 +35,9 @@ import {
   // ]
 })
 export class SkillComponent implements OnInit {
-
-  constructor() {
+  articleId: string;
+  pid:any;
+  constructor(private route: ActivatedRoute) {
     // this.go();
   }
 
@@ -89,6 +91,13 @@ export class SkillComponent implements OnInit {
   // }
 
   ngOnInit() {
+    this.articleId = this.route.snapshot.paramMap.get('pid');
+    console.log(this.articleId);
+
+  }
+  getpid(i:any){
+    this.pid=i;
+    console.log(this.pid);
   }
 
 }

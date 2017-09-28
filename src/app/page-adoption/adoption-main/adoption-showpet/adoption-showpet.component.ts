@@ -34,6 +34,7 @@ export class AdoptionShowpetComponent implements OnInit {
   }
 
   constructor() {
+
   }
 
   ngOnInit() {

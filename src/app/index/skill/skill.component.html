@@ -3,9 +3,9 @@
     <a class="index-container-skill-a">养宠技巧</a>
     <div class="pppp">
       <ul class="index-container-skill-ul">
-        <li routerLink="../skill/detail/id" *ngFor="let items of datas" >
+        <li routerLink="../skill/detail/{{pid}}" *ngFor="let items of datas" >
 
-          <div  class="all" *ngFor="let item of items">
+          <div  class="all" (click)="getpid(i)" *ngFor="let item of items;let i=index">
             <div class="piv" >
               <i class="fa fa-chevron-right oo"></i>
             </div>
