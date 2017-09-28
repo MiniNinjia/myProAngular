@@ -2,14 +2,20 @@
     <div class="listwith">
       <div class="main">
         <div routerLink="/adoption/detail/{{item.petId}}" *ngFor="let item of data;let i=index" class="listpet ">
-          <div class="petlft">
-            <img class="img" src="{{_uploadUrl}}{{item?.img}}" alt="">
-          </div>
-          <div class="petrig">
-            <p>用户名：{{item.nickname}}</p>
-            <p>品种：{{item.category}}</p>
-            <p>地区：{{item?.province}}{{item?.city}}</p>
-          </div>
+      <h1>萌宠领养</h1>
+      <div class="main" routerLink="./detail/id">
+        <div *ngFor="let item of data;let i=index" class="listpet ">
+          <a class="details-link" href="">
+            <div class="petlft">
+              <img class="img" src="{{item.img}}" alt="">
+            </div>
+            <div class="petrig">
+              <h4>{{item.user}}</h4>
+              <p class="font-left"><i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;{{item.Ename}}</p>
+              <p class="font-right">地区：{{item.area}}</p>
+            </div>
+          </a>
+
         </div>
       </div>
 

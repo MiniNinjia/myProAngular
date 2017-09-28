@@ -6,14 +6,21 @@
     <div class="mbig">
       <p class="title">基础信息</p>
       <form action="">
-        <p>
-          <span class="sp1"><span class="col">*</span>供求</span>
-          <input type="radio" name="give" id="give1"/>赠送
-          <input type="radio" name="give" id="give2"/>领养
-        </p>
+
         <p>
           <span class="sp1"><span class="col">*</span>宠物年龄</span>
-          <input type="text" id="age" class="add1">
+          <input type="text" id="age" class="add1"name="age" [(ngModel)]="age">
+        </p>
+        <p>
+          <span class="sp1">宠物分类</span>
+          <select class="add1" name="" id="kind" (change)="petkind($event)">
+            <option value="">请选择宠物类型</option>
+            <option [value]="i" *ngFor="let item of petkindof;let i=index">{{item.petkind}}</option>
+          </select>
+          <select class="add1" name="" id="kindof">
+            <option value="">请选择种类</option>
+            <option value="" *ngFor="let item of kindof;let j=index">{{item}}</option>
+          </select>
         </p>
         <p>
           <span class="sp1"><span class="col">*</span>标题</span>
@@ -37,6 +44,7 @@
             </div>
           </div>
         </div>
+
         <p>
           <span class="sp1">详细地址</span>
           <select class="add1" name="" id="add1" (change)="pro($event)">
@@ -68,3 +76,4 @@
   </div>
 </div>
 <!--<app-protected></app-protected>-->
+<app-bottom></app-bottom>

@@ -1,43 +1,40 @@
-<div class="skill-details-bg">
-  <h1>哈士奇能不能吃海鲜？</h1>
+<div class="skill-details-bg"(change)="pid(i)" *ngFor="let item  of art;let i =index ">
+  <div>{{articleId}}{{article[i].pid}}
+  <h1>{{item.title}}</h1>
   <div class="skill-details-content">
     <div class="wenben-1">
     <p>
-      关于在沿海城市生活的咱们，海鲜是每日生活中不可少的好菜，
-      咱们在养哈士奇的时候，应当留意哈士奇吃海鲜的问题，
-      哈士奇是十分贪吃的家伙，但是咱们要知道海鲜是不是合适哈
-      士奇吃的，这样才能确保哈士奇吃到海鲜今后不会有不良反应。
+      &nbsp;&nbsp; {{item.square}}
+    <p>{{item.square}}
     </p>
   </div>
     <div class="wenben-2">
-        <img src="../../../assets/images/2222.png"/>
-      <p style="text-align: center" >哈士奇</p>
+        <img src="../../../assets/images/{{item.articleimag}}"/>
+      <p style="text-align: center" >&nbsp;&nbsp;{{item.style}}</p>
+        <img src="../../../assets/images/{{item.articleimag}}"/>
+      <p style="text-align: center" >{{item.style}}</p>
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;海鲜是有营养的好东西，但是并
-        不是合适一切的狗狗，也并不合适当狗狗的主粮。在给狗狗吃海鲜的的时候，仍是少吃的原
-        则，发现问题及时中止。
+        &nbsp;&nbsp;{{item.p1}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p1}}
       </p>
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;咱们都喜爱给狗狗吃好吃的东西，
-        狗狗又是馋嘴的小家伙，但是狗狗是不是可以吃海鲜呢?海鲜虽然是好东西，但是关于哈士
-        奇而言却是可以损伤它身体的食物。所以希望主人要给哈
-        士奇吃海鲜时，仍是需要稳重，不要让狗狗过量有用海鲜。不过，本来国外现已有很多饲料
-        当中的蛋白质来历就现已选用鱼肉成品，仅仅由于鱼肉饲料的本钱较昂贵，加工也较为繁琐，
-        因而才不普遍运用，
+        &nbsp;&nbsp;{{item.p2}}
+        <span>{{item.p21}}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p2}}
       </p>
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;哈士奇食物的摄取当然仍是以健康为主，以适当就好的准则，
-        但也不要矫枉过正，硬是决定除了饲料以外，什么东西都不能吃。
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p21}}。
       </p>
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宠物狗吃海鲜的时候，咱们应当阻止，由于要了解哈士奇的身体需要，不然的话你的爱犬吃
-        多了海鲜今后，它们还会出现拉肚子的状况。所以为了让哈士奇可以健健康康的生长，咱们就
-        一定要远离这些食物，海鲜是寒性很大的食物，这类食物对狗狗的伤害很深
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}{{item.p31}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}<span>{{item.p31}}</span>
       </p>
     </div>
   </div>
 
+  </div>
 
 
-
+<!--</div>-->
 </div>

@@ -56,7 +56,7 @@ export class AdoptionDetailsComponent implements OnInit {
   recommend = [
     {
       'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
+      'pimg': '../../../assets/adoption_detail/1.1.jpg',
       'uimg': '../../../assets/images/skill-t1.jpg',
       'uname': 'tom',
       'kind': '萨摩耶',
@@ -65,7 +65,7 @@ export class AdoptionDetailsComponent implements OnInit {
     },
     {
       'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
+      'pimg': '../../../assets/adoption_detail/2.1.jpg',
       'uimg': '../../../assets/images/skill-t1.jpg',
       'uname': 'tom',
       'kind': '萨摩耶',

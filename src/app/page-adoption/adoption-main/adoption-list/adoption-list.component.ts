@@ -27,68 +27,46 @@ export class AdoptionListComponent implements OnInit {
   all = [
     {
       'id': 1,
-      'user': '1111111111111日本',
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': 'all腿短1111'
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
     {
-      'id': 2,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
+      'id': 1,
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
     {
-      'id': 3,
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短',
-      'img': '../../../../assets/images/dog1.png'
-    }, {
-      'id': 4,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
+      'id': 1,
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
     {
-      'id': 5,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
+      'id': 1,
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
     {
-      'id': 6,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
+      'id': 1,
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
     {
-      'id': 7,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
+      'id': 1,
+      'user': '[ 萨摩耶 ] · 4个月 · 大型犬 · 母狗 · 呆萌',
+      'img': '../../../../assets/images/325x240.jpg',
+      'Ename': '用户名',
+      'area': '上海',
     },
-    {
-      'id': 8,
-      'img': '../../../../assets/images/dog1.png',
-      'name': 'shabi',
-      'Ename': 'sha',
-      'form': '柯基',
-      'special': '腿短'
-    }
   ]
 
 

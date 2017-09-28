@@ -1,6 +1,6 @@
 .background{
   width: 100%;
-  /*height: 1200px;*/
+  min-height: 1000px;
   background-color: #f3f3f3;
 }
 .back1{

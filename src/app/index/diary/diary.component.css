@@ -73,13 +73,16 @@
   background-color: #f3dd00;
 }
 .qqq{
-  background-color: #ffffff !important;
+  background-color: #f3dd00 !important;
 }
 .index-container-diary-ul-list li a i {
   width: 40px;
   height: 10px;
   display: block;
   background-color: rgba(255, 255, 255, 0.31);
+}
+.dai{
+  outline: none;
 }
 
 .index-container-diary-ul-list li:first-child a i {

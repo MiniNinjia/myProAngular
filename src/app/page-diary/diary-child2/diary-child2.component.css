@@ -102,7 +102,7 @@
 
 }
 .name{
-  cursor: none;
+  cursor: default;
   width: 100px;
   height: 80px;
   /*background-color: #f3dd00;*/
@@ -110,13 +110,13 @@
   margin-top: -100px;
 }
 .pet_name{
-  cursor: none;
+  cursor: default;
   font-size: 1.2em;
   color: #444444;
   font-weight: 600;
 }
 .right_right1{
-  cursor: none;
+  cursor: default;
   width: 750px;
   height: 60px;
   padding-left: 20px;
@@ -205,16 +205,16 @@
 .send_diary{
   font-size: 1.2em;
   float: left;
-  cursor: none;
+  cursor: default;
 }
 .total{
   margin-left: 20px;
   float: left;
-  cursor: none;
+  cursor: default;
 }
 .right_right3_one ul{
   float: right;
-  cursor: none;
+  cursor: default;
   margin-right: 20px;
 }
 

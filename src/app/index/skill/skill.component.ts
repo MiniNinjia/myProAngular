@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
 import {
   trigger,
   state,
@@ -34,8 +35,9 @@ import {
   // ]
 })
 export class SkillComponent implements OnInit {
-
-  constructor() {
+  articleId: string;
+  pid:any;
+  constructor(private route: ActivatedRoute) {
     // this.go();
   }
 
@@ -49,7 +51,7 @@ export class SkillComponent implements OnInit {
       'middlewords':' 狗狗饲养需要注意的问题？',
     },
     {
-      'imag':'罗福梗犬.jpg',
+      'imag':'罗福梗.jpg',
       'middlewords':' 罗福梗犬好养吗 罗福梗犬还是比较好养',
     },
     {
@@ -89,6 +91,13 @@ export class SkillComponent implements OnInit {
   // }
 
   ngOnInit() {
+    this.articleId = this.route.snapshot.paramMap.get('pid');
+    console.log(this.articleId);
+
+  }
+  getpid(i:any){
+    this.pid=i;
+    console.log(this.pid);
   }
 
 }

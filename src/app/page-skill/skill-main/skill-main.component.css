@@ -35,13 +35,13 @@
 }
 .skill-right{
   width: 260px;
-  height: 200px;
-  background: #ffab8e;
+  /*height: 200px;*/
+  /*background: #ffab8e;*/
   float: right;
 }
 .list-1{
   width: 700px;
-  height: 218px;
+  /*height: 218px;*/
   float: left;
   background: #ffffff;
   padding: 30px;
@@ -50,7 +50,7 @@
 .gardent{
   width: 50px;
   height: 50px;
-  background: #86bc3e;
+  /*background: #86bc3e;*/
   border-radius: 100%;
   float: left;
 }
@@ -82,3 +82,15 @@ li{
   float: right;
 }
 
+.adv-1{
+  width: 100%;
+  height: 400px;
+  /*background-color: #2cff47;*/
+
+}
+.adv-2{
+  width: 100%;
+  height: 380px;
+  margin-top:30px;
+  /*background-color: #799fff;*/
+}

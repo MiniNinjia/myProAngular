@@ -3,8 +3,8 @@
     <div class="index-container-diary-a" >领养日记</div>
     <div class="pppp">
       <ul class="index-container-diary-ul" [@change]="state" >
-        <li *ngFor="let items of datas">
-          <div *ngFor="let item of items.items">
+        <li class="dai" *ngFor="let items of datas">
+          <div class="dai" routerLink="../diary/detail/id" *ngFor="let item of items.items">
             <img src="../../../assets/upload/diary/{{item.id}}" height="300" width="300"/>
 
           </div>
@@ -18,6 +18,6 @@
       <li id="list3"  (click)="change(4)"><a><i [class.qqq]="state==4" ></i></a></li>
       <li id="list4"  (click)="change(5)"><a><i [class.qqq]="state==5" ></i></a></li>
     </ul>
-    <div id="index-container-diary-btn">查看更多日记</div>
+    <div id="index-container-diary-btn" routerLink="../diary">查看更多日记</div>
   </div>
 </div><!--领养日记-->

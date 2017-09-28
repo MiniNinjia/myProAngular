@@ -57,6 +57,7 @@
   text-shadow: 5px 2px 6px #000;;
 }
 .info_words{
+  cursor: default;
   font-size: 1.2em;
   line-height:25px;
   color: white;

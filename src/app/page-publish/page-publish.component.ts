@@ -18,7 +18,7 @@ export class PagePublishComponent implements OnInit {
   publishData: any;
   postData: any;
   choose: any;
-
+  kindof:any;
   constructor(private ps: PublishService,
               private as: AdoptionService) {
   }
@@ -44,6 +44,13 @@ export class PagePublishComponent implements OnInit {
   _choose(e) {
     this.choose = this.cit[e.target.value];
   }
+  //宠物分类
+  petkind(event:any){
+    this.kindof=this.petkindof[event.target.value].petkindof
+  }
+
+
+
 
   public uploader: FileUploader = new FileUploader({
     url: "http://localhost:3000/ng2/uploadFile",
@@ -85,6 +92,10 @@ export class PagePublishComponent implements OnInit {
 
 
   // onFileChanged(fileList: FileList) {
+  //发布内容保存
+
+
+  //onFileChanged(fileList: FileList) {
   //  if (fileList.length > 0) {
   //    let file: File = fileList[0];
   //    let formData: FormData = new FormData();
