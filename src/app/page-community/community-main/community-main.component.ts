@@ -26,6 +26,7 @@ export class CommunityMainComponent implements OnInit {
     time: null
   };
 
+  aa = false;
 
   constructor(private glo: GlobalPropertyService,
               private cs: CommunityService,
@@ -117,9 +118,21 @@ export class CommunityMainComponent implements OnInit {
     });
   }
 
+
   froalaContent(event) {
     this.writecontent.content = event;
     console.log(this.writecontent.content);
+  }
+
+  //举报模态框
+  jubao() {
+    this.aa = !this.aa;
+    console.log(this.aa + '举报');
+  }
+
+  receive(mes: boolean) {
+    this.aa = !mes;
+    console.log(this.aa + 're');
   }
 
   loaddata() {

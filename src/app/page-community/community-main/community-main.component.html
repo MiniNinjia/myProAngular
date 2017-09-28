@@ -24,9 +24,7 @@
           <img class="info_img" src="{{_uploadUrl}}{{article?.headimg}}" alt="">
           <span class="username">{{article?.nickname}}</span>
           <span class="time">发表于{{article?.time|date:'y-MM-dd'}}</span>
-          <div class="report">
-            举报
-          </div>
+          <div class="report" (click)="jubao()">举报</div>
         </div>
         <div class="text">
           <h3 routerLink="detail/{{article?.communityID}}" >{{article?.title|numberPipe:20}}</h3>
@@ -63,14 +61,16 @@
   </div>
   <div class="right">
     <ul class="right_1">
-      <li class="right_item"><i class="fa fa-star" aria-hidden="true"></i> 我的收藏</li>
+      <li class="right_item"><i class="fa fa-star" aria-hidden="true" routerLink="/personal/{{postData?.uid}}" ></i> 我的收藏</li>
       <li class="right_item" (click)="write()"><i class="fa fa-pencil" aria-hidden="true"></i> 发个帖子</li>
     </ul>
     <ul class="adv">
       <li class="adv_li"><a><img src="../../../assets/upload/advImg/community_adv1.jpg" height="143" width="350"/></a></li>
-      <li class="adv_li"><a><img src="../../../assets/upload/advImg/community_adv2.jpg"height="143" width="350"/></a></li>
-      <li class="adv_li"><a><img src="../../../assets/upload/advImg/community_adv3.jpg"height="143" width="350"/></a></li>
+      <li class="adv_li"><a><img src="../../../assets/upload/advImg/community_adv2.jpg" height="143" width="350"/></a></li>
+      <li class="adv_li"><a><img src="../../../assets/upload/advImg/community_adv3.jpg" height="143" width="350"/></a></li>
     </ul>
 
   </div>
 </div>
+
+<app-page-report *ngIf="aa" [Sitem]="aa"(TOparent)="receive($event)"></app-page-report>
