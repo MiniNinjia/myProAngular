@@ -11,7 +11,8 @@ export class AdoptionListComponent implements OnInit {
   constructor(private as: AdoptionService,
               private glo: GlobalPropertyService) {
   }
-  _uploadUrl=this.glo.uploadUrl;
+
+  _uploadUrl = this.glo.uploadUrl;
   data: any;
 
   ngOnInit() {
@@ -19,6 +20,7 @@ export class AdoptionListComponent implements OnInit {
     this.as.getpetbanner(function (result) {
       if (result._body !== 'err') {
         that.data = JSON.parse(result._body);
+        console.log(that.data)
       }
     })
     //this.data = this.all;

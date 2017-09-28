@@ -1,52 +1,55 @@
 <div class="ooo">
-<div class="container_2" *ngIf="list_data?.diary">
-  <div class="aaa">
-<div class="left">
-  <div *ngFor="let item of list_data?.diary;let i=index"class="detail-1">
-    <div class="line"></div>
-    <div class="detail-1-1 ">
-      <img  class="imag" src="{{_uploadUrl}}{{item.headimg}}"/>
-      <div class="username ">{{item.nickname}}</div>
-    <div class="info1 ">
-    <ul class="ul-1">
-      <li>发表的日志</li>
-    </ul>
-  </div>
-    <div class="info2">
-      <ul class="ul-2">
-        <li>
-          <a (click)="change(i)">
-            <i class="fa fa-thumbs-up" aria-hidden="true" *ngIf="item.isCollect"></i>
-            <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="!item.isCollect"></i>
-          </a>
-          <span>{{item.likecount}}</span>人赞过</li>
-      </ul>
-    </div>
-    </div>
-    <div class="detail-1-2  ">
-    <div class="left_word">
-      <p class="left_word_name" ><a  routerLink="detail/{{item.diaryID}}">{{item.titile}}</a></p>
-      <p class="left_word_info">{{item.content}}</p>
-    </div>
-        <img class="right_imag" src="{{_uploadUrl}}{{item.img}}"/>
-    </div>
-</div>
-  <div class="page_out">
-    <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
-    <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
-    <a class="page_tag"
-       *ngFor="let page of pageList;"
-       (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
-    <a class="next" [class.page_btn_enable]="pageNumber==list_data?.totalPage" (click)="changePageNumber(pageNumber+1)">下一页</a>
-    <a class="end" [class.page_btn_enable]="pageNumber==list_data?.totalPage" (click)="changePageNumber(list_data?.totalPage)">尾页</a>
-  </div>
-</div>
-    <div class="right">
-    <img class="guanggao_1" src="../../../../assets/upload/advImg/diary_adv1.png" height="450" width="330"/>
-    <img class="guanggao_2" src="../../../../assets/upload/advImg/diary_adv2.png" height="150" width="330"/>
-      <img class="guanggao_3" src="../../../../assets/upload/advImg/diary_adv3.png" height="150" width="330"/>
-</div>
+  <div class="container_2" *ngIf="list_data?.diary">
+    <div class="aaa">
+      <div class="left">
+        <div *ngFor="let item of list_data?.diary;let i=index" class="detail-1">
+          <div class="line"></div>
+          <div class="detail-1-1 ">
+            <img class="imag" src="{{_uploadUrl}}{{item?.headimg}}"/>
+            <div class="username ">{{item?.nickname}}</div>
+            <div class="info1 ">
+              <ul class="ul-1">
+                <li>发表的日志</li>
+              </ul>
+            </div>
+            <div class="info2">
+              <ul class="ul-2">
+                <li>
+                  <a (click)="change(i)">
+                    <i class="fa fa-thumbs-up" aria-hidden="true" *ngIf="item?.isCollect"></i>
+                    <i class="fa fa-thumbs-o-up " aria-hidden="true" *ngIf="!item?.isCollect"></i>
+                  </a>
+                  <span>{{item?.likecount}}</span>人赞过
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="detail-1-2  ">
+            <div class="left_word">
+              <p class="left_word_name"><a routerLink="detail/{{item?.diaryID}}">{{item?.titile}}</a></p>
+              <p class="left_word_info">{{item?.content|numberPipe:50}}</p>
+            </div>
+            <img class="right_imag" src="{{_uploadUrl}}{{item?.img}}"/>
+          </div>
+        </div>
+        <div class="page_out">
+          <a class="first " [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(1)">首页</a>
+          <a class="prev" [class.page_btn_enable]="pageNumber==1" (click)="changePageNumber(pageNumber-1)">上一页</a>
+          <a class="page_tag"
+             *ngFor="let page of pageList;"
+             (click)="changePageNumber(page)" [class.page_tag_active]="page==pageNumber">{{page}}</a>
+          <a class="next" [class.page_btn_enable]="pageNumber==list_data?.totalPage"
+             (click)="changePageNumber(pageNumber+1)">下一页</a>
+          <a class="end" [class.page_btn_enable]="pageNumber==list_data?.totalPage"
+             (click)="changePageNumber(list_data?.totalPage)">尾页</a>
+        </div>
+      </div>
+      <div class="right">
+        <img class="guanggao_1" src="../../../../assets/upload/advImg/diary_adv1.png" height="450" width="330"/>
+        <img class="guanggao_2" src="../../../../assets/upload/advImg/diary_adv2.png" height="150" width="330"/>
+        <img class="guanggao_3" src="../../../../assets/upload/advImg/diary_adv3.png" height="150" width="330"/>
+      </div>
 
+    </div>
   </div>
-</div>
 </div>

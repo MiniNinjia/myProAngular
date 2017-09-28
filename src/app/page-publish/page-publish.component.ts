@@ -18,10 +18,15 @@ export class PagePublishComponent implements OnInit {
   publishData: any;
   postData: any;
   choose: any;
-  kindof:any;
-  constructor(private ps: PublishService,
+  kindof: any;
+  petkindof: {
+
+  };
+
+  constructor(private ps: PublishService, 
               private as: AdoptionService) {
   }
+
   ngOnInit() {
     const that = this;
     this.as.getcity(function (result) {
@@ -44,12 +49,11 @@ export class PagePublishComponent implements OnInit {
   _choose(e) {
     this.choose = this.cit[e.target.value];
   }
+
   //宠物分类
-  petkind(event:any){
-    this.kindof=this.petkindof[event.target.value].petkindof
+  petkind(event: any) {
+    this.kindof = this.petkindof[event.target.value].petkindof;
   }
-
-
 
 
   public uploader: FileUploader = new FileUploader({

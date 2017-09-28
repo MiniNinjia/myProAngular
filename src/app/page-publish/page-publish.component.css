@@ -4,10 +4,13 @@
   height: 110%;
   background-color: white;
 }
-
+.max:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 .big {
   width: 1200px;
-  height: 900px;
   /*background-color: #dcddff;*/
   margin: 0 auto;
   position: relative;
@@ -21,7 +24,6 @@
 
 .mbig {
   width: 700px;
-  height: 700px;
   /*background-color: #ffd1ca;*/
   margin: 0 auto;
   padding-top: 50px;

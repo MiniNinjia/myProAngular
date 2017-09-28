@@ -1,33 +1,30 @@
-<div class="skill-details-bg"(change)="pid(i)" *ngFor="let item  of art;let i =index ">
-  <div>{{articleId}}{{article[i].pid}}
+<div class="skill-details-bg" (change)="pid(i)" *ngFor="let item of art;let i =index ">
+  <div>
   <h1>{{item.title}}</h1>
   <div class="skill-details-content">
     <div class="wenben-1">
-    <p>
-      &nbsp;&nbsp; {{item.square}}
+
     <p>{{item.square}}
     </p>
   </div>
     <div class="wenben-2">
         <img src="../../../assets/images/{{item.articleimag}}"/>
       <p style="text-align: center" >&nbsp;&nbsp;{{item.style}}</p>
-        <img src="../../../assets/images/{{item.articleimag}}"/>
-      <p style="text-align: center" >{{item.style}}</p>
       <p>
-        &nbsp;&nbsp;{{item.p1}}
+        &nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p1}}
       </p>
       <p>
         &nbsp;&nbsp;{{item.p2}}
         <span>{{item.p21}}</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p2}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </p>
       <p>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p21}}。
+        &nbsp;&nbsp;&nbsp;&nbsp;
       </p>
       <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}{{item.p31}}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.p3}}<span>{{item.p31}}</span>
       </p>
     </div>
