@@ -128,6 +128,24 @@
 .flo {
   float: left;
 }
+.gotop{
+  width: 80px;
+  height: 100px;
+  background-color: rgba(149, 149, 149, 0.82);
+  position: fixed;
+ bottom: 16%;
+  right:3%;
+  float: left;
+  border-radius: 5%;
+}
+.gotop img{
+  display: inline-block;
+  line-height: 100px;
+  color:#333333 ;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
 
 .dat {
   margin-left: 5px;
