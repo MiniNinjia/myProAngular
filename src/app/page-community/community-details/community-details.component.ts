@@ -26,6 +26,8 @@ export class CommunityDetailsComponent implements OnInit, OnChanges {
   reviewstate = false;
   rereview = '';
 
+  login = false;
+  timmer: any;
 
   aa = false;
 
@@ -180,7 +182,10 @@ export class CommunityDetailsComponent implements OnInit, OnChanges {
         });
       }
     } else {
-      alert('请先登录');
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
     }
   }
 
@@ -201,7 +206,10 @@ export class CommunityDetailsComponent implements OnInit, OnChanges {
           }
         });
     } else {
-      alert('请先登录');
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
     }
   }
 
@@ -221,7 +229,10 @@ export class CommunityDetailsComponent implements OnInit, OnChanges {
         }
       });
     } else {
-      alert('未登陆');
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
     }
   }
 }

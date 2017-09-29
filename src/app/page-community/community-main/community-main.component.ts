@@ -25,8 +25,10 @@ export class CommunityMainComponent implements OnInit {
     uid: null,
     time: null
   };
-
+  login = false;
+  timmer: any;
   aa = false;
+
 
   constructor(private glo: GlobalPropertyService,
               private cs: CommunityService,
@@ -102,7 +104,10 @@ export class CommunityMainComponent implements OnInit {
       this.writestate = !this.writestate;
       this.writecontent.uid = this.postData.uid;
     } else {
-      alert('未登录');
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
     }
   }
 
@@ -164,7 +169,10 @@ export class CommunityMainComponent implements OnInit {
         }
       });
     } else {
-      alert('未登陆');
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
     }
   }
 }

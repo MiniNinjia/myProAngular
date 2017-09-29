@@ -143,5 +143,7 @@
     </div>
   </div>
 </div>
-
+<div *ngIf="login">
+  <app-page-shop></app-page-shop>
+</div>
   <app-page-report *ngIf="aa" [Sitem]="aa"(TOparent)="receive($event)"></app-page-report>

@@ -114,8 +114,9 @@ export class AdoptionDetailsComponent implements OnInit {
   menunow = 0;
   aa = false;
   id = 0;
-  login=false;
-timmer:any;
+  login = false;
+  timmer: any;
+
   constructor(private route: ActivatedRoute,
               private as: AdoptionService,
               private _cookieService: CookieService,
@@ -174,20 +175,15 @@ timmer:any;
         }
       });
     } else {
-      this.login=true;
-
-     this.timmer = setInterval(()=>{
-        this.login=false //检测变化
-      },3000);
+      this.login = true;
+      this.timmer = setTimeout(() => {
+        this.login = false //检测变化
+      }, 3000);
 
     }
+  }
 
-  }
-  ngOnDestroy() {
-    if (this.timmer) {
-      clearInterval(this.timmer);
-    }
-  }
+
   carousel(i: any) {
     clearInterval(this.time);
     this.id = i;
@@ -222,12 +218,7 @@ timmer:any;
       'baddres': this.buyaddres,
       'breason': this.reason,
     };
-    let timmer;
-    //timmer:clearTimeout();
-    timmer = setInterval(()=>{
-      this.aa = !this.aa;
-    },3000);
-
+    this.aa = !this.aa;
   }
 
 }

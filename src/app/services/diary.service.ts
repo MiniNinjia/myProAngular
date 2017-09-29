@@ -16,7 +16,7 @@ export class DiaryService {
         callback(result);
       }
     );
-  };
+  }
 
   getdiaryPageCount(callback) {
     this.http.get(this._url + '/diary/getdiaryPageCount').subscribe(
@@ -24,10 +24,11 @@ export class DiaryService {
         callback(result);
       }
     );
-  };
+  }
+
   getdiaryBanner(callback) {
     this.http.get(this._url + '/diary/getdiaryBanner').subscribe(
-      function (result){
+      function (result) {
         callback(result);
       }
     );
