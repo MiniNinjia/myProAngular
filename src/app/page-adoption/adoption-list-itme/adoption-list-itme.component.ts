@@ -125,5 +125,8 @@ export class AdoptionListItmeComponent implements OnInit {
     this.choose = this.cit[j];
     this.pla = !this.pla;
   }
+  gotop(){
+    scrollTo(0, 0);
+  }
 
 }
