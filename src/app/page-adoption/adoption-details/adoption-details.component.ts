@@ -53,68 +53,69 @@ export class AdoptionDetailsComponent implements OnInit {
     },
   };
 
-  recommend = [
-    {
-      'id': 1,
-      'pimg': '../../../assets/adoption_detail/1.1.jpg',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-    {
-      'id': 1,
-      'pimg': '../../../assets/adoption_detail/2.1.jpg',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-    {
-      'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-    {
-      'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-    {
-      'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-    {
-      'id': 1,
-      'pimg': '../../../assets/images/dog1.png',
-      'uimg': '../../../assets/images/skill-t1.jpg',
-      'uname': 'tom',
-      'kind': '萨摩耶',
-      'date': '2017-3-4',
-      'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
-    },
-
-  ];
+  //recommend = [
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/adoption_detail/1.1.jpg',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/adoption_detail/2.1.jpg',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/images/dog1.png',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/images/dog1.png',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/images/dog1.png',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //  {
+  //    'id': 1,
+  //    'pimg': '../../../assets/images/dog1.png',
+  //    'uimg': '../../../assets/images/skill-t1.jpg',
+  //    'uname': 'tom',
+  //    'kind': '萨摩耶',
+  //    'date': '2017-3-4',
+  //    'word': '胡凯彬爱吃，爱玩，爱睡觉，超级懒，超级丑'
+  //  },
+  //
+  //];
 
   menunow = 0;
   aa = false;
   id = 0;
-
+  login=false;
+timmer:any;
   constructor(private route: ActivatedRoute,
               private as: AdoptionService,
               private _cookieService: CookieService,
@@ -173,10 +174,20 @@ export class AdoptionDetailsComponent implements OnInit {
         }
       });
     } else {
-      alert('未登陆');
+      this.login=true;
+
+     this.timmer = setInterval(()=>{
+        this.login=false //检测变化
+      },3000);
+
+    }
+
+  }
+  ngOnDestroy() {
+    if (this.timmer) {
+      clearInterval(this.timmer);
     }
   }
-
   carousel(i: any) {
     clearInterval(this.time);
     this.id = i;
@@ -211,7 +222,12 @@ export class AdoptionDetailsComponent implements OnInit {
       'baddres': this.buyaddres,
       'breason': this.reason,
     };
-    this.aa = !this.aa;
+    let timmer;
+    //timmer:clearTimeout();
+    timmer = setInterval(()=>{
+      this.aa = !this.aa;
+    },3000);
+
   }
 
 }
