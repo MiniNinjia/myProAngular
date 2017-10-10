@@ -9,7 +9,8 @@
   font-size: 30px;
   color: #444444;
 }
-.cbtn{
+
+.cbtn {
   outline: none;
 }
 
@@ -23,10 +24,12 @@
   width: 280px;
   height: 306px;
   margin: 10px;
- border: solid 1px #CCCCCC;
+  border: solid 1px #CCCCCC;
   background-color: white;
+  outline: none;
 }
-.index-container-adoption-li:hover{
+
+.index-container-adoption-li:hover {
   border-color: #CCCCCC;
   box-shadow: 0 0 20px #aaaaaa;
 }

@@ -2,7 +2,7 @@
   <div class="index-container-adoption-div">
     <a class="index-container-adoption-a">领养中心</a>
     <ul class="index-container-adoption-ul">
-      <li class="index-container-adoption-li" routerLink="../adoption/detail/:petid" *ngFor="let item of datas">
+      <li class="index-container-adoption-li" routerLink="../adoption/detail/{{item?.petid}}" *ngFor="let item of datas">
         <a>
           <div>
             <img src="{{_uploadUrl}}{{item.img}}" width="100%" height="160px;"/>

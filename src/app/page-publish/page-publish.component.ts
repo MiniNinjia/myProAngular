@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Http} from '@angular/http';
 import {FileUploader} from 'ng2-file-upload';
-//import {GlobalPropertyService} from '../services/global-property.service';
+import {GlobalPropertyService} from '../services/global-property.service';
 import {PublishService} from '../services/publish.service';
 import {AdoptionService} from '../services/adoption.service';
+
 
 @Component({
   selector: 'app-page-publish',
@@ -19,12 +20,17 @@ export class PagePublishComponent implements OnInit {
   postData: any;
   choose: any;
   kindof: any;
-  petkindof: {
+  petkindof: {};
+  uploader: FileUploader = new FileUploader({
+    url: this.glo.serverUrl + '/upload',
+    method: 'POST',
+    itemAlias: 'pet'
+  });
+  uploadimg = null;
 
-  };
-
-  constructor(private ps: PublishService, 
-              private as: AdoptionService) {
+  constructor(private ps: PublishService,
+              private as: AdoptionService,
+              private glo: GlobalPropertyService) {
   }
 
   ngOnInit() {
@@ -42,6 +48,7 @@ export class PagePublishComponent implements OnInit {
     console.log(event);
   }
 
+
   pro(event: any) {
     this.cit = this.data[event.target.value].city;
   }
@@ -55,35 +62,6 @@ export class PagePublishComponent implements OnInit {
     this.kindof = this.petkindof[event.target.value].petkindof;
   }
 
-
-  public uploader: FileUploader = new FileUploader({
-    url: "http://localhost:3000/ng2/uploadFile",
-    method: "POST",
-    itemAlias: "uploadedfile"
-  });
-  // C: 定义事件，选择文件
-  selectedFileOnChanged(event: any) {
-    // 打印文件选择名称
-    console.log(event.target.value);
-  }
-
-  // D: 定义事件，上传文件
-  uploadFile() {
-    // 上传
-    this.uploader.queue[0].onSuccess = function (response, status, headers) {
-      // 上传文件成功
-      if (status === 200) {
-        // 上传文件后获取服务器返回的数据
-        const tempRes = JSON.parse(response);
-      } else {
-        // 上传文件后获取服务器返回的数据错误
-        alert('');
-      }
-    };
-    this.uploader.queue[0].upload(); // 开始上传
-  }
-
-
   //接口
   publish() {
     const that = this;
@@ -95,28 +73,19 @@ export class PagePublishComponent implements OnInit {
   }
 
 
-  // onFileChanged(fileList: FileList) {
-  //发布内容保存
+  selectedFileOnChanged() {
+    console.log(this.uploader.queue[0]);
+    const that = this;
+    // 这里是文件选择完成后的操作处理
+    this.uploader.queue[0].onSuccess = (response, status, headers) => {
+      if (status === 200) {
+        that.uploadimg = JSON.parse(response).link;
+      } else {
 
+      }
+      that.uploader.clearQueue();
+    };
+    this.uploader.queue[0].upload(); // 开始上传
 
-  //onFileChanged(fileList: FileList) {
-  //  if (fileList.length > 0) {
-  //    let file: File = fileList[0];
-  //    let formData: FormData = new FormData();
-  //    formData.append('uploadFile', file, file.name);
-  //    let headers = new Headers({
-  //      "Accept": "application/json"
-  //    });
-  //    let options = new RequestOptions({ headers });
-  //    this.http.post("https://localhost:44372/api/uploadFile", formData, options)
-  //      .map(res => res.json())
-  //      .catch(error => Observable.throw(error))
-  //      .subscribe(
-  //        data => console.log('success' + data),
-  //        error => console.log(error)
-  //      )
-  //  }
-  // }
-
-
+  }
 }

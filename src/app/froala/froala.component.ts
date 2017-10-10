@@ -27,7 +27,7 @@ export class FroalaComponent implements OnInit {
       widthMax: 800,
       heightMin: 90,
       imageDefaultAlign: 'left',
-      imageDefaultWidth: 500,
+      imageDefaultWidth: '100%',
       toolbarVisibleWithoutSelection: true,
       theme: 'gray',
       language: 'zh_cn', //配置语言

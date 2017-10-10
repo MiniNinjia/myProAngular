@@ -42,6 +42,7 @@ import {AdoptionShowpetComponent} from './page-adoption/adoption-main/adoption-s
 import {AdoptionListComponent} from './page-adoption/adoption-main/adoption-list/adoption-list.component';
 import {AdoptionMainComponent} from './page-adoption/adoption-main/adoption-main.component';
 import {AdoptionDetailsComponent} from './page-adoption/adoption-details/adoption-details.component';
+
 import {AdoptionListItmeComponent} from './page-adoption/adoption-list-itme/adoption-list-itme.component';
 import {TextComponent} from './index/text/text.component';
 import {CommunityListComponent} from './page-community/community-list/community-list.component';
@@ -95,7 +96,6 @@ import { DefaultimgPipe } from './defaultimg.pipe';
 
 @NgModule({
   declarations: [
-
     NumberPipePipe,
     SkillDetailsComponent,
     PetIntroduceComponent,

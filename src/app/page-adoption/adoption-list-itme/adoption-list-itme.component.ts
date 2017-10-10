@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AdoptionService} from '../../services/adoption.service';
 import {CookieService} from 'angular2-cookie/services/cookies.service';
-import {GlobalPropertyService} from '../../services/global-property.service'
+import {GlobalPropertyService} from '../../services/global-property.service';
 @Component({
   selector: 'app-adoption-list-itme',
   templateUrl: './adoption-list-itme.component.html',

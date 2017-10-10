@@ -10,7 +10,11 @@ import {CookieService} from 'angular2-cookie/services/cookies.service';
 })
 
 export class DiaryDetailsComponent implements OnInit {
-  list_data: any;
+  list_data = {
+    totalPage: null,
+    pageNow: null,
+    diary: []
+  };
   _uploadUrl: any;
   postData: any;
   pageList: any;
@@ -75,9 +79,9 @@ export class DiaryDetailsComponent implements OnInit {
           diary: []
         };
         that.changePageList();
+        that.loaddata();
       }
     });
-    this.loaddata();
   }
 
   loaddata() {

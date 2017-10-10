@@ -6,10 +6,13 @@
     <div class="mbig">
       <p class="title">基础信息</p>
       <form action="">
-
+        <p>
+          <span class="sp1"><span class="col">*</span>标题</span>
+          <input type="text" id="detail" class="til" maxlength="20">
+        </p>
         <p>
           <span class="sp1"><span class="col">*</span>宠物年龄</span>
-          <input type="text" id="age" class="add1"name="age" [(ngModel)]="age">
+          <input type="number" id="age" class="add1" name="age" [(ngModel)]="age">
         </p>
         <p>
           <span class="sp1">宠物分类</span>
@@ -22,26 +25,25 @@
             <option value="" *ngFor="let item of kindof;let j=index">{{item}}</option>
           </select>
         </p>
-        <p>
-          <span class="sp1"><span class="col">*</span>标题</span>
-          <input type="text" id="detail" class="til">
-        </p>
+
         <p class="psp1">
           <span class="sp1 psp1">上传图片</span>
 
         </p>
         <div class="pbig">
           <div class="fil">
-            <input type="file"
-                  class="fil2" placeholder="Upload file"
-                   ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" multiple>
+            <input class="fil2" type="file" ng2FileSelect [uploader]="uploader"
+                   (change)="selectedFileOnChanged($event)"/>
           </div>
-          <div class="pic3">
+          <div class="pic3" *ngIf="uploadimg==null">
             <div class="pic4">上传电脑中图片</div>
             <div class="camera">
               <img src="../../assets/images/camera.png" alt="">
               <p class="carm">选择电脑图片上传</p>
             </div>
+          </div>
+          <div class="pic3" *ngIf="uploadimg">
+              <img src="{{uploadimg}}" alt="" width="100%">
           </div>
         </div>
 

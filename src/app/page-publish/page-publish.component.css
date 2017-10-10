@@ -69,6 +69,7 @@ p {
   top: -80px;
   left: 130px;
   overflow: hidden;
+  border: 1px solid #dcdcdc;
 }
 
 .fil {
@@ -96,9 +97,7 @@ p {
   /*background-color: #a8e0d9;*/
   position: relative;
   top: -180px;
-  border: 1px solid #dcdcdc;
   box-sizing: border-box;
-
 }
 
 .pic3, .fil2:after {
